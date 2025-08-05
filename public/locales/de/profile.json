@@ -1,0 +1,120 @@
+{
+  "title": "Profil",
+  "subtitle": "Verwalten Sie Ihre persönlichen Informationen und Präferenzen",
+  "tabs": {
+    "general": "Allgemein",
+    "professional": "Beruflich",
+    "security": "Sicherheit"
+  },
+  "userCard": {
+    "role": "Benutzer"
+  },
+  "accountStats": {
+    "title": "Kontostatistiken",
+    "memberSince": "Mitglied seit",
+    "lastActive": "Zuletzt aktiv",
+    "status": "Status",
+    "active": "Aktiv"
+  },
+  "general": {
+    "title": "Persönliche Informationen",
+    "description": "Aktualisieren Sie Ihre persönlichen Daten und Kontaktinformationen",
+    "fullName": "Vollständiger Name",
+    "email": "E-Mail",
+    "phoneNumber": "Telefonnummer",
+    "location": "Standort",
+    "bio": "Biografie",
+    "bioPlaceholder": "Erzählen Sie uns von sich...",
+    "website": "Website",
+    "placeholders": {
+      "fullName": "Max Mustermann",
+      "email": "max@beispiel.com",
+      "phoneNumber": "+49 30 12345678",
+      "location": "Berlin, Deutschland",
+      "website": "https://beispiel.com"
+    }
+  },
+  "professional": {
+    "title": "Berufliche Informationen",
+    "description": "Verwalten Sie Ihre arbeitsbezogenen Informationen und Präferenzen",
+    "company": "Unternehmen",
+    "position": "Position",
+    "department": "Abteilung",
+    "timezone": "Zeitzone",
+    "preferredLanguage": "Bevorzugte Sprache",
+    "placeholders": {
+      "company": "Acme GmbH",
+      "position": "Software-Ingenieur",
+      "selectDepartment": "Abteilung auswählen",
+      "selectTimezone": "Zeitzone auswählen",
+      "selectLanguage": "Sprache auswählen"
+    },
+    "departments": {
+      "engineering": "Entwicklung",
+      "design": "Design",
+      "marketing": "Marketing",
+      "sales": "Vertrieb",
+      "support": "Support",
+      "hr": "Personalwesen",
+      "other": "Andere"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "Ostküstenzeit",
+      "centralTime": "Zentrale Zeit",
+      "mountainTime": "Bergzeit",
+      "pacificTime": "Pazifikzeit",
+      "london": "London",
+      "paris": "Paris",
+      "tokyo": "Tokio"
+    },
+    "languages": {
+      "english": "Englisch",
+      "spanish": "Spanisch",
+      "french": "Französisch",
+      "german": "Deutsch",
+      "japanese": "Japanisch",
+      "chinese": "Chinesisch"
+    }
+  },
+  "security": {
+    "title": "Sicherheitseinstellungen",
+    "description": "Verwalten Sie Ihre Kontosicherheit und Datenschutzpräferenzen",
+    "twoFactorAuth": "Zwei-Faktor-Authentifizierung",
+    "twoFactorAuthDescription": "Fügen Sie eine zusätzliche Sicherheitsebene zu Ihrem Konto hinzu",
+    "emailNotifications": "E-Mail-Benachrichtigungen",
+    "emailNotificationsDescription": "Sicherheitswarnungen per E-Mail erhalten",
+    "recentActivity": "Letzte Aktivitäten",
+    "lastLogin": "Letzte Anmeldung",
+    "lastPasswordChange": "Letzte Passwort-Änderung",
+    "activeSessions": "Aktive Sitzungen",
+    "changePassword": "Passwort ändern",
+    "enable": "Aktivieren",
+    "configure": "Konfigurieren",
+    "activityValues": {
+      "todayAt": "Heute um 9:15",
+      "monthsAgo": "vor 3 Monaten",
+      "devices": "2 Geräte"
+    }
+  },
+  "actions": {
+    "save": "Änderungen speichern",
+    "saving": "Speichert...",
+    "cancel": "Abbrechen",
+    "deleteAccount": "Konto löschen"
+  },
+  "messages": {
+    "updateSuccess": "Profil erfolgreich aktualisiert",
+    "updateError": "Fehler beim Aktualisieren des Profils",
+    "avatarUpdateSuccess": "Avatar erfolgreich aktualisiert",
+    "avatarUpdateError": "Fehler beim Hochladen des Avatars",
+    "invalidImageFile": "Bitte laden Sie eine Bilddatei hoch",
+    "imageTooLarge": "Die Bildgröße sollte weniger als 5 MB betragen"
+  },
+  "validation": {
+    "nameRequired": "Name muss mindestens 2 Zeichen haben",
+    "invalidEmail": "Ungültige E-Mail-Adresse",
+    "bioTooLong": "Biografie muss weniger als 500 Zeichen haben",
+    "invalidUrl": "Ungültige URL"
+  }
+}

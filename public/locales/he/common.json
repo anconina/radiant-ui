@@ -1,0 +1,180 @@
+{
+  "app": {
+    "name": "Radiant UI",
+    "description": "אפליקציית React מודרנית עם רכיבי UI מתקדמים"
+  },
+  "search": "חיפוש",
+  "searchPlaceholder": "הקלד לחיפוש...",
+  "cancel": "ביטול",
+  "notifications": "התראות",
+  "create": "צור",
+  "recentSearches": "חיפושים אחרונים",
+  "common": {
+    "search": "חיפוש",
+    "searchPlaceholder": "הקלד לחיפוש...",
+    "cancel": "ביטול",
+    "notifications": "התראות",
+    "create": "צור",
+    "recentSearches": "חיפושים אחרונים"
+  },
+  "navigation": {
+    "home": "בית",
+    "dashboard": "לוח בקרה",
+    "profile": "פרופיל",
+    "settings": "הגדרות",
+    "logout": "התנתק",
+    "login": "התחבר",
+    "register": "הרשם",
+    "signUp": "הרשמה",
+    "main": "ראשי",
+    "platform": "פלטפורמה",
+    "administration": "ניהול",
+    "users": "משתמשים",
+    "notifications": "התראות",
+    "helpSupport": "עזרה ותמיכה",
+    "adminDashboard": "לוח בקרה מנהל",
+    "components": "רכיבים",
+    "examples": "דוגמאות",
+    "uiComponents": "רכיבי ממשק",
+    "forms": "טפסים",
+    "dataDisplay": "תצוגת נתונים",
+    "urlState": "מצב URL",
+    "responsiveDesign": "עיצוב רספונסיבי",
+    "loadingStates": "מצבי טעינה",
+    "rtlSupport": "תמיכה ב-RTL",
+    "dataTable": "טבלת נתונים",
+    "projects": "פרויקטים",
+    "accountStatus": "סטטוס חשבון",
+    "billing": "חיוב",
+    "calendar": "לוח שנה",
+    "support": "תמיכה",
+    "help": "עזרה"
+  },
+  "actions": {
+    "save": "שמור",
+    "cancel": "ביטול",
+    "delete": "מחק",
+    "edit": "ערוך",
+    "create": "צור",
+    "update": "עדכן",
+    "submit": "שלח",
+    "search": "חיפוש",
+    "filter": "סינון",
+    "sort": "מיון",
+    "refresh": "רענן",
+    "download": "הורד",
+    "upload": "העלה",
+    "share": "שתף",
+    "copy": "העתק",
+    "close": "סגור",
+    "back": "חזור",
+    "next": "הבא",
+    "previous": "הקודם",
+    "confirm": "אשר",
+    "retry": "נסה שוב",
+    "toggle": "החלף",
+    "viewDetails": "צפה בפרטים",
+    "more": "עוד"
+  },
+  "status": {
+    "loading": "טוען...",
+    "saving": "שומר...",
+    "success": "הצלחה",
+    "error": "שגיאה",
+    "warning": "אזהרה",
+    "info": "מידע",
+    "pending": "ממתין",
+    "completed": "הושלם",
+    "failed": "נכשל",
+    "online": "מחובר",
+    "offline": "לא מחובר"
+  },
+  "messages": {
+    "welcome": "ברוך הבא, {{name}}!",
+    "goodbye": "להתראות!",
+    "saved": "השינויים נשמרו בהצלחה",
+    "deleted": "הפריט נמחק בהצלחה",
+    "created": "הפריט נוצר בהצלחה",
+    "updated": "הפריט עודכן בהצלחה",
+    "error": "משהו השתבש",
+    "offline": "אתה כרגע לא מחובר",
+    "noData": "אין נתונים זמינים",
+    "noResults": "לא נמצאו תוצאות",
+    "confirmDelete": "האם אתה בטוח שברצונך למחוק פריט זה?",
+    "unsavedChanges": "יש לך שינויים שלא נשמרו. האם אתה בטוח שברצונך לעזוב?",
+    "and": "ו"
+  },
+  "time": {
+    "now": "עכשיו",
+    "today": "היום",
+    "yesterday": "אתמול",
+    "tomorrow": "מחר",
+    "days": "יום {{count}}",
+    "days_other": "{{count}} ימים",
+    "hours": "שעה {{count}}",
+    "hours_other": "{{count}} שעות",
+    "minutes": "דקה {{count}}",
+    "minutes_other": "{{count}} דקות",
+    "seconds": "שנייה {{count}}",
+    "seconds_other": "{{count}} שניות"
+  },
+  "pagination": {
+    "first": "ראשון",
+    "last": "אחרון",
+    "next": "הבא",
+    "previous": "הקודם",
+    "page": "עמוד {{page}} מתוך {{total}}",
+    "showing": "מציג {{from}} עד {{to}} מתוך {{total}} תוצאות",
+    "perPage": "לעמוד"
+  },
+  "theme": {
+    "light": "בהיר",
+    "dark": "כהה",
+    "system": "מערכת",
+    "toggle": "החלף ערכת נושא"
+  },
+  "language": {
+    "select": "בחר שפה",
+    "change": "שנה שפה"
+  },
+  "sidebar": {
+    "toggleSidebar": "החלף סרגל צד",
+    "searchPlaceholder": "הקלד לחיפוש...",
+    "guest": "אורח",
+    "guestEmail": "guest@example.com",
+    "switchToRtl": "החלף ל-RTL",
+    "switchToLtr": "החלף ל-LTR"
+  },
+  "projects": {
+    "designEngineering": "הנדסת עיצוב",
+    "salesMarketing": "מכירות ושיווק",
+    "travel": "נסיעות"
+  },
+  "footer": {
+    "description": "תבנית React מודרנית עם TypeScript, Vite, ו-shadcn/ui.",
+    "product": {
+      "title": "מוצר",
+      "features": "תכונות",
+      "pricing": "תמחור",
+      "changelog": "יומן שינויים",
+      "roadmap": "מפת דרכים"
+    },
+    "resources": {
+      "title": "משאבים",
+      "documentation": "תיעוד",
+      "guides": "מדריכים",
+      "apiReference": "מדריך API",
+      "blog": "בלוג"
+    },
+    "company": {
+      "title": "חברה",
+      "about": "אודות",
+      "contact": "צור קשר",
+      "privacyPolicy": "מדיניות פרטיות",
+      "termsOfService": "תנאי שימוש"
+    },
+    "copyright": "© {{year}} Radiant UI. כל הזכויות שמורות.",
+    "madeWith": "נבנה עם",
+    "using": "באמצעות React ו-TypeScript"
+  }
+}

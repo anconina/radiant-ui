@@ -1,0 +1,71 @@
+name: FSD Validation
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  fsd-check:
+    name: Validate FSD Architecture
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check FSD structure with Steiger
+        run: npm run fsd:check
+        continue-on-error: true # Allow workflow to continue even if there are warnings
+
+      - name: Run FSD import validation
+        run: ./check-fsd-imports.sh
+
+      - name: Run FSD ESLint rules
+        run: npm run lint:fsd
+        continue-on-error: true # Allow workflow to continue for warnings
+
+      - name: TypeScript check
+        run: npm run typecheck
+
+      - name: Comment PR with FSD results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const { execSync } = require('child_process');
+
+            let steigerOutput = '';
+            try {
+              steigerOutput = execSync('npm run fsd:check', { encoding: 'utf-8' });
+            } catch (error) {
+              steigerOutput = error.stdout || error.message;
+            }
+
+            const comment = `## FSD Architecture Validation Results
+
+            ### Steiger Check
+            \`\`\`
+            ${steigerOutput}
+            \`\`\`
+
+            For more information about FSD rules, see [Feature-Sliced Design](https://feature-sliced.design/)
+            `;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });

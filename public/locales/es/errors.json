@@ -1,0 +1,46 @@
+{
+  "generic": {
+    "title": "¡Ups! Algo salió mal",
+    "message": "Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde."
+  },
+  "notFound": {
+    "title": "Página No Encontrada",
+    "message": "La página que está buscando no existe o ha sido movida.",
+    "code": "404"
+  },
+  "unauthorized": {
+    "title": "No Autorizado",
+    "message": "No tiene permisos para acceder a este recurso.",
+    "code": "401"
+  },
+  "forbidden": {
+    "title": "Prohibido",
+    "message": "El acceso a este recurso está prohibido.",
+    "code": "403"
+  },
+  "serverError": {
+    "title": "Error del Servidor",
+    "message": "El servidor encontró un error y no pudo completar su solicitud.",
+    "code": "500"
+  },
+  "networkError": {
+    "title": "Error de Red",
+    "message": "No se pudo conectar al servidor. Por favor, verifique su conexión a internet."
+  },
+  "validationError": {
+    "title": "Error de Validación",
+    "message": "Por favor, revise su entrada e inténtelo de nuevo."
+  },
+  "actions": {
+    "goHome": "Ir al Inicio",
+    "goBack": "Volver",
+    "retry": "Reintentar",
+    "refresh": "Actualizar Página",
+    "contactSupport": "Contactar Soporte"
+  },
+  "details": {
+    "errorCode": "Código de Error",
+    "timestamp": "Marca de Tiempo",
+    "requestId": "ID de Solicitud"
+  }
+}

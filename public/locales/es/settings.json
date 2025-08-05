@@ -1,0 +1,133 @@
+{
+  "title": "Configuración",
+  "subtitle": "Gestione la configuración de su cuenta y preferencias",
+  "tabs": {
+    "appearance": "Apariencia",
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "privacy": "Privacidad"
+  },
+  "actions": {
+    "save": "Guardar Configuración",
+    "saveChanges": "Guardar Cambios",
+    "saving": "Guardando...",
+    "cancel": "Cancelar",
+    "reset": "Restablecer"
+  },
+  "appearance": {
+    "title": "Tema",
+    "description": "Personalice cómo se ve la aplicación en su dispositivo",
+    "colorTheme": "Tema de Color",
+    "fontSize": "Tamaño de Fuente",
+    "fontSizeDescription": "Ajuste el tamaño de fuente base para mejorar la legibilidad",
+    "reducedMotion": "Movimiento Reducido",
+    "reducedMotionDescription": "Minimizar animaciones y transiciones",
+    "highContrast": "Alto Contraste",
+    "highContrastDescription": "Aumentar el contraste para mejor visibilidad",
+    "themes": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    }
+  },
+  "language": {
+    "title": "Idioma y Región",
+    "description": "Configure sus preferencias de idioma y región",
+    "language": "Idioma",
+    "region": "Región",
+    "dateFormat": "Formato de Fecha",
+    "timeFormat": "Formato de Hora",
+    "firstDayOfWeek": "Primer Día de la Semana",
+    "regions": {
+      "US": "Estados Unidos",
+      "GB": "Reino Unido",
+      "CA": "Canadá",
+      "AU": "Australia",
+      "DE": "Alemania",
+      "FR": "Francia",
+      "JP": "Japón",
+      "CN": "China"
+    },
+    "timeFormats": {
+      "12h": "12 horas (AM/PM)",
+      "24h": "24 horas"
+    },
+    "weekDays": {
+      "sunday": "Domingo",
+      "monday": "Lunes",
+      "saturday": "Sábado"
+    },
+    "placeholders": {
+      "selectRegion": "Seleccionar región",
+      "selectDateFormat": "Seleccionar formato de fecha",
+      "selectTimeFormat": "Seleccionar formato de hora",
+      "selectFirstDay": "Seleccionar primer día"
+    }
+  },
+  "notifications": {
+    "title": "Preferencias de Notificaciones",
+    "description": "Elija cómo desea recibir notificaciones",
+    "channels": {
+      "email": "Correo Electrónico",
+      "push": "Push",
+      "sms": "SMS"
+    },
+    "types": {
+      "updates": {
+        "label": "Actualizaciones del Producto",
+        "description": "Noticias sobre características del producto y mejoras"
+      },
+      "security": {
+        "label": "Alertas de Seguridad",
+        "description": "Notificaciones y alertas de seguridad importantes"
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Contenido promocional y ofertas especiales"
+      },
+      "reminders": {
+        "label": "Recordatorios",
+        "description": "Recordatorios de tareas y notificaciones de plazos"
+      }
+    },
+    "schedule": {
+      "title": "Programa de Notificaciones",
+      "description": "Configure horas silenciosas cuando no desee ser molestado",
+      "quietHours": "Horas Silenciosas",
+      "quietHoursDescription": "Pausar notificaciones no urgentes durante las horas especificadas",
+      "startTime": "Hora de Inicio",
+      "endTime": "Hora de Fin"
+    }
+  },
+  "privacy": {
+    "title": "Configuración de Privacidad",
+    "description": "Controle su privacidad y preferencias de intercambio de datos",
+    "profileVisibility": "Visibilidad del Perfil",
+    "profileOptions": {
+      "public": "Público - Cualquiera puede ver su perfil",
+      "friends": "Solo Amigos - Solo sus conexiones pueden ver",
+      "private": "Privado - Solo usted puede ver su perfil"
+    },
+    "showEmail": "Mostrar Dirección de Correo Electrónico",
+    "showEmailDescription": "Mostrar su correo electrónico en su perfil público",
+    "showPhone": "Mostrar Número de Teléfono",
+    "showPhoneDescription": "Mostrar su número de teléfono en su perfil público",
+    "searchIndexing": "Indexación en Motores de Búsqueda",
+    "searchIndexingDescription": "Permitir que los motores de búsqueda indexen su perfil",
+    "dataCollection": "Análisis de Uso",
+    "dataCollectionDescription": "Ayude a mejorar nuestros servicios compartiendo datos de uso",
+    "dataManagement": {
+      "title": "Gestión de Datos",
+      "description": "Gestione sus datos personales y cuenta",
+      "exportData": "Exportar Sus Datos",
+      "exportDataDescription": "Descargar una copia de todos sus datos",
+      "requestExport": "Solicitar Exportación",
+      "deleteAccount": "Eliminar Cuenta",
+      "deleteAccountDescription": "Eliminar permanentemente su cuenta y todos los datos"
+    }
+  },
+  "messages": {
+    "settingsSaved": "Configuración guardada exitosamente",
+    "settingsSaveFailed": "Error al guardar la configuración"
+  }
+}

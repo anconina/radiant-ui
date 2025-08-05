@@ -1,0 +1,180 @@
+{
+  "app": {
+    "name": "Radiant UI",
+    "description": "Modern React application with advanced UI components"
+  },
+  "search": "Search",
+  "searchPlaceholder": "Type to search...",
+  "cancel": "Cancel",
+  "notifications": "Notifications",
+  "create": "Create",
+  "recentSearches": "Recent searches",
+  "common": {
+    "search": "Search",
+    "searchPlaceholder": "Type to search...",
+    "cancel": "Cancel",
+    "notifications": "Notifications",
+    "create": "Create",
+    "recentSearches": "Recent searches"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "signUp": "Sign Up",
+    "main": "Main",
+    "platform": "Platform",
+    "administration": "Administration",
+    "users": "Users",
+    "notifications": "Notifications",
+    "helpSupport": "Help & Support",
+    "adminDashboard": "Admin Dashboard",
+    "components": "Components",
+    "examples": "Examples",
+    "uiComponents": "UI Components",
+    "forms": "Forms",
+    "dataDisplay": "Data Display",
+    "urlState": "URL State",
+    "responsiveDesign": "Responsive Design",
+    "loadingStates": "Loading States",
+    "rtlSupport": "RTL Support",
+    "dataTable": "Data Table",
+    "projects": "Projects",
+    "accountStatus": "Account Status",
+    "billing": "Billing",
+    "calendar": "Calendar",
+    "support": "Support",
+    "help": "Help"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "download": "Download",
+    "upload": "Upload",
+    "share": "Share",
+    "copy": "Copy",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "confirm": "Confirm",
+    "retry": "Retry",
+    "toggle": "Toggle",
+    "viewDetails": "View Details",
+    "more": "More"
+  },
+  "status": {
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Information",
+    "pending": "Pending",
+    "completed": "Completed",
+    "failed": "Failed",
+    "online": "Online",
+    "offline": "Offline"
+  },
+  "messages": {
+    "welcome": "Welcome back, {{name}}!",
+    "goodbye": "Goodbye!",
+    "saved": "Changes saved successfully",
+    "deleted": "Item deleted successfully",
+    "created": "Item created successfully",
+    "updated": "Item updated successfully",
+    "error": "Something went wrong",
+    "offline": "You are currently offline",
+    "noData": "No data available",
+    "noResults": "No results found",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "unsavedChanges": "You have unsaved changes. Are you sure you want to leave?",
+    "and": "and"
+  },
+  "time": {
+    "now": "Now",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "days": "{{count}} day",
+    "days_other": "{{count}} days",
+    "hours": "{{count}} hour",
+    "hours_other": "{{count}} hours",
+    "minutes": "{{count}} minute",
+    "minutes_other": "{{count}} minutes",
+    "seconds": "{{count}} second",
+    "seconds_other": "{{count}} seconds"
+  },
+  "pagination": {
+    "first": "First",
+    "last": "Last",
+    "next": "Next",
+    "previous": "Previous",
+    "page": "Page {{page}} of {{total}}",
+    "showing": "Showing {{from}} to {{to}} of {{total}} results",
+    "perPage": "Per page"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "select": "Select language",
+    "change": "Change language"
+  },
+  "sidebar": {
+    "toggleSidebar": "Toggle sidebar",
+    "searchPlaceholder": "Type to search...",
+    "guest": "Guest",
+    "guestEmail": "guest@example.com",
+    "switchToRtl": "Switch to RTL",
+    "switchToLtr": "Switch to LTR"
+  },
+  "projects": {
+    "designEngineering": "Design Engineering",
+    "salesMarketing": "Sales & Marketing",
+    "travel": "Travel"
+  },
+  "footer": {
+    "description": "A modern React template with TypeScript, Vite, and shadcn/ui.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "changelog": "Changelog",
+      "roadmap": "Roadmap"
+    },
+    "resources": {
+      "title": "Resources",
+      "documentation": "Documentation",
+      "guides": "Guides",
+      "apiReference": "API Reference",
+      "blog": "Blog"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "contact": "Contact",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    },
+    "copyright": "© {{year}} Radiant UI. All rights reserved.",
+    "madeWith": "Built with",
+    "using": "using React & TypeScript"
+  }
+}

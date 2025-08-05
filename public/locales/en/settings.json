@@ -1,0 +1,133 @@
+{
+  "title": "Settings",
+  "subtitle": "Manage your account settings and preferences",
+  "tabs": {
+    "appearance": "Appearance",
+    "language": "Language",
+    "notifications": "Notifications",
+    "privacy": "Privacy"
+  },
+  "actions": {
+    "save": "Save Settings",
+    "saveChanges": "Save Changes",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "reset": "Reset"
+  },
+  "appearance": {
+    "title": "Theme",
+    "description": "Customize how the application looks on your device",
+    "colorTheme": "Color Theme",
+    "fontSize": "Font Size",
+    "fontSizeDescription": "Adjust the base font size for better readability",
+    "reducedMotion": "Reduced Motion",
+    "reducedMotionDescription": "Minimize animations and transitions",
+    "highContrast": "High Contrast",
+    "highContrastDescription": "Increase contrast for better visibility",
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    }
+  },
+  "language": {
+    "title": "Language & Region",
+    "description": "Set your language and regional preferences",
+    "language": "Language",
+    "region": "Region",
+    "dateFormat": "Date Format",
+    "timeFormat": "Time Format",
+    "firstDayOfWeek": "First Day of Week",
+    "regions": {
+      "US": "United States",
+      "GB": "United Kingdom",
+      "CA": "Canada",
+      "AU": "Australia",
+      "DE": "Germany",
+      "FR": "France",
+      "JP": "Japan",
+      "CN": "China"
+    },
+    "timeFormats": {
+      "12h": "12-hour (AM/PM)",
+      "24h": "24-hour"
+    },
+    "weekDays": {
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "saturday": "Saturday"
+    },
+    "placeholders": {
+      "selectRegion": "Select region",
+      "selectDateFormat": "Select date format",
+      "selectTimeFormat": "Select time format",
+      "selectFirstDay": "Select first day"
+    }
+  },
+  "notifications": {
+    "title": "Notification Preferences",
+    "description": "Choose how you want to receive notifications",
+    "channels": {
+      "email": "Email",
+      "push": "Push",
+      "sms": "SMS"
+    },
+    "types": {
+      "updates": {
+        "label": "Product Updates",
+        "description": "News about product features and improvements"
+      },
+      "security": {
+        "label": "Security Alerts",
+        "description": "Important security notifications and alerts"
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Promotional content and special offers"
+      },
+      "reminders": {
+        "label": "Reminders",
+        "description": "Task reminders and deadline notifications"
+      }
+    },
+    "schedule": {
+      "title": "Notification Schedule",
+      "description": "Set quiet hours when you don't want to be disturbed",
+      "quietHours": "Quiet Hours",
+      "quietHoursDescription": "Pause non-urgent notifications during specified hours",
+      "startTime": "Start Time",
+      "endTime": "End Time"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Settings",
+    "description": "Control your privacy and data sharing preferences",
+    "profileVisibility": "Profile Visibility",
+    "profileOptions": {
+      "public": "Public - Anyone can see your profile",
+      "friends": "Friends Only - Only your connections can see",
+      "private": "Private - Only you can see your profile"
+    },
+    "showEmail": "Show Email Address",
+    "showEmailDescription": "Display your email on your public profile",
+    "showPhone": "Show Phone Number",
+    "showPhoneDescription": "Display your phone number on your public profile",
+    "searchIndexing": "Search Engine Indexing",
+    "searchIndexingDescription": "Allow search engines to index your profile",
+    "dataCollection": "Usage Analytics",
+    "dataCollectionDescription": "Help improve our services by sharing usage data",
+    "dataManagement": {
+      "title": "Data Management",
+      "description": "Manage your personal data and account",
+      "exportData": "Export Your Data",
+      "exportDataDescription": "Download a copy of all your data",
+      "requestExport": "Request Export",
+      "deleteAccount": "Delete Account",
+      "deleteAccountDescription": "Permanently delete your account and all data"
+    }
+  },
+  "messages": {
+    "settingsSaved": "Settings saved successfully",
+    "settingsSaveFailed": "Failed to save settings"
+  }
+}

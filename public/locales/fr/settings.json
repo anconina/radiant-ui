@@ -1,0 +1,133 @@
+{
+  "title": "Paramètres",
+  "subtitle": "Gérez les paramètres et préférences de votre compte",
+  "tabs": {
+    "appearance": "Apparence",
+    "language": "Langue",
+    "notifications": "Notifications",
+    "privacy": "Confidentialité"
+  },
+  "actions": {
+    "save": "Enregistrer les paramètres",
+    "saveChanges": "Enregistrer les modifications",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+    "reset": "Réinitialiser"
+  },
+  "appearance": {
+    "title": "Thème",
+    "description": "Personnalisez l'apparence de l'application sur votre appareil",
+    "colorTheme": "Thème de couleur",
+    "fontSize": "Taille de police",
+    "fontSizeDescription": "Ajustez la taille de base de la police pour une meilleure lisibilité",
+    "reducedMotion": "Mouvement réduit",
+    "reducedMotionDescription": "Minimiser les animations et transitions",
+    "highContrast": "Contraste élevé",
+    "highContrastDescription": "Augmenter le contraste pour une meilleure visibilité",
+    "themes": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    }
+  },
+  "language": {
+    "title": "Langue et région",
+    "description": "Définissez vos préférences de langue et de région",
+    "language": "Langue",
+    "region": "Région",
+    "dateFormat": "Format de date",
+    "timeFormat": "Format d'heure",
+    "firstDayOfWeek": "Premier jour de la semaine",
+    "regions": {
+      "US": "États-Unis",
+      "GB": "Royaume-Uni",
+      "CA": "Canada",
+      "AU": "Australie",
+      "DE": "Allemagne",
+      "FR": "France",
+      "JP": "Japon",
+      "CN": "Chine"
+    },
+    "timeFormats": {
+      "12h": "12 heures (AM/PM)",
+      "24h": "24 heures"
+    },
+    "weekDays": {
+      "sunday": "Dimanche",
+      "monday": "Lundi",
+      "saturday": "Samedi"
+    },
+    "placeholders": {
+      "selectRegion": "Sélectionner la région",
+      "selectDateFormat": "Sélectionner le format de date",
+      "selectTimeFormat": "Sélectionner le format d'heure",
+      "selectFirstDay": "Sélectionner le premier jour"
+    }
+  },
+  "notifications": {
+    "title": "Préférences de notification",
+    "description": "Choisissez comment vous souhaitez recevoir les notifications",
+    "channels": {
+      "email": "E-mail",
+      "push": "Push",
+      "sms": "SMS"
+    },
+    "types": {
+      "updates": {
+        "label": "Mises à jour produit",
+        "description": "Actualités sur les fonctionnalités et améliorations du produit"
+      },
+      "security": {
+        "label": "Alertes de sécurité",
+        "description": "Notifications et alertes de sécurité importantes"
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Contenu promotionnel et offres spéciales"
+      },
+      "reminders": {
+        "label": "Rappels",
+        "description": "Rappels de tâches et notifications d'échéances"
+      }
+    },
+    "schedule": {
+      "title": "Horaire des notifications",
+      "description": "Définissez des heures silencieuses où vous ne voulez pas être dérangé",
+      "quietHours": "Heures silencieuses",
+      "quietHoursDescription": "Suspendre les notifications non urgentes pendant les heures spécifiées",
+      "startTime": "Heure de début",
+      "endTime": "Heure de fin"
+    }
+  },
+  "privacy": {
+    "title": "Paramètres de confidentialité",
+    "description": "Contrôlez vos préférences de confidentialité et de partage des données",
+    "profileVisibility": "Visibilité du profil",
+    "profileOptions": {
+      "public": "Public - Tout le monde peut voir votre profil",
+      "friends": "Amis uniquement - Seules vos connexions peuvent voir",
+      "private": "Privé - Vous seul pouvez voir votre profil"
+    },
+    "showEmail": "Afficher l'adresse e-mail",
+    "showEmailDescription": "Afficher votre e-mail sur votre profil public",
+    "showPhone": "Afficher le numéro de téléphone",
+    "showPhoneDescription": "Afficher votre numéro de téléphone sur votre profil public",
+    "searchIndexing": "Indexation par les moteurs de recherche",
+    "searchIndexingDescription": "Permettre aux moteurs de recherche d'indexer votre profil",
+    "dataCollection": "Analyses d'utilisation",
+    "dataCollectionDescription": "Aidez à améliorer nos services en partageant les données d'utilisation",
+    "dataManagement": {
+      "title": "Gestion des données",
+      "description": "Gérez vos données personnelles et votre compte",
+      "exportData": "Exporter vos données",
+      "exportDataDescription": "Télécharger une copie de toutes vos données",
+      "requestExport": "Demander l'exportation",
+      "deleteAccount": "Supprimer le compte",
+      "deleteAccountDescription": "Supprimer définitivement votre compte et toutes les données"
+    }
+  },
+  "messages": {
+    "settingsSaved": "Paramètres enregistrés avec succès",
+    "settingsSaveFailed": "Échec de l'enregistrement des paramètres"
+  }
+}

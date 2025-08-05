@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "Benutzer",
+    "subtitle": "Benutzerkonten verwalten und überwachen",
+    "addUser": "Benutzer Hinzufügen"
+  },
+  "stats": {
+    "totalUsers": "Benutzer Gesamt",
+    "activeUsers": "Aktive Benutzer",
+    "adminUsers": "Administrator Benutzer",
+    "totalUsersDescription": "+{{count}} vom letzten Monat",
+    "activeUsersDescription": "{{percentage}}% der Gesamtzahl",
+    "adminUsersDescription": "Mit vollem Zugriff"
+  },
+  "table": {
+    "title": "Benutzerverwaltung",
+    "description": "Alle registrierten Benutzer anzeigen und verwalten",
+    "searchPlaceholder": "Benutzer suchen...",
+    "noResults": "Keine Benutzer gefunden",
+    "headers": {
+      "user": "Benutzer",
+      "role": "Rolle",
+      "status": "Status",
+      "joined": "Beigetreten",
+      "actions": "Aktionen"
+    }
+  },
+  "roles": {
+    "admin": "Administrator",
+    "user": "Benutzer",
+    "moderator": "Moderator"
+  },
+  "statuses": {
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "pending": "Ausstehend"
+  },
+  "actions": {
+    "openMenu": "Menü öffnen",
+    "edit": "Bearbeiten",
+    "sendEmail": "E-Mail senden",
+    "delete": "Löschen"
+  }
+}

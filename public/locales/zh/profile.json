@@ -1,0 +1,120 @@
+{
+  "title": "个人资料",
+  "subtitle": "管理您的个人信息和偏好",
+  "tabs": {
+    "general": "基本信息",
+    "professional": "职业信息",
+    "security": "安全"
+  },
+  "userCard": {
+    "role": "用户"
+  },
+  "accountStats": {
+    "title": "账户统计",
+    "memberSince": "注册时间",
+    "lastActive": "最后活跃",
+    "status": "状态",
+    "active": "活跃"
+  },
+  "general": {
+    "title": "个人信息",
+    "description": "更新您的个人详细信息和联系信息",
+    "fullName": "姓名",
+    "email": "邮箱",
+    "phoneNumber": "电话号码",
+    "location": "位置",
+    "bio": "个人简介",
+    "bioPlaceholder": "介绍一下您自己...",
+    "website": "网站",
+    "placeholders": {
+      "fullName": "张三",
+      "email": "zhang@example.com",
+      "phoneNumber": "+86 138 0013 8000",
+      "location": "北京，中国",
+      "website": "https://example.com"
+    }
+  },
+  "professional": {
+    "title": "职业信息",
+    "description": "管理您的工作相关信息和偏好",
+    "company": "公司",
+    "position": "职位",
+    "department": "部门",
+    "timezone": "时区",
+    "preferredLanguage": "首选语言",
+    "placeholders": {
+      "company": "阿里巴巴集团",
+      "position": "软件工程师",
+      "selectDepartment": "选择部门",
+      "selectTimezone": "选择时区",
+      "selectLanguage": "选择语言"
+    },
+    "departments": {
+      "engineering": "工程",
+      "design": "设计",
+      "marketing": "市场营销",
+      "sales": "销售",
+      "support": "支持",
+      "hr": "人力资源",
+      "other": "其他"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "东部时间",
+      "centralTime": "中部时间",
+      "mountainTime": "山地时间",
+      "pacificTime": "太平洋时间",
+      "london": "伦敦",
+      "paris": "巴黎",
+      "tokyo": "东京"
+    },
+    "languages": {
+      "english": "英语",
+      "spanish": "西班牙语",
+      "french": "法语",
+      "german": "德语",
+      "japanese": "日语",
+      "chinese": "中文"
+    }
+  },
+  "security": {
+    "title": "安全设置",
+    "description": "管理您的账户安全和隐私偏好",
+    "twoFactorAuth": "双重认证",
+    "twoFactorAuthDescription": "为您的账户添加额外的安全层",
+    "emailNotifications": "邮件通知",
+    "emailNotificationsDescription": "通过邮件接收安全警报",
+    "recentActivity": "最近活动",
+    "lastLogin": "最后登录",
+    "lastPasswordChange": "最后密码更改",
+    "activeSessions": "活跃会话",
+    "changePassword": "更改密码",
+    "enable": "启用",
+    "configure": "配置",
+    "activityValues": {
+      "todayAt": "今天 9:15",
+      "monthsAgo": "3个月前",
+      "devices": "2台设备"
+    }
+  },
+  "actions": {
+    "save": "保存更改",
+    "saving": "保存中...",
+    "cancel": "取消",
+    "deleteAccount": "删除账户"
+  },
+  "messages": {
+    "updateSuccess": "个人资料更新成功",
+    "updateError": "个人资料更新失败",
+    "avatarUpdateSuccess": "头像更新成功",
+    "avatarUpdateError": "头像上传失败",
+    "invalidImageFile": "请上传图片文件",
+    "imageTooLarge": "图片大小应小于5MB"
+  },
+  "validation": {
+    "nameRequired": "姓名必须至少包含2个字符",
+    "invalidEmail": "无效的邮箱地址",
+    "bioTooLong": "个人简介必须少于500个字符",
+    "invalidUrl": "无效的URL"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "title": "プロフィール",
+  "subtitle": "個人情報と設定を管理",
+  "tabs": {
+    "general": "一般",
+    "professional": "職業",
+    "security": "セキュリティ"
+  },
+  "userCard": {
+    "role": "ユーザー"
+  },
+  "accountStats": {
+    "title": "アカウント統計",
+    "memberSince": "登録日",
+    "lastActive": "最終アクティブ",
+    "status": "ステータス",
+    "active": "アクティブ"
+  },
+  "general": {
+    "title": "個人情報",
+    "description": "個人の詳細と連絡先情報を更新",
+    "fullName": "氏名",
+    "email": "メール",
+    "phoneNumber": "電話番号",
+    "location": "場所",
+    "bio": "自己紹介",
+    "bioPlaceholder": "ご自身について教えてください...",
+    "website": "ウェブサイト",
+    "placeholders": {
+      "fullName": "山田太郎",
+      "email": "yamada@example.com",
+      "phoneNumber": "+81 90-1234-5678",
+      "location": "東京都、日本",
+      "website": "https://example.com"
+    }
+  },
+  "professional": {
+    "title": "職業情報",
+    "description": "職業関連の情報と設定を管理",
+    "company": "会社",
+    "position": "役職",
+    "department": "部署",
+    "timezone": "タイムゾーン",
+    "preferredLanguage": "優先言語",
+    "placeholders": {
+      "company": "Acme株式会社",
+      "position": "ソフトウェアエンジニア",
+      "selectDepartment": "部署を選択",
+      "selectTimezone": "タイムゾーンを選択",
+      "selectLanguage": "言語を選択"
+    },
+    "departments": {
+      "engineering": "エンジニアリング",
+      "design": "デザイン",
+      "marketing": "マーケティング",
+      "sales": "営業",
+      "support": "サポート",
+      "hr": "人事",
+      "other": "その他"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "東部時間",
+      "centralTime": "中部時間",
+      "mountainTime": "山岳時間",
+      "pacificTime": "太平洋時間",
+      "london": "ロンドン",
+      "paris": "パリ",
+      "tokyo": "東京"
+    },
+    "languages": {
+      "english": "英語",
+      "spanish": "スペイン語",
+      "french": "フランス語",
+      "german": "ドイツ語",
+      "japanese": "日本語",
+      "chinese": "中国語"
+    }
+  },
+  "security": {
+    "title": "セキュリティ設定",
+    "description": "アカウントセキュリティとプライバシー設定を管理",
+    "twoFactorAuth": "二要素認証",
+    "twoFactorAuthDescription": "アカウントに追加のセキュリティレイヤーを追加",
+    "emailNotifications": "メール通知",
+    "emailNotificationsDescription": "メールでセキュリティアラートを受信",
+    "recentActivity": "最近のアクティビティ",
+    "lastLogin": "最終ログイン",
+    "lastPasswordChange": "最終パスワード変更",
+    "activeSessions": "アクティブセッション",
+    "changePassword": "パスワードを変更",
+    "enable": "有効にする",
+    "configure": "設定",
+    "activityValues": {
+      "todayAt": "今日 9:15",
+      "monthsAgo": "3ヶ月前",
+      "devices": "2台のデバイス"
+    }
+  },
+  "actions": {
+    "save": "変更を保存",
+    "saving": "保存中...",
+    "cancel": "キャンセル",
+    "deleteAccount": "アカウントを削除"
+  },
+  "messages": {
+    "updateSuccess": "プロフィールが正常に更新されました",
+    "updateError": "プロフィールの更新に失敗しました",
+    "avatarUpdateSuccess": "アバターが正常に更新されました",
+    "avatarUpdateError": "アバターのアップロードに失敗しました",
+    "invalidImageFile": "画像ファイルをアップロードしてください",
+    "imageTooLarge": "画像サイズは5MB未満である必要があります"
+  },
+  "validation": {
+    "nameRequired": "名前は2文字以上である必要があります",
+    "invalidEmail": "無効なメールアドレス",
+    "bioTooLong": "自己紹介は500文字未満である必要があります",
+    "invalidUrl": "無効なURL"
+  }
+}

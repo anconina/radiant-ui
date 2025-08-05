@@ -1,0 +1,36 @@
+{
+  "required": "{{field}}是必填项",
+  "email": "请输入有效的邮箱地址",
+  "minLength": "{{field}}必须至少包含{{min}}个字符",
+  "maxLength": "{{field}}不能超过{{max}}个字符",
+  "min": "{{field}}必须至少为{{min}}",
+  "max": "{{field}}不能超过{{max}}",
+  "pattern": "{{field}}格式无效",
+  "number": "{{field}}必须是数字",
+  "integer": "{{field}}必须是整数",
+  "positive": "{{field}}必须是正数",
+  "negative": "{{field}}必须是负数",
+  "url": "请输入有效的URL",
+  "date": "请输入有效的日期",
+  "time": "请输入有效的时间",
+  "dateTime": "请输入有效的日期和时间",
+  "match": "{{field}}必须与{{otherField}}匹配",
+  "unique": "{{field}}必须是唯一的",
+  "fileSize": "文件大小不能超过{{max}}",
+  "fileType": "无效的文件类型。允许的类型：{{types}}",
+  "imageSize": "图片尺寸必须为{{width}}x{{height}}",
+  "phoneNumber": "请输入有效的电话号码",
+  "postalCode": "请输入有效的邮政编码",
+  "creditCard": "请输入有效的信用卡号码",
+  "password": {
+    "weak": "密码太弱",
+    "medium": "密码强度中等",
+    "strong": "密码很强",
+    "requirements": "密码必须至少包含{{min}}个字符，包括大写字母、小写字母、数字和特殊字符"
+  },
+  "custom": {
+    "username": "用户名只能包含字母、数字和下划线",
+    "age": "您必须年满18岁",
+    "terms": "您必须接受条款和条件"
+  }
+}

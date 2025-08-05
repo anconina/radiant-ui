@@ -1,0 +1,120 @@
+{
+  "title": "الملف الشخصي",
+  "subtitle": "إدارة معلوماتك الشخصية وتفضيلاتك",
+  "tabs": {
+    "general": "عام",
+    "professional": "مهني",
+    "security": "الأمان"
+  },
+  "userCard": {
+    "role": "مستخدم"
+  },
+  "accountStats": {
+    "title": "إحصائيات الحساب",
+    "memberSince": "عضو منذ",
+    "lastActive": "آخر نشاط",
+    "status": "الحالة",
+    "active": "نشط"
+  },
+  "general": {
+    "title": "المعلومات الشخصية",
+    "description": "تحديث تفاصيلك الشخصية ومعلومات الاتصال",
+    "fullName": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "phoneNumber": "رقم الهاتف",
+    "location": "الموقع",
+    "bio": "السيرة الذاتية",
+    "bioPlaceholder": "أخبرنا عن نفسك...",
+    "website": "الموقع الإلكتروني",
+    "placeholders": {
+      "fullName": "أحمد محمد",
+      "email": "ahmed@example.com",
+      "phoneNumber": "+966 50 123 4567",
+      "location": "الرياض، المملكة العربية السعودية",
+      "website": "https://example.com"
+    }
+  },
+  "professional": {
+    "title": "المعلومات المهنية",
+    "description": "إدارة معلوماتك وتفضيلاتك المتعلقة بالعمل",
+    "company": "الشركة",
+    "position": "المنصب",
+    "department": "القسم",
+    "timezone": "المنطقة الزمنية",
+    "preferredLanguage": "اللغة المفضلة",
+    "placeholders": {
+      "company": "شركة الأحلام",
+      "position": "مهندس برمجيات",
+      "selectDepartment": "اختيار القسم",
+      "selectTimezone": "اختيار المنطقة الزمنية",
+      "selectLanguage": "اختيار اللغة"
+    },
+    "departments": {
+      "engineering": "الهندسة",
+      "design": "التصميم",
+      "marketing": "التسويق",
+      "sales": "المبيعات",
+      "support": "الدعم",
+      "hr": "الموارد البشرية",
+      "other": "أخرى"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "التوقيت الشرقي",
+      "centralTime": "التوقيت المركزي",
+      "mountainTime": "توقيت الجبال",
+      "pacificTime": "توقيت المحيط الهادئ",
+      "london": "لندن",
+      "paris": "باريس",
+      "tokyo": "طوكيو"
+    },
+    "languages": {
+      "english": "الإنجليزية",
+      "spanish": "الإسبانية",
+      "french": "الفرنسية",
+      "german": "الألمانية",
+      "japanese": "اليابانية",
+      "chinese": "الصينية"
+    }
+  },
+  "security": {
+    "title": "إعدادات الأمان",
+    "description": "إدارة أمان حسابك وتفضيلات الخصوصية",
+    "twoFactorAuth": "المصادقة الثنائية",
+    "twoFactorAuthDescription": "إضافة طبقة أمان إضافية لحسابك",
+    "emailNotifications": "إشعارات البريد الإلكتروني",
+    "emailNotificationsDescription": "تلقي تنبيهات الأمان عبر البريد الإلكتروني",
+    "recentActivity": "النشاط الأخير",
+    "lastLogin": "آخر تسجيل دخول",
+    "lastPasswordChange": "آخر تغيير كلمة مرور",
+    "activeSessions": "الجلسات النشطة",
+    "changePassword": "تغيير كلمة المرور",
+    "enable": "تفعيل",
+    "configure": "تكوين",
+    "activityValues": {
+      "todayAt": "اليوم في 9:15",
+      "monthsAgo": "منذ 3 أشهر",
+      "devices": "جهازان"
+    }
+  },
+  "actions": {
+    "save": "حفظ التغييرات",
+    "saving": "جاري الحفظ...",
+    "cancel": "إلغاء",
+    "deleteAccount": "حذف الحساب"
+  },
+  "messages": {
+    "updateSuccess": "تم تحديث الملف الشخصي بنجاح",
+    "updateError": "فشل في تحديث الملف الشخصي",
+    "avatarUpdateSuccess": "تم تحديث الصورة الشخصية بنجاح",
+    "avatarUpdateError": "فشل في رفع الصورة الشخصية",
+    "invalidImageFile": "يرجى رفع ملف صورة",
+    "imageTooLarge": "يجب أن يكون حجم الصورة أقل من 5 ميجابايت"
+  },
+  "validation": {
+    "nameRequired": "يجب أن يحتوي الاسم على حرفين على الأقل",
+    "invalidEmail": "عنوان بريد إلكتروني غير صالح",
+    "bioTooLong": "يجب أن تكون السيرة الذاتية أقل من 500 حرف",
+    "invalidUrl": "رابط غير صالح"
+  }
+}

@@ -1,0 +1,201 @@
+/**
+ * Global RTL (Right-to-Left) Support Styles
+ * 
+ * This file provides automatic bidirectional text support without requiring
+ * manual CSS classes. It works by leveraging the dir attribute set on the
+ * document root element.
+ */
+
+/* CSS Custom Properties for Direction */
+[dir='rtl'] {
+  --direction: rtl;
+  --text-align: right;
+  --text-align-opposite: left;
+  --flex-direction: row-reverse;
+}
+
+[dir='ltr'] {
+  --direction: ltr;
+  --text-align: left;
+  --text-align-opposite: right;
+  --flex-direction: row;
+}
+
+/* Automatic Text Alignment */
+/* Apply start alignment to all text-containing elements by default */
+/* Commented out - too broad, interferes with Tailwind utilities
+[dir] {
+  text-align: start;
+}
+*/
+
+/* Allow utility classes to override text alignment */
+/* Removed the global inherit rule to allow Tailwind utilities to work properly */
+
+/* Form Controls and Interactive Elements */
+/* These elements should align their text content automatically */
+[dir] input:not([type='checkbox']):not([type='radio']):not([type='range']),
+[dir] textarea,
+[dir] select,
+[dir] button:not(.icon-only),
+[dir] [role='button']:not(.icon-only),
+[dir] [role='combobox'],
+[dir] [role='listbox'],
+[dir] [role='option'],
+[dir] [role='menuitem'],
+[dir] [data-radix-collection-item] {
+  text-align: start;
+}
+
+/* Select trigger specific fix for Radix UI */
+[dir] [data-slot='select-trigger'] {
+  text-align: start;
+}
+
+/* Dropdown and menu items */
+[dir] [role='menu'] [role='menuitem'],
+[dir] [role='listbox'] [role='option'],
+[dir] [data-slot='select-item'] {
+  text-align: start;
+}
+
+/* Navigation items */
+[dir] nav a,
+[dir] nav button,
+[dir] [role='navigation'] a,
+[dir] [role='navigation'] button {
+  text-align: start;
+}
+
+/* Card and list content */
+/* Removed automatic text alignment to allow Tailwind utilities to work properly */
+
+/* Preserve specific alignments */
+/* Elements with explicit center alignment should stay centered */
+[dir] .text-center,
+[dir] [data-align='center'] {
+  text-align: center !important;
+}
+
+/* Elements with explicit end alignment */
+[dir] .text-end,
+[dir] [data-align='end'] {
+  text-align: end !important;
+}
+
+/* Elements with explicit justify alignment */
+[dir] .text-justify,
+[dir] [data-align='justify'] {
+  text-align: justify !important;
+}
+
+/* Tables need special handling */
+[dir] th,
+[dir] td {
+  text-align: start;
+}
+
+[dir] th.text-center,
+[dir] td.text-center,
+[dir] th[data-align='center'],
+[dir] td[data-align='center'] {
+  text-align: center !important;
+}
+
+[dir] th.text-end,
+[dir] td.text-end,
+[dir] th[data-align='end'],
+[dir] td[data-align='end'] {
+  text-align: end !important;
+}
+
+/* Flexbox Direction Adjustments */
+/* Automatically reverse flex direction for common patterns */
+[dir='rtl'] .flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .flex-row-reverse {
+  flex-direction: row;
+}
+
+/* Icon Adjustments */
+/* Auto-flip certain icons in RTL */
+[dir='rtl'] [data-flip='auto'] svg,
+[dir='rtl'] [data-flip='auto'] img {
+  transform: scaleX(-1);
+}
+
+/* Directional Utilities (Use Sparingly) */
+/* Override utilities for exceptional cases */
+.dir-override-ltr {
+  direction: ltr !important;
+}
+
+.dir-override-rtl {
+  direction: rtl !important;
+}
+
+.align-override-start {
+  text-align: start !important;
+}
+
+.align-override-end {
+  text-align: end !important;
+}
+
+/* Ensure Radix UI Popovers respect direction */
+[dir='rtl'] [data-radix-popper-content-wrapper] {
+  text-align: start;
+}
+
+/* Fix for Radix UI Select content */
+[dir] [role='listbox'] {
+  text-align: start;
+}
+
+/* Tooltip alignment */
+[dir] [role='tooltip'] {
+  text-align: start;
+}
+
+/* Dialog and Modal content */
+[dir] [role='dialog'] h1,
+[dir] [role='dialog'] h2,
+[dir] [role='dialog'] h3,
+[dir] [role='dialog'] h4,
+[dir] [role='dialog'] h5,
+[dir] [role='dialog'] h6,
+[dir] [role='dialog'] p {
+  text-align: start;
+}
+
+/* Alert and Toast content */
+[dir] [role='alert'],
+[dir] [role='status'] {
+  text-align: start;
+}
+
+/* Breadcrumb alignment */
+[dir] [aria-label='breadcrumb'] ol,
+[dir] nav[aria-label='breadcrumb'] ol {
+  text-align: start;
+}
+
+/* Code blocks should remain LTR */
+[dir] pre,
+[dir] code,
+[dir] kbd,
+[dir] samp {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Ensure number inputs remain LTR */
+[dir] input[type='number'],
+[dir] input[type='tel'],
+[dir] input[type='date'],
+[dir] input[type='time'],
+[dir] input[type='datetime-local'] {
+  direction: ltr;
+}

@@ -1,0 +1,48 @@
+{
+  "title": "لوحة التحكم",
+  "subtitle": "نظرة عامة على عملك",
+  "welcome": "مرحباً بعودتك، {{name}}!",
+  "refresh": "تحديث",
+  "today": "اليوم",
+  "thisWeek": "هذا الأسبوع",
+  "thisMonth": "هذا الشهر",
+  "download": "تنزيل",
+  "downloadCsv": "تنزيل كـ CSV",
+  "downloadJson": "تنزيل كـ JSON",
+  "downloadPdf": "تنزيل كـ PDF",
+  "exporting": "جاري التصدير...",
+  "totalRevenue": "إجمالي الإيرادات",
+  "totalUsers": "إجمالي المستخدمين",
+  "totalOrders": "إجمالي الطلبات",
+  "activeNow": "نشط الآن",
+  "revenue": "الإيرادات",
+  "revenueDescription": "إيراداتك عبر الزمن",
+  "activity": "النشاط",
+  "activityDescription": "تفصيل نشاط المستخدمين",
+  "recentSales": "المبيعات الأخيرة",
+  "recentSalesDescription": "لقد حققت 265 عملية بيع هذا الشهر",
+  "topProducts": "أهم المنتجات",
+  "topProductsDescription": "المنتجات الأفضل أداءً",
+  "overview": {
+    "title": "نظرة عامة",
+    "totalUsers": "إجمالي المستخدمين",
+    "activeUsers": "المستخدمون النشطون",
+    "revenue": "الإيرادات",
+    "growth": "النمو"
+  },
+  "charts": {
+    "userActivity": "نشاط المستخدمين",
+    "revenueAnalysis": "تحليل الإيرادات",
+    "performanceMetrics": "مقاييس الأداء"
+  },
+  "recentActivity": {
+    "title": "النشاط الأخير",
+    "noActivity": "لا يوجد نشاط أخير"
+  },
+  "quickActions": {
+    "title": "الإجراءات السريعة",
+    "viewReports": "عرض التقارير",
+    "manageUsers": "إدارة المستخدمين",
+    "settings": "الإعدادات"
+  }
+}

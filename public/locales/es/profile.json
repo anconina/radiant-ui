@@ -1,0 +1,120 @@
+{
+  "title": "Perfil",
+  "subtitle": "Gestione su información personal y preferencias",
+  "tabs": {
+    "general": "General",
+    "professional": "Profesional",
+    "security": "Seguridad"
+  },
+  "userCard": {
+    "role": "Usuario"
+  },
+  "accountStats": {
+    "title": "Estadísticas de la Cuenta",
+    "memberSince": "Miembro desde",
+    "lastActive": "Última actividad",
+    "status": "Estado",
+    "active": "Activo"
+  },
+  "general": {
+    "title": "Información Personal",
+    "description": "Actualice sus datos personales e información de contacto",
+    "fullName": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phoneNumber": "Número de Teléfono",
+    "location": "Ubicación",
+    "bio": "Biografía",
+    "bioPlaceholder": "Cuéntanos sobre ti...",
+    "website": "Sitio Web",
+    "placeholders": {
+      "fullName": "Juan Pérez",
+      "email": "juan@example.com",
+      "phoneNumber": "+34 912 345 678",
+      "location": "Madrid, España",
+      "website": "https://example.com"
+    }
+  },
+  "professional": {
+    "title": "Información Profesional",
+    "description": "Gestione su información y preferencias relacionadas con el trabajo",
+    "company": "Empresa",
+    "position": "Cargo",
+    "department": "Departamento",
+    "timezone": "Zona Horaria",
+    "preferredLanguage": "Idioma Preferido",
+    "placeholders": {
+      "company": "Empresa SA",
+      "position": "Ingeniero de Software",
+      "selectDepartment": "Seleccionar departamento",
+      "selectTimezone": "Seleccionar zona horaria",
+      "selectLanguage": "Seleccionar idioma"
+    },
+    "departments": {
+      "engineering": "Ingeniería",
+      "design": "Diseño",
+      "marketing": "Marketing",
+      "sales": "Ventas",
+      "support": "Soporte",
+      "hr": "Recursos Humanos",
+      "other": "Otro"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "Hora del Este",
+      "centralTime": "Hora Central",
+      "mountainTime": "Hora de las Montañas",
+      "pacificTime": "Hora del Pacífico",
+      "london": "Londres",
+      "paris": "París",
+      "tokyo": "Tokio"
+    },
+    "languages": {
+      "english": "Inglés",
+      "spanish": "Español",
+      "french": "Francés",
+      "german": "Alemán",
+      "japanese": "Japonés",
+      "chinese": "Chino"
+    }
+  },
+  "security": {
+    "title": "Configuración de Seguridad",
+    "description": "Gestione la seguridad de su cuenta y preferencias de privacidad",
+    "twoFactorAuth": "Autenticación de dos factores",
+    "twoFactorAuthDescription": "Agregue una capa adicional de seguridad a su cuenta",
+    "emailNotifications": "Notificaciones por correo electrónico",
+    "emailNotificationsDescription": "Reciba alertas de seguridad por correo electrónico",
+    "recentActivity": "Actividad Reciente",
+    "lastLogin": "Último inicio de sesión",
+    "lastPasswordChange": "Último cambio de contraseña",
+    "activeSessions": "Sesiones activas",
+    "changePassword": "Cambiar Contraseña",
+    "enable": "Habilitar",
+    "configure": "Configurar",
+    "activityValues": {
+      "todayAt": "Hoy a las 9:15",
+      "monthsAgo": "Hace 3 meses",
+      "devices": "2 dispositivos"
+    }
+  },
+  "actions": {
+    "save": "Guardar Cambios",
+    "saving": "Guardando...",
+    "cancel": "Cancelar",
+    "deleteAccount": "Eliminar Cuenta"
+  },
+  "messages": {
+    "updateSuccess": "Perfil actualizado exitosamente",
+    "updateError": "Error al actualizar el perfil",
+    "avatarUpdateSuccess": "Avatar actualizado exitosamente",
+    "avatarUpdateError": "Error al subir el avatar",
+    "invalidImageFile": "Por favor sube un archivo de imagen",
+    "imageTooLarge": "El tamaño de la imagen debe ser menor a 5MB"
+  },
+  "validation": {
+    "nameRequired": "El nombre debe tener al menos 2 caracteres",
+    "invalidEmail": "Dirección de correo electrónico inválida",
+    "bioTooLong": "La biografía debe tener menos de 500 caracteres",
+    "invalidUrl": "URL inválida"
+  }
+}

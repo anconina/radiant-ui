@@ -1,0 +1,48 @@
+{
+  "title": "לוח בקרה",
+  "subtitle": "העסק שלך במבט אחד",
+  "welcome": "ברוך הבא, {{name}}!",
+  "refresh": "רענן",
+  "today": "היום",
+  "thisWeek": "השבוע",
+  "thisMonth": "החודש",
+  "download": "הורדה",
+  "downloadCsv": "הורד כ-CSV",
+  "downloadJson": "הורד כ-JSON",
+  "downloadPdf": "הורד כ-PDF",
+  "exporting": "מייצא...",
+  "totalRevenue": "סך כל ההכנסות",
+  "totalUsers": "סך כל המשתמשים",
+  "totalOrders": "סך כל ההזמנות",
+  "activeNow": "פעילים כעת",
+  "revenue": "הכנסות",
+  "revenueDescription": "ההכנסות שלך לאורך זמן",
+  "activity": "פעילות",
+  "activityDescription": "פירוט פעילות המשתמשים",
+  "recentSales": "מכירות אחרונות",
+  "recentSalesDescription": "ביצעת 265 מכירות החודש",
+  "topProducts": "מוצרים מובילים",
+  "topProductsDescription": "המוצרים עם הביצועים הטובים ביותר",
+  "overview": {
+    "title": "סקירה כללית",
+    "totalUsers": "סך כל המשתמשים",
+    "activeUsers": "משתמשים פעילים",
+    "revenue": "הכנסות",
+    "growth": "צמיחה"
+  },
+  "charts": {
+    "userActivity": "פעילות משתמשים",
+    "revenueAnalysis": "ניתוח הכנסות",
+    "performanceMetrics": "מדדי ביצועים"
+  },
+  "recentActivity": {
+    "title": "פעילות אחרונה",
+    "noActivity": "אין פעילות אחרונה"
+  },
+  "quickActions": {
+    "title": "פעולות מהירות",
+    "viewReports": "צפה בדוחות",
+    "manageUsers": "ניהול משתמשים",
+    "settings": "הגדרות"
+  }
+}

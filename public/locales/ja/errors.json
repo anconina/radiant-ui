@@ -1,0 +1,46 @@
+{
+  "generic": {
+    "title": "エラーが発生しました",
+    "message": "予期しないエラーが発生しました。後でもう一度お試しください。"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "message": "お探しのページは存在しないか、移動されました。",
+    "code": "404"
+  },
+  "unauthorized": {
+    "title": "認証が必要です",
+    "message": "このリソースにアクセスする権限がありません。",
+    "code": "401"
+  },
+  "forbidden": {
+    "title": "アクセス禁止",
+    "message": "このリソースへのアクセスは禁止されています。",
+    "code": "403"
+  },
+  "serverError": {
+    "title": "サーバーエラー",
+    "message": "サーバーでエラーが発生し、リクエストを完了できませんでした。",
+    "code": "500"
+  },
+  "networkError": {
+    "title": "ネットワークエラー",
+    "message": "サーバーに接続できません。インターネット接続を確認してください。"
+  },
+  "validationError": {
+    "title": "検証エラー",
+    "message": "入力内容を確認して、もう一度お試しください。"
+  },
+  "actions": {
+    "goHome": "ホームページへ",
+    "goBack": "戻る",
+    "retry": "再試行",
+    "refresh": "ページを更新",
+    "contactSupport": "サポートに連絡"
+  },
+  "details": {
+    "errorCode": "エラーコード",
+    "timestamp": "タイムスタンプ",
+    "requestId": "リクエストID"
+  }
+}

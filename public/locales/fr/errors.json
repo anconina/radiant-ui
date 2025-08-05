@@ -1,0 +1,46 @@
+{
+  "generic": {
+    "title": "Oups ! Une erreur s'est produite",
+    "message": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard."
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "message": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "code": "404"
+  },
+  "unauthorized": {
+    "title": "Non autorisé",
+    "message": "Vous n'avez pas l'autorisation d'accéder à cette ressource.",
+    "code": "401"
+  },
+  "forbidden": {
+    "title": "Interdit",
+    "message": "L'accès à cette ressource est interdit.",
+    "code": "403"
+  },
+  "serverError": {
+    "title": "Erreur du serveur",
+    "message": "Le serveur a rencontré une erreur et n'a pas pu traiter votre demande.",
+    "code": "500"
+  },
+  "networkError": {
+    "title": "Erreur réseau",
+    "message": "Impossible de se connecter au serveur. Veuillez vérifier votre connexion Internet."
+  },
+  "validationError": {
+    "title": "Erreur de validation",
+    "message": "Veuillez vérifier votre saisie et réessayer."
+  },
+  "actions": {
+    "goHome": "Aller à l'accueil",
+    "goBack": "Retour",
+    "retry": "Réessayer",
+    "refresh": "Actualiser la page",
+    "contactSupport": "Contacter le support"
+  },
+  "details": {
+    "errorCode": "Code d'erreur",
+    "timestamp": "Horodatage",
+    "requestId": "ID de la demande"
+  }
+}

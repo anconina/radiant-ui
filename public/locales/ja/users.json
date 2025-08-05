@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "ユーザー",
+    "subtitle": "ユーザーアカウントの管理と監視",
+    "addUser": "ユーザー追加"
+  },
+  "stats": {
+    "totalUsers": "総ユーザー数",
+    "activeUsers": "アクティブユーザー",
+    "adminUsers": "管理者ユーザー",
+    "totalUsersDescription": "先月から+{{count}}",
+    "activeUsersDescription": "全体の{{percentage}}%",
+    "adminUsersDescription": "フルアクセス権限"
+  },
+  "table": {
+    "title": "ユーザー管理",
+    "description": "すべての登録ユーザーを表示・管理",
+    "searchPlaceholder": "ユーザーを検索...",
+    "noResults": "ユーザーが見つかりません",
+    "headers": {
+      "user": "ユーザー",
+      "role": "ロール",
+      "status": "ステータス",
+      "joined": "参加日",
+      "actions": "アクション"
+    }
+  },
+  "roles": {
+    "admin": "管理者",
+    "user": "ユーザー",
+    "moderator": "モデレーター"
+  },
+  "statuses": {
+    "active": "アクティブ",
+    "inactive": "非アクティブ",
+    "pending": "保留中"
+  },
+  "actions": {
+    "openMenu": "メニューを開く",
+    "edit": "編集",
+    "sendEmail": "メール送信",
+    "delete": "削除"
+  }
+}

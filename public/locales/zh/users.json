@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "用户",
+    "subtitle": "管理和监控用户账户",
+    "addUser": "添加用户"
+  },
+  "stats": {
+    "totalUsers": "总用户数",
+    "activeUsers": "活跃用户",
+    "adminUsers": "管理员用户",
+    "totalUsersDescription": "比上月增加{{count}}",
+    "activeUsersDescription": "占总数的{{percentage}}%",
+    "adminUsersDescription": "拥有完全访问权限"
+  },
+  "table": {
+    "title": "用户管理",
+    "description": "查看和管理所有注册用户",
+    "searchPlaceholder": "搜索用户...",
+    "noResults": "未找到用户",
+    "headers": {
+      "user": "用户",
+      "role": "角色",
+      "status": "状态",
+      "joined": "注册时间",
+      "actions": "操作"
+    }
+  },
+  "roles": {
+    "admin": "管理员",
+    "user": "用户",
+    "moderator": "版主"
+  },
+  "statuses": {
+    "active": "活跃",
+    "inactive": "非活跃",
+    "pending": "待处理"
+  },
+  "actions": {
+    "openMenu": "打开菜单",
+    "edit": "编辑",
+    "sendEmail": "发送邮件",
+    "delete": "删除"
+  }
+}

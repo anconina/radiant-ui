@@ -1,0 +1,133 @@
+{
+  "title": "Einstellungen",
+  "subtitle": "Verwalten Sie Ihre Kontoeinstellungen und Präferenzen",
+  "tabs": {
+    "appearance": "Erscheinungsbild",
+    "language": "Sprache",
+    "notifications": "Benachrichtigungen",
+    "privacy": "Datenschutz"
+  },
+  "actions": {
+    "save": "Einstellungen speichern",
+    "saveChanges": "Änderungen speichern",
+    "saving": "Speichert...",
+    "cancel": "Abbrechen",
+    "reset": "Zurücksetzen"
+  },
+  "appearance": {
+    "title": "Design",
+    "description": "Passen Sie das Aussehen der Anwendung auf Ihrem Gerät an",
+    "colorTheme": "Farbschema",
+    "fontSize": "Schriftgröße",
+    "fontSizeDescription": "Passen Sie die Grundschriftgröße für bessere Lesbarkeit an",
+    "reducedMotion": "Reduzierte Bewegung",
+    "reducedMotionDescription": "Animationen und Übergänge minimieren",
+    "highContrast": "Hoher Kontrast",
+    "highContrastDescription": "Kontrast für bessere Sichtbarkeit erhöhen",
+    "themes": {
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "System"
+    }
+  },
+  "language": {
+    "title": "Sprache und Region",
+    "description": "Legen Sie Ihre Sprach- und Regionspräferenzen fest",
+    "language": "Sprache",
+    "region": "Region",
+    "dateFormat": "Datumsformat",
+    "timeFormat": "Zeitformat",
+    "firstDayOfWeek": "Erster Tag der Woche",
+    "regions": {
+      "US": "Vereinigte Staaten",
+      "GB": "Vereinigtes Königreich",
+      "CA": "Kanada",
+      "AU": "Australien",
+      "DE": "Deutschland",
+      "FR": "Frankreich",
+      "JP": "Japan",
+      "CN": "China"
+    },
+    "timeFormats": {
+      "12h": "12-Stunden (AM/PM)",
+      "24h": "24-Stunden"
+    },
+    "weekDays": {
+      "sunday": "Sonntag",
+      "monday": "Montag",
+      "saturday": "Samstag"
+    },
+    "placeholders": {
+      "selectRegion": "Region auswählen",
+      "selectDateFormat": "Datumsformat auswählen",
+      "selectTimeFormat": "Zeitformat auswählen",
+      "selectFirstDay": "Ersten Tag auswählen"
+    }
+  },
+  "notifications": {
+    "title": "Benachrichtigungseinstellungen",
+    "description": "Wählen Sie, wie Sie Benachrichtigungen erhalten möchten",
+    "channels": {
+      "email": "E-Mail",
+      "push": "Push",
+      "sms": "SMS"
+    },
+    "types": {
+      "updates": {
+        "label": "Produkt-Updates",
+        "description": "Neuigkeiten zu Produktfunktionen und Verbesserungen"
+      },
+      "security": {
+        "label": "Sicherheitswarnungen",
+        "description": "Wichtige Sicherheitsbenachrichtigungen und Warnungen"
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Werbeinhalte und Sonderangebote"
+      },
+      "reminders": {
+        "label": "Erinnerungen",
+        "description": "Aufgabenerinnerungen und Terminbenachrichtigungen"
+      }
+    },
+    "schedule": {
+      "title": "Benachrichtigungsplan",
+      "description": "Legen Sie Ruhezeiten fest, in denen Sie nicht gestört werden möchten",
+      "quietHours": "Ruhezeiten",
+      "quietHoursDescription": "Nicht-dringende Benachrichtigungen während der angegebenen Zeiten pausieren",
+      "startTime": "Startzeit",
+      "endTime": "Endzeit"
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzeinstellungen",
+    "description": "Kontrollieren Sie Ihre Datenschutz- und Datenaustauschpräferenzen",
+    "profileVisibility": "Profilsichtbarkeit",
+    "profileOptions": {
+      "public": "Öffentlich - Jeder kann Ihr Profil sehen",
+      "friends": "Nur Freunde - Nur Ihre Verbindungen können es sehen",
+      "private": "Privat - Nur Sie können Ihr Profil sehen"
+    },
+    "showEmail": "E-Mail-Adresse zeigen",
+    "showEmailDescription": "Ihre E-Mail in Ihrem öffentlichen Profil anzeigen",
+    "showPhone": "Telefonnummer zeigen",
+    "showPhoneDescription": "Ihre Telefonnummer in Ihrem öffentlichen Profil anzeigen",
+    "searchIndexing": "Suchmaschinenindexierung",
+    "searchIndexingDescription": "Suchmaschinen erlauben, Ihr Profil zu indexieren",
+    "dataCollection": "Nutzungsanalyse",
+    "dataCollectionDescription": "Helfen Sie uns, unsere Dienste durch das Teilen von Nutzungsdaten zu verbessern",
+    "dataManagement": {
+      "title": "Datenverwaltung",
+      "description": "Verwalten Sie Ihre persönlichen Daten und Ihr Konto",
+      "exportData": "Ihre Daten exportieren",
+      "exportDataDescription": "Eine Kopie all Ihrer Daten herunterladen",
+      "requestExport": "Export anfordern",
+      "deleteAccount": "Konto löschen",
+      "deleteAccountDescription": "Ihr Konto und alle Daten dauerhaft löschen"
+    }
+  },
+  "messages": {
+    "settingsSaved": "Einstellungen erfolgreich gespeichert",
+    "settingsSaveFailed": "Fehler beim Speichern der Einstellungen"
+  }
+}

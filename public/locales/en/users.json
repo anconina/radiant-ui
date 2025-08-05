@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "Users",
+    "subtitle": "Manage and monitor user accounts",
+    "addUser": "Add User"
+  },
+  "stats": {
+    "totalUsers": "Total Users",
+    "activeUsers": "Active Users",
+    "adminUsers": "Admin Users",
+    "totalUsersDescription": "+{{count}} from last month",
+    "activeUsersDescription": "{{percentage}}% of total",
+    "adminUsersDescription": "With full access"
+  },
+  "table": {
+    "title": "User Management",
+    "description": "View and manage all registered users",
+    "searchPlaceholder": "Search users...",
+    "noResults": "No users found",
+    "headers": {
+      "user": "User",
+      "role": "Role",
+      "status": "Status",
+      "joined": "Joined",
+      "actions": "Actions"
+    }
+  },
+  "roles": {
+    "admin": "Admin",
+    "user": "User",
+    "moderator": "Moderator"
+  },
+  "statuses": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending"
+  },
+  "actions": {
+    "openMenu": "Open menu",
+    "edit": "Edit",
+    "sendEmail": "Send email",
+    "delete": "Delete"
+  }
+}

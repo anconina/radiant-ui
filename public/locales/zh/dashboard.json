@@ -1,0 +1,48 @@
+{
+  "title": "仪表板",
+  "subtitle": "一览您的业务概况",
+  "welcome": "欢迎回来，{{name}}！",
+  "refresh": "刷新",
+  "today": "今天",
+  "thisWeek": "本周",
+  "thisMonth": "本月",
+  "download": "下载",
+  "downloadCsv": "下载为CSV",
+  "downloadJson": "下载为JSON",
+  "downloadPdf": "下载为PDF",
+  "exporting": "导出中...",
+  "totalRevenue": "总收入",
+  "totalUsers": "总用户数",
+  "totalOrders": "总订单数",
+  "activeNow": "当前活跃",
+  "revenue": "收入",
+  "revenueDescription": "您的收入随时间变化",
+  "activity": "活动",
+  "activityDescription": "用户活动详情",
+  "recentSales": "最近销售",
+  "recentSalesDescription": "本月您已完成265笔销售",
+  "topProducts": "热门产品",
+  "topProductsDescription": "表现最佳的产品",
+  "overview": {
+    "title": "概览",
+    "totalUsers": "总用户数",
+    "activeUsers": "活跃用户",
+    "revenue": "收入",
+    "growth": "增长"
+  },
+  "charts": {
+    "userActivity": "用户活动",
+    "revenueAnalysis": "收入分析",
+    "performanceMetrics": "性能指标"
+  },
+  "recentActivity": {
+    "title": "最近活动",
+    "noActivity": "暂无最近活动"
+  },
+  "quickActions": {
+    "title": "快速操作",
+    "viewReports": "查看报告",
+    "manageUsers": "管理用户",
+    "settings": "设置"
+  }
+}

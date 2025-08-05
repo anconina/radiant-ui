@@ -1,0 +1,20 @@
+# Testing Dockerfile for CI/CD
+
+FROM node:20-alpine
+
+# Install dependencies
+RUN apk add --no-cache python3 make g++ libc6-compat
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install all dependencies including devDependencies
+RUN npm ci
+
+# Copy source code and test files
+COPY . .
+
+# Run tests
+CMD ["npm", "run", "test:ci"]

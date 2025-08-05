@@ -1,0 +1,120 @@
+{
+  "title": "פרופיל",
+  "subtitle": "נהל את המידע האישי וההעדפות שלך",
+  "tabs": {
+    "general": "כללי",
+    "professional": "מקצועי",
+    "security": "אבטחה"
+  },
+  "userCard": {
+    "role": "משתמש"
+  },
+  "accountStats": {
+    "title": "סטטיסטיקות חשבון",
+    "memberSince": "חבר מאז",
+    "lastActive": "פעיל לאחרונה",
+    "status": "סטטוס",
+    "active": "פעיל"
+  },
+  "general": {
+    "title": "מידע אישי",
+    "description": "עדכן את הפרטים האישיים ופרטי הקשר שלך",
+    "fullName": "שם מלא",
+    "email": "אימייל",
+    "phoneNumber": "מספר טלפון",
+    "location": "מיקום",
+    "bio": "ביוגרפיה",
+    "bioPlaceholder": "ספר לנו על עצמך...",
+    "website": "אתר אינטרנט",
+    "placeholders": {
+      "fullName": "ישראל ישראלי",
+      "email": "israel@example.com",
+      "phoneNumber": "+972-50-123-4567",
+      "location": "תל אביב, ישראל",
+      "website": "https://example.com"
+    }
+  },
+  "professional": {
+    "title": "מידע מקצועי",
+    "description": "נהל את המידע הקשור לעבודה וההעדפות שלך",
+    "company": "חברה",
+    "position": "תפקיד",
+    "department": "מחלקה",
+    "timezone": "אזור זמן",
+    "preferredLanguage": "שפה מועדפת",
+    "placeholders": {
+      "company": "חברת אקמי בע\"מ",
+      "position": "מהנדס תוכנה",
+      "selectDepartment": "בחר מחלקה",
+      "selectTimezone": "בחר אזור זמן",
+      "selectLanguage": "בחר שפה"
+    },
+    "departments": {
+      "engineering": "הנדסה",
+      "design": "עיצוב",
+      "marketing": "שיווק",
+      "sales": "מכירות",
+      "support": "תמיכה",
+      "hr": "משאבי אנוש",
+      "other": "אחר"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "זמן מזרחי",
+      "centralTime": "זמן מרכזי",
+      "mountainTime": "זמן הרים",
+      "pacificTime": "זמן שקט",
+      "london": "לונדון",
+      "paris": "פריז",
+      "tokyo": "טוקיו"
+    },
+    "languages": {
+      "english": "אנגלית",
+      "spanish": "ספרדית",
+      "french": "צרפתית",
+      "german": "גרמנית",
+      "japanese": "יפנית",
+      "chinese": "סינית"
+    }
+  },
+  "security": {
+    "title": "הגדרות אבטחה",
+    "description": "נהל את אבטחת החשבון וההעדפות הפרטיות שלך",
+    "twoFactorAuth": "אימות דו-שלבי",
+    "twoFactorAuthDescription": "הוסף שכבת אבטחה נוספת לחשבון שלך",
+    "emailNotifications": "התראות אימייל",
+    "emailNotificationsDescription": "קבל התראות אבטחה באימייל",
+    "recentActivity": "פעילות אחרונה",
+    "lastLogin": "כניסה אחרונה",
+    "lastPasswordChange": "שינוי סיסמה אחרון",
+    "activeSessions": "הפעלות פעילות",
+    "changePassword": "שנה סיסמה",
+    "enable": "הפעל",
+    "configure": "הגדר",
+    "activityValues": {
+      "todayAt": "היום ב-9:15",
+      "monthsAgo": "לפני 3 חודשים",
+      "devices": "2 מכשירים"
+    }
+  },
+  "actions": {
+    "save": "שמור שינויים",
+    "saving": "שומר...",
+    "cancel": "ביטול",
+    "deleteAccount": "מחק חשבון"
+  },
+  "messages": {
+    "updateSuccess": "הפרופיל עודכן בהצלחה",
+    "updateError": "שגיאה בעדכון הפרופיל",
+    "avatarUpdateSuccess": "התמונה עודכנה בהצלחה",
+    "avatarUpdateError": "שגיאה בהעלאת התמונה",
+    "invalidImageFile": "אנא העלה קובץ תמונה",
+    "imageTooLarge": "גודל התמונה צריך להיות פחות מ-5MB"
+  },
+  "validation": {
+    "nameRequired": "השם חייב להכיל לפחות 2 תווים",
+    "invalidEmail": "כתובת אימייל לא תקינה",
+    "bioTooLong": "הביוגרפיה חייבת להיות פחות מ-500 תווים",
+    "invalidUrl": "כתובת URL לא תקינה"
+  }
+}

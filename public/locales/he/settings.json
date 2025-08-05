@@ -1,0 +1,133 @@
+{
+  "title": "הגדרות",
+  "subtitle": "נהל את הגדרות החשבון והעדפותיך",
+  "tabs": {
+    "appearance": "מראה",
+    "language": "שפה",
+    "notifications": "התראות",
+    "privacy": "פרטיות"
+  },
+  "actions": {
+    "save": "שמור הגדרות",
+    "saveChanges": "שמור שינויים",
+    "saving": "שומר...",
+    "cancel": "ביטול",
+    "reset": "איפוס"
+  },
+  "appearance": {
+    "title": "ערכת נושא",
+    "description": "התאם אישית את המראה של האפליקציה במכשיר שלך",
+    "colorTheme": "ערכת צבעים",
+    "fontSize": "גודל גופן",
+    "fontSizeDescription": "התאם את גודל הגופן הבסיסי לקריאה טובה יותר",
+    "reducedMotion": "הפחתת תנועה",
+    "reducedMotionDescription": "צמצם אנימציות ומעברים",
+    "highContrast": "ניגודיות גבוהה",
+    "highContrastDescription": "הגבר את הניגודיות לראייה טובה יותר",
+    "themes": {
+      "light": "בהיר",
+      "dark": "כהה",
+      "system": "מערכת"
+    }
+  },
+  "language": {
+    "title": "שפה ואזור",
+    "description": "הגדר את העדפות השפה והאזור שלך",
+    "language": "שפה",
+    "region": "אזור",
+    "dateFormat": "פורמט תאריך",
+    "timeFormat": "פורמט שעה",
+    "firstDayOfWeek": "יום ראשון בשבוע",
+    "regions": {
+      "US": "ארצות הברית",
+      "GB": "בריטניה",
+      "CA": "קנדה",
+      "AU": "אוסטרליה",
+      "DE": "גרמניה",
+      "FR": "צרפת",
+      "JP": "יפן",
+      "CN": "סין"
+    },
+    "timeFormats": {
+      "12h": "12 שעות (AM/PM)",
+      "24h": "24 שעות"
+    },
+    "weekDays": {
+      "sunday": "ראשון",
+      "monday": "שני",
+      "saturday": "שבת"
+    },
+    "placeholders": {
+      "selectRegion": "בחר אזור",
+      "selectDateFormat": "בחר פורמט תאריך",
+      "selectTimeFormat": "בחר פורמט שעה",
+      "selectFirstDay": "בחר יום ראשון"
+    }
+  },
+  "notifications": {
+    "title": "העדפות התראות",
+    "description": "בחר איך אתה רוצה לקבל התראות",
+    "channels": {
+      "email": "אימייל",
+      "push": "דחיפה",
+      "sms": "SMS"
+    },
+    "types": {
+      "updates": {
+        "label": "עדכוני מוצר",
+        "description": "חדשות על תכונות המוצר ושיפורים"
+      },
+      "security": {
+        "label": "התראות אבטחה",
+        "description": "התראות אבטחה חשובות ואזהרות"
+      },
+      "marketing": {
+        "label": "שיווק",
+        "description": "תוכן פרסומי והצעות מיוחדות"
+      },
+      "reminders": {
+        "label": "תזכורות",
+        "description": "תזכורות למשימות והתראות על מועדים"
+      }
+    },
+    "schedule": {
+      "title": "לוח זמנים התראות",
+      "description": "הגדר שעות שקט שבהן אינך רוצה להיות מופרע",
+      "quietHours": "שעות שקט",
+      "quietHoursDescription": "השהה התראות לא דחופות במהלך השעות המוגדרות",
+      "startTime": "שעת התחלה",
+      "endTime": "שעת סיום"
+    }
+  },
+  "privacy": {
+    "title": "הגדרות פרטיות",
+    "description": "שלוט בפרטיותך ובהעדפות שיתוף הנתונים",
+    "profileVisibility": "נראות פרופיל",
+    "profileOptions": {
+      "public": "ציבורי - כל אחד יכול לראות את הפרופיל שלך",
+      "friends": "חברים בלבד - רק הקשרים שלך יכולים לראות",
+      "private": "פרטי - רק אתה יכול לראות את הפרופיל שלך"
+    },
+    "showEmail": "הצג כתובת אימייל",
+    "showEmailDescription": "הצג את האימייל שלך בפרופיל הציבורי",
+    "showPhone": "הצג מספר טלפון",
+    "showPhoneDescription": "הצג את מספר הטלפון שלך בפרופיל הציבורי",
+    "searchIndexing": "אינדוקס מנועי חיפוש",
+    "searchIndexingDescription": "אפשר למנועי חיפוש לאנדקס את הפרופיל שלך",
+    "dataCollection": "ניתוח שימוש",
+    "dataCollectionDescription": "עזור לשפר את השירותים שלנו על ידי שיתוף נתוני שימוש",
+    "dataManagement": {
+      "title": "ניהול נתונים",
+      "description": "נהל את הנתונים האישיים והחשבון שלך",
+      "exportData": "ייצא את הנתונים שלך",
+      "exportDataDescription": "הורד עותק של כל הנתונים שלך",
+      "requestExport": "בקש ייצוא",
+      "deleteAccount": "מחק חשבון",
+      "deleteAccountDescription": "מחק לצמיתות את החשבון וכל הנתונים שלך"
+    }
+  },
+  "messages": {
+    "settingsSaved": "ההגדרות נשמרו בהצלחה",
+    "settingsSaveFailed": "נכשל בשמירת ההגדרות"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Panel de Control",
+  "subtitle": "Su negocio de un vistazo",
+  "welcome": "¡Bienvenido de vuelta, {{name}}!",
+  "refresh": "Actualizar",
+  "today": "Hoy",
+  "thisWeek": "Esta Semana",
+  "thisMonth": "Este Mes",
+  "download": "Descargar",
+  "downloadCsv": "Descargar como CSV",
+  "downloadJson": "Descargar como JSON",
+  "downloadPdf": "Descargar como PDF",
+  "exporting": "Exportando...",
+  "totalRevenue": "Ingresos Totales",
+  "totalUsers": "Usuarios Totales",
+  "totalOrders": "Pedidos Totales",
+  "activeNow": "Activos Ahora",
+  "revenue": "Ingresos",
+  "revenueDescription": "Sus ingresos a lo largo del tiempo",
+  "activity": "Actividad",
+  "activityDescription": "Desglose de actividad de usuarios",
+  "recentSales": "Ventas Recientes",
+  "recentSalesDescription": "Ha realizado 265 ventas este mes",
+  "topProducts": "Principales Productos",
+  "topProductsDescription": "Productos con mejor rendimiento",
+  "overview": {
+    "title": "Resumen",
+    "totalUsers": "Usuarios Totales",
+    "activeUsers": "Usuarios Activos",
+    "revenue": "Ingresos",
+    "growth": "Crecimiento"
+  },
+  "charts": {
+    "userActivity": "Actividad de Usuarios",
+    "revenueAnalysis": "Análisis de Ingresos",
+    "performanceMetrics": "Métricas de Rendimiento"
+  },
+  "recentActivity": {
+    "title": "Actividad Reciente",
+    "noActivity": "No hay actividad reciente"
+  },
+  "quickActions": {
+    "title": "Acciones Rápidas",
+    "viewReports": "Ver Informes",
+    "manageUsers": "Gestionar Usuarios",
+    "settings": "Configuración"
+  }
+}

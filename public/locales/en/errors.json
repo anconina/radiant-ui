@@ -1,0 +1,46 @@
+{
+  "generic": {
+    "title": "Oops! Something went wrong",
+    "message": "An unexpected error occurred. Please try again later."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you are looking for doesn't exist or has been moved.",
+    "code": "404"
+  },
+  "unauthorized": {
+    "title": "Unauthorized",
+    "message": "You don't have permission to access this resource.",
+    "code": "401"
+  },
+  "forbidden": {
+    "title": "Forbidden",
+    "message": "Access to this resource is forbidden.",
+    "code": "403"
+  },
+  "serverError": {
+    "title": "Server Error",
+    "message": "The server encountered an error and could not complete your request.",
+    "code": "500"
+  },
+  "networkError": {
+    "title": "Network Error",
+    "message": "Unable to connect to the server. Please check your internet connection."
+  },
+  "validationError": {
+    "title": "Validation Error",
+    "message": "Please check your input and try again."
+  },
+  "actions": {
+    "goHome": "Go to Homepage",
+    "goBack": "Go Back",
+    "retry": "Retry",
+    "refresh": "Refresh Page",
+    "contactSupport": "Contact Support"
+  },
+  "details": {
+    "errorCode": "Error Code",
+    "timestamp": "Timestamp",
+    "requestId": "Request ID"
+  }
+}

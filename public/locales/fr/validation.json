@@ -1,0 +1,36 @@
+{
+  "required": "{{field}} est obligatoire",
+  "email": "Veuillez saisir une adresse e-mail valide",
+  "minLength": "{{field}} doit contenir au moins {{min}} caractères",
+  "maxLength": "{{field}} ne doit pas dépasser {{max}} caractères",
+  "min": "{{field}} doit être au moins {{min}}",
+  "max": "{{field}} ne doit pas dépasser {{max}}",
+  "pattern": "Le format de {{field}} est invalide",
+  "number": "{{field}} doit être un nombre",
+  "integer": "{{field}} doit être un nombre entier",
+  "positive": "{{field}} doit être positif",
+  "negative": "{{field}} doit être négatif",
+  "url": "Veuillez saisir une URL valide",
+  "date": "Veuillez saisir une date valide",
+  "time": "Veuillez saisir une heure valide",
+  "dateTime": "Veuillez saisir une date et une heure valides",
+  "match": "{{field}} doit correspondre à {{otherField}}",
+  "unique": "{{field}} doit être unique",
+  "fileSize": "La taille du fichier ne doit pas dépasser {{max}}",
+  "fileType": "Type de fichier invalide. Types autorisés : {{types}}",
+  "imageSize": "Les dimensions de l'image doivent être {{width}}x{{height}}",
+  "phoneNumber": "Veuillez saisir un numéro de téléphone valide",
+  "postalCode": "Veuillez saisir un code postal valide",
+  "creditCard": "Veuillez saisir un numéro de carte de crédit valide",
+  "password": {
+    "weak": "Le mot de passe est trop faible",
+    "medium": "La force du mot de passe est moyenne",
+    "strong": "Le mot de passe est fort",
+    "requirements": "Le mot de passe doit contenir au moins {{min}} caractères, incluant des majuscules, des minuscules, des chiffres et des caractères spéciaux"
+  },
+  "custom": {
+    "username": "Le nom d'utilisateur ne peut contenir que des lettres, des chiffres et des traits de soulignement",
+    "age": "Vous devez avoir au moins 18 ans",
+    "terms": "Vous devez accepter les conditions d'utilisation"
+  }
+}

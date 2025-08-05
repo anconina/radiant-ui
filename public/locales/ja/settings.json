@@ -1,0 +1,133 @@
+{
+  "title": "設定",
+  "subtitle": "アカウント設定と設定を管理",
+  "tabs": {
+    "appearance": "外観",
+    "language": "言語",
+    "notifications": "通知",
+    "privacy": "プライバシー"
+  },
+  "actions": {
+    "save": "設定を保存",
+    "saveChanges": "変更を保存",
+    "saving": "保存中...",
+    "cancel": "キャンセル",
+    "reset": "リセット"
+  },
+  "appearance": {
+    "title": "テーマ",
+    "description": "デバイスでのアプリケーションの外観をカスタマイズ",
+    "colorTheme": "カラーテーマ",
+    "fontSize": "フォントサイズ",
+    "fontSizeDescription": "読みやすさを向上させるために基本フォントサイズを調整",
+    "reducedMotion": "モーション軽減",
+    "reducedMotionDescription": "アニメーションとトランジションを最小化",
+    "highContrast": "ハイコントラスト",
+    "highContrastDescription": "視認性を向上させるためにコントラストを増加",
+    "themes": {
+      "light": "ライト",
+      "dark": "ダーク",
+      "system": "システム"
+    }
+  },
+  "language": {
+    "title": "言語と地域",
+    "description": "言語と地域の設定を設定",
+    "language": "言語",
+    "region": "地域",
+    "dateFormat": "日付形式",
+    "timeFormat": "時刻形式",
+    "firstDayOfWeek": "週の最初の日",
+    "regions": {
+      "US": "アメリカ合衆国",
+      "GB": "イギリス",
+      "CA": "カナダ",
+      "AU": "オーストラリア",
+      "DE": "ドイツ",
+      "FR": "フランス",
+      "JP": "日本",
+      "CN": "中国"
+    },
+    "timeFormats": {
+      "12h": "12時間制（AM/PM）",
+      "24h": "24時間制"
+    },
+    "weekDays": {
+      "sunday": "日曜日",
+      "monday": "月曜日",
+      "saturday": "土曜日"
+    },
+    "placeholders": {
+      "selectRegion": "地域を選択",
+      "selectDateFormat": "日付形式を選択",
+      "selectTimeFormat": "時刻形式を選択",
+      "selectFirstDay": "最初の日を選択"
+    }
+  },
+  "notifications": {
+    "title": "通知設定",
+    "description": "通知の受信方法を選択",
+    "channels": {
+      "email": "メール",
+      "push": "プッシュ",
+      "sms": "SMS"
+    },
+    "types": {
+      "updates": {
+        "label": "製品アップデート",
+        "description": "製品機能と改善に関するニュース"
+      },
+      "security": {
+        "label": "セキュリティアラート",
+        "description": "重要なセキュリティ通知とアラート"
+      },
+      "marketing": {
+        "label": "マーケティング",
+        "description": "プロモーション内容とスペシャルオファー"
+      },
+      "reminders": {
+        "label": "リマインダー",
+        "description": "タスクリマインダーと期限通知"
+      }
+    },
+    "schedule": {
+      "title": "通知スケジュール",
+      "description": "邪魔されたくない静寂時間を設定",
+      "quietHours": "静寂時間",
+      "quietHoursDescription": "指定した時間中は緊急でない通知を一時停止",
+      "startTime": "開始時刻",
+      "endTime": "終了時刻"
+    }
+  },
+  "privacy": {
+    "title": "プライバシー設定",
+    "description": "プライバシーとデータ共有の設定を制御",
+    "profileVisibility": "プロフィールの可視性",
+    "profileOptions": {
+      "public": "公開 - 誰でもあなたのプロフィールを見ることができます",
+      "friends": "友達のみ - あなたの接続相手のみが見ることができます",
+      "private": "非公開 - あなたのみがプロフィールを見ることができます"
+    },
+    "showEmail": "メールアドレスを表示",
+    "showEmailDescription": "公開プロフィールにメールアドレスを表示",
+    "showPhone": "電話番号を表示",
+    "showPhoneDescription": "公開プロフィールに電話番号を表示",
+    "searchIndexing": "検索エンジンインデックス",
+    "searchIndexingDescription": "検索エンジンがプロフィールをインデックスすることを許可",
+    "dataCollection": "利用分析",
+    "dataCollectionDescription": "利用データを共有してサービスの改善にお役立てください",
+    "dataManagement": {
+      "title": "データ管理",
+      "description": "個人データとアカウントを管理",
+      "exportData": "データをエクスポート",
+      "exportDataDescription": "すべてのデータのコピーをダウンロード",
+      "requestExport": "エクスポートをリクエスト",
+      "deleteAccount": "アカウントを削除",
+      "deleteAccountDescription": "アカウントとすべてのデータを完全に削除"
+    }
+  },
+  "messages": {
+    "settingsSaved": "設定が正常に保存されました",
+    "settingsSaveFailed": "設定の保存に失敗しました"
+  }
+}

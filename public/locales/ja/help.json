@@ -1,0 +1,127 @@
+{
+  "title": "お困りのことはありませんか？",
+  "subtitle": "ナレッジベースを検索するか、以下のトピックをご覧ください",
+  "searchPlaceholder": "ヘルプを検索...",
+  "quickLinks": {
+    "documentation": "ドキュメント",
+    "community": "コミュニティ",
+    "emailSupport": "メールサポート",
+    "callUs": "お電話"
+  },
+  "tabs": {
+    "faq": "よくある質問",
+    "guides": "ガイド",
+    "contact": "お問い合わせ"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "サービスに関するよくある質問の回答を見つける",
+    "categories": {
+      "allTopics": "すべてのトピック",
+      "account": "アカウント",
+      "billing": "請求",
+      "security": "セキュリティ",
+      "technical": "技術的"
+    },
+    "questions": {
+      "resetPassword": {
+        "question": "パスワードをリセットするにはどうすればよいですか？",
+        "answer": "パスワードをリセットするには、ログインページの「パスワードをお忘れですか」リンクをクリックしてください。メールアドレスを入力すると、パスワードリセットの手順をお送りします。"
+      },
+      "upgradeSubscription": {
+        "question": "サブスクリプションをアップグレードするにはどうすればよいですか？",
+        "answer": "設定 > 請求に移動してサブスクリプションをアップグレードできます。「プランを変更」をクリックして、ニーズに最適なプランを選択してください。請求は日割り計算されます。"
+      },
+      "dataSecure": {
+        "question": "データは安全ですか？",
+        "answer": "はい、私たちはセキュリティを真剣に考えています。すべてのデータは転送中および保存時に暗号化されます。業界標準のセキュリティプロトコルを使用し、定期的にセキュリティ監査を受けています。"
+      },
+      "exportData": {
+        "question": "データをエクスポートできますか？",
+        "answer": "はい、いつでもデータをエクスポートできます。設定 > データとプライバシーに移動し、「データをエクスポート」をクリックしてください。メールでダウンロードリンクをお送りします。"
+      },
+      "cancelSubscription": {
+        "question": "サブスクリプションをキャンセルするにはどうすればよいですか？",
+        "answer": "サブスクリプションをキャンセルするには、設定 > 請求に移動し、「サブスクリプションをキャンセル」をクリックしてください。請求期間の終了まではアクセスできます。"
+      },
+      "paymentMethods": {
+        "question": "どのような支払い方法を受け付けていますか？",
+        "answer": "主要なクレジットカード（Visa、MasterCard、American Express）、PayPal、および企業顧客向けの銀行振込を受け付けています。"
+      },
+      "twoFactor": {
+        "question": "二要素認証を有効にするにはどうすればよいですか？",
+        "answer": "設定 > セキュリティに移動し、「二要素認証を有効にする」をクリックしてください。セットアップ手順に従って認証アプリをリンクしてください。"
+      },
+      "api": {
+        "question": "APIを使用できますか？",
+        "answer": "はい、包括的なREST APIを提供しています。APIドキュメントはdocs.example.com/apiで見つけることができます。APIアクセスはProfessionalおよびEnterpriseプランで利用できます。"
+      }
+    },
+    "noResults": "検索に一致するFAQが見つかりませんでした。"
+  },
+  "guides": {
+    "title": "ヘルプガイドとチュートリアル",
+    "subtitle": "プラットフォームを最大限に活用するためのステップバイステップガイド",
+    "items": {
+      "gettingStarted": {
+        "title": "はじめにガイド",
+        "description": "基本を学び素早く開始"
+      },
+      "accountManagement": {
+        "title": "アカウント管理",
+        "description": "プロフィール、設定、設定を管理"
+      },
+      "billing": {
+        "title": "請求とサブスクリプション",
+        "description": "価格、請求サイクル、支払いオプションを理解"
+      },
+      "security": {
+        "title": "セキュリティのベストプラクティス",
+        "description": "推奨プラクティスでアカウントを安全に保つ"
+      },
+      "api": {
+        "title": "APIドキュメント",
+        "description": "REST APIを使用してプラットフォームと統合"
+      },
+      "mobile": {
+        "title": "モバイルアプリガイド",
+        "description": "モバイルアプリケーションを最大限に活用"
+      },
+      "collaboration": {
+        "title": "チームコラボレーション",
+        "description": "チームメンバーと効果的に作業"
+      },
+      "advanced": {
+        "title": "高度な機能",
+        "description": "プラットフォームの完全な可能性を解放"
+      }
+    },
+    "noResults": "検索に一致するガイドが見つかりませんでした。"
+  },
+  "contact": {
+    "support": {
+      "title": "サポートにお問い合わせ",
+      "subtitle": "サポートチームにご連絡ください",
+      "hours": {
+        "title": "サポート時間",
+        "description": "サポートチームは月曜日から金曜日の午前9時から午後6時（EST）まで対応しています。通常24時間以内に返信いたします。"
+      },
+      "email": "support@example.com",
+      "phone": "+81 3-1234-5678",
+      "liveChat": "ライブチャット（オンライン）"
+    },
+    "resources": {
+      "title": "追加リソース",
+      "subtitle": "ヘルプを得て情報を得るための追加の方法",
+      "communityForum": "コミュニティフォーラム",
+      "apiDocs": "APIドキュメント",
+      "developerPortal": "開発者ポータル",
+      "videoTutorials": "ビデオチュートリアル"
+    },
+    "ticket": {
+      "title": "お探しのものが見つかりませんか？",
+      "subtitle": "サポートチケットを送信していただければ、できるだけ早くご連絡いたします",
+      "button": "サポートチケットを送信"
+    }
+  }
+}

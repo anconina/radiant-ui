@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Check if this is not an interactive rebase, merge, or squash
+if [ "$2" != "commit" ] && [ "$2" != "template" ] && [ "$2" != "" ]; then
+  exit 0
+fi
+
+# Only suggest commitizen for empty commit messages
+if [ ! -s "$1" ] || [ "$(head -1 "$1" | grep -c '^#')" -eq 1 ]; then
+  echo ""
+  echo "💡 Tip: Use 'npm run commit' for guided conventional commits!"
+  echo ""
+fi

@@ -1,0 +1,127 @@
+{
+  "title": "Comment pouvons-nous vous aider ?",
+  "subtitle": "Recherchez dans notre base de connaissances ou parcourez les sujets ci-dessous",
+  "searchPlaceholder": "Rechercher de l'aide...",
+  "quickLinks": {
+    "documentation": "Documentation",
+    "community": "Communauté",
+    "emailSupport": "Support par e-mail",
+    "callUs": "Nous appeler"
+  },
+  "tabs": {
+    "faq": "FAQ",
+    "guides": "Guides",
+    "contact": "Contact"
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "subtitle": "Trouvez des réponses aux questions courantes sur notre service",
+    "categories": {
+      "allTopics": "Tous les sujets",
+      "account": "Compte",
+      "billing": "Facturation",
+      "security": "Sécurité",
+      "technical": "Technique"
+    },
+    "questions": {
+      "resetPassword": {
+        "question": "Comment réinitialiser mon mot de passe ?",
+        "answer": "Pour réinitialiser votre mot de passe, cliquez sur le lien \"Mot de passe oublié\" sur la page de connexion. Saisissez votre adresse e-mail et nous vous enverrons les instructions pour réinitialiser votre mot de passe."
+      },
+      "upgradeSubscription": {
+        "question": "Comment puis-je mettre à niveau mon abonnement ?",
+        "answer": "Vous pouvez mettre à niveau votre abonnement en allant dans Paramètres > Facturation. Cliquez sur \"Changer de plan\" et sélectionnez le plan qui correspond le mieux à vos besoins. Votre facturation sera calculée au prorata."
+      },
+      "dataSecure": {
+        "question": "Mes données sont-elles sécurisées ?",
+        "answer": "Oui, nous prenons la sécurité au sérieux. Toutes les données sont chiffrées en transit et au repos. Nous utilisons des protocoles de sécurité standard de l'industrie et subissons régulièrement des audits de sécurité."
+      },
+      "exportData": {
+        "question": "Puis-je exporter mes données ?",
+        "answer": "Oui, vous pouvez exporter vos données à tout moment. Allez dans Paramètres > Données et confidentialité et cliquez sur \"Exporter les données\". Vous recevrez un lien de téléchargement par e-mail."
+      },
+      "cancelSubscription": {
+        "question": "Comment annuler mon abonnement ?",
+        "answer": "Pour annuler votre abonnement, allez dans Paramètres > Facturation et cliquez sur \"Annuler l'abonnement\". Vous continuerez à avoir accès jusqu'à la fin de votre période de facturation."
+      },
+      "paymentMethods": {
+        "question": "Quels modes de paiement acceptez-vous ?",
+        "answer": "Nous acceptons toutes les principales cartes de crédit (Visa, MasterCard, American Express), PayPal et les virements bancaires pour les clients entreprise."
+      },
+      "twoFactor": {
+        "question": "Comment activer l'authentification à deux facteurs ?",
+        "answer": "Allez dans Paramètres > Sécurité et cliquez sur \"Activer l'authentification à deux facteurs\". Suivez les instructions de configuration pour lier votre application d'authentification."
+      },
+      "api": {
+        "question": "Puis-je utiliser l'API ?",
+        "answer": "Oui, nous fournissons une API REST complète. Vous pouvez trouver la documentation de l'API sur docs.exemple.com/api. L'accès à l'API est disponible sur les plans Professionnel et Entreprise."
+      }
+    },
+    "noResults": "Aucune FAQ trouvée correspondant à votre recherche."
+  },
+  "guides": {
+    "title": "Guides d'aide et tutoriels",
+    "subtitle": "Guides étape par étape pour vous aider à tirer le meilleur parti de notre plateforme",
+    "items": {
+      "gettingStarted": {
+        "title": "Guide de démarrage",
+        "description": "Apprenez les bases et démarrez rapidement"
+      },
+      "accountManagement": {
+        "title": "Gestion de compte",
+        "description": "Gérez votre profil, paramètres et préférences"
+      },
+      "billing": {
+        "title": "Facturation et abonnements",
+        "description": "Comprenez les tarifs, cycles de facturation et options de paiement"
+      },
+      "security": {
+        "title": "Meilleures pratiques de sécurité",
+        "description": "Gardez votre compte sécurisé avec nos pratiques recommandées"
+      },
+      "api": {
+        "title": "Documentation API",
+        "description": "Intégrez avec notre plateforme en utilisant notre API REST"
+      },
+      "mobile": {
+        "title": "Guide de l'application mobile",
+        "description": "Tirez le meilleur parti de nos applications mobiles"
+      },
+      "collaboration": {
+        "title": "Collaboration d'équipe",
+        "description": "Travaillez efficacement avec les membres de votre équipe"
+      },
+      "advanced": {
+        "title": "Fonctionnalités avancées",
+        "description": "Libérez tout le potentiel de notre plateforme"
+      }
+    },
+    "noResults": "Aucun guide trouvé correspondant à votre recherche."
+  },
+  "contact": {
+    "support": {
+      "title": "Contacter le support",
+      "subtitle": "Contactez notre équipe de support",
+      "hours": {
+        "title": "Heures de support",
+        "description": "Notre équipe de support est disponible du lundi au vendredi, de 9h à 18h EST. Nous répondons généralement dans les 24 heures."
+      },
+      "email": "support@exemple.com",
+      "phone": "+1 (555) 123-4567",
+      "liveChat": "Chat en direct (En ligne)"
+    },
+    "resources": {
+      "title": "Ressources supplémentaires",
+      "subtitle": "Plus de façons d'obtenir de l'aide et de rester informé",
+      "communityForum": "Forum communautaire",
+      "apiDocs": "Documentation API",
+      "developerPortal": "Portail développeur",
+      "videoTutorials": "Tutoriels vidéo"
+    },
+    "ticket": {
+      "title": "Vous ne trouvez pas ce que vous cherchez ?",
+      "subtitle": "Soumettez un ticket de support et nous vous répondrons dès que possible",
+      "button": "Soumettre un ticket de support"
+    }
+  }
+}

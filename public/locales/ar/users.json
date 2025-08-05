@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "المستخدمون",
+    "subtitle": "إدارة ومراقبة حسابات المستخدمين",
+    "addUser": "إضافة مستخدم"
+  },
+  "stats": {
+    "totalUsers": "إجمالي المستخدمين",
+    "activeUsers": "المستخدمون النشطون",
+    "adminUsers": "المستخدمون المسؤولون",
+    "totalUsersDescription": "+{{count}} من الشهر الماضي",
+    "activeUsersDescription": "{{percentage}}% من الإجمالي",
+    "adminUsersDescription": "بصلاحية وصول كاملة"
+  },
+  "table": {
+    "title": "إدارة المستخدمين",
+    "description": "عرض وإدارة جميع المستخدمين المسجلين",
+    "searchPlaceholder": "البحث عن المستخدمين...",
+    "noResults": "لم يتم العثور على مستخدمين",
+    "headers": {
+      "user": "المستخدم",
+      "role": "الدور",
+      "status": "الحالة",
+      "joined": "تاريخ الانضمام",
+      "actions": "الإجراءات"
+    }
+  },
+  "roles": {
+    "admin": "مسؤول",
+    "user": "مستخدم",
+    "moderator": "مشرف"
+  },
+  "statuses": {
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "pending": "في الانتظار"
+  },
+  "actions": {
+    "openMenu": "فتح القائمة",
+    "edit": "تعديل",
+    "sendEmail": "إرسال بريد إلكتروني",
+    "delete": "حذف"
+  }
+}

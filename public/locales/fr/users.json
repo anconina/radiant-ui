@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "Utilisateurs",
+    "subtitle": "Gérer et surveiller les comptes utilisateur",
+    "addUser": "Ajouter Utilisateur"
+  },
+  "stats": {
+    "totalUsers": "Utilisateurs Totaux",
+    "activeUsers": "Utilisateurs Actifs",
+    "adminUsers": "Utilisateurs Administrateurs",
+    "totalUsersDescription": "+{{count}} du mois dernier",
+    "activeUsersDescription": "{{percentage}}% du total",
+    "adminUsersDescription": "Avec accès complet"
+  },
+  "table": {
+    "title": "Gestion des Utilisateurs",
+    "description": "Voir et gérer tous les utilisateurs enregistrés",
+    "searchPlaceholder": "Rechercher des utilisateurs...",
+    "noResults": "Aucun utilisateur trouvé",
+    "headers": {
+      "user": "Utilisateur",
+      "role": "Rôle",
+      "status": "Statut",
+      "joined": "Inscrit",
+      "actions": "Actions"
+    }
+  },
+  "roles": {
+    "admin": "Administrateur",
+    "user": "Utilisateur",
+    "moderator": "Modérateur"
+  },
+  "statuses": {
+    "active": "Actif",
+    "inactive": "Inactif",
+    "pending": "En attente"
+  },
+  "actions": {
+    "openMenu": "Ouvrir le menu",
+    "edit": "Modifier",
+    "sendEmail": "Envoyer un e-mail",
+    "delete": "Supprimer"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "title": "Profile",
+  "subtitle": "Manage your personal information and preferences",
+  "tabs": {
+    "general": "General",
+    "professional": "Professional",
+    "security": "Security"
+  },
+  "userCard": {
+    "role": "User"
+  },
+  "accountStats": {
+    "title": "Account Stats",
+    "memberSince": "Member since",
+    "lastActive": "Last active",
+    "status": "Status",
+    "active": "Active"
+  },
+  "general": {
+    "title": "Personal Information",
+    "description": "Update your personal details and contact information",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "location": "Location",
+    "bio": "Bio",
+    "bioPlaceholder": "Tell us about yourself...",
+    "website": "Website",
+    "placeholders": {
+      "fullName": "John Doe",
+      "email": "john@example.com",
+      "phoneNumber": "+1 (555) 123-4567",
+      "location": "San Francisco, CA",
+      "website": "https://example.com"
+    }
+  },
+  "professional": {
+    "title": "Professional Information",
+    "description": "Manage your work-related information and preferences",
+    "company": "Company",
+    "position": "Position",
+    "department": "Department",
+    "timezone": "Timezone",
+    "preferredLanguage": "Preferred Language",
+    "placeholders": {
+      "company": "Acme Inc.",
+      "position": "Software Engineer",
+      "selectDepartment": "Select department",
+      "selectTimezone": "Select timezone",
+      "selectLanguage": "Select language"
+    },
+    "departments": {
+      "engineering": "Engineering",
+      "design": "Design",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "support": "Support",
+      "hr": "Human Resources",
+      "other": "Other"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "Eastern Time",
+      "centralTime": "Central Time",
+      "mountainTime": "Mountain Time",
+      "pacificTime": "Pacific Time",
+      "london": "London",
+      "paris": "Paris",
+      "tokyo": "Tokyo"
+    },
+    "languages": {
+      "english": "English",
+      "spanish": "Spanish",
+      "french": "French",
+      "german": "German",
+      "japanese": "Japanese",
+      "chinese": "Chinese"
+    }
+  },
+  "security": {
+    "title": "Security Settings",
+    "description": "Manage your account security and privacy preferences",
+    "twoFactorAuth": "Two-factor authentication",
+    "twoFactorAuthDescription": "Add an extra layer of security to your account",
+    "emailNotifications": "Email notifications",
+    "emailNotificationsDescription": "Receive security alerts via email",
+    "recentActivity": "Recent Activity",
+    "lastLogin": "Last login",
+    "lastPasswordChange": "Last password change",
+    "activeSessions": "Active sessions",
+    "changePassword": "Change Password",
+    "enable": "Enable",
+    "configure": "Configure",
+    "activityValues": {
+      "todayAt": "Today at 9:15 AM",
+      "monthsAgo": "3 months ago",
+      "devices": "2 devices"
+    }
+  },
+  "actions": {
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "deleteAccount": "Delete Account"
+  },
+  "messages": {
+    "updateSuccess": "Profile updated successfully",
+    "updateError": "Failed to update profile",
+    "avatarUpdateSuccess": "Avatar updated successfully",
+    "avatarUpdateError": "Failed to upload avatar",
+    "invalidImageFile": "Please upload an image file",
+    "imageTooLarge": "Image size should be less than 5MB"
+  },
+  "validation": {
+    "nameRequired": "Name must be at least 2 characters",
+    "invalidEmail": "Invalid email address",
+    "bioTooLong": "Bio must be less than 500 characters",
+    "invalidUrl": "Invalid URL"
+  }
+}

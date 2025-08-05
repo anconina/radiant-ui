@@ -1,0 +1,22 @@
+# Security Policy for Radiant UI
+
+Contact: security@example.com
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://example.com/.well-known/security.txt
+
+# Reporting Security Issues
+# Please report security vulnerabilities to our security team at security@example.com
+# We appreciate responsible disclosure and will acknowledge your report within 48 hours
+
+# Bug Bounty Program
+# We currently do not have a bug bounty program
+
+# Encryption
+# Our PGP key for secure communication:
+# -----BEGIN PGP PUBLIC KEY BLOCK-----
+# (Add your PGP public key here)
+# -----END PGP PUBLIC KEY BLOCK-----
+
+# Acknowledgments
+# We thank the security researchers who have helped us improve our security

@@ -1,0 +1,46 @@
+{
+  "generic": {
+    "title": "哎呀！出现了问题",
+    "message": "发生了意外错误。请稍后重试。"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "message": "您寻找的页面不存在或已被移动。",
+    "code": "404"
+  },
+  "unauthorized": {
+    "title": "未授权",
+    "message": "您无权访问此资源。",
+    "code": "401"
+  },
+  "forbidden": {
+    "title": "禁止访问",
+    "message": "禁止访问此资源。",
+    "code": "403"
+  },
+  "serverError": {
+    "title": "服务器错误",
+    "message": "服务器遇到错误，无法完成您的请求。",
+    "code": "500"
+  },
+  "networkError": {
+    "title": "网络错误",
+    "message": "无法连接到服务器。请检查您的网络连接。"
+  },
+  "validationError": {
+    "title": "验证错误",
+    "message": "请检查您的输入并重试。"
+  },
+  "actions": {
+    "goHome": "回到首页",
+    "goBack": "返回",
+    "retry": "重试",
+    "refresh": "刷新页面",
+    "contactSupport": "联系支持"
+  },
+  "details": {
+    "errorCode": "错误代码",
+    "timestamp": "时间戳",
+    "requestId": "请求ID"
+  }
+}

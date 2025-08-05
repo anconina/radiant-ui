@@ -1,0 +1,35 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Lead Developer -- Your Name -- @twitter
+    UI/UX Designer -- Designer Name -- @twitter
+    DevOps Engineer -- Engineer Name -- @twitter
+
+# THANKS
+
+    React Team -- For the amazing framework
+    Vite Team -- For the blazing fast build tool
+    Open Source Community -- For all the great libraries
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    React 18
+    TypeScript
+    Vite
+    Tailwind CSS
+    Zustand
+    React Query
+    MSW
+    Playwright
+    Vitest
+
+# SITE
+
+    Language: English
+    Standards: HTML5, CSS3, ES2022
+    Components: React
+    Build: Vite
+    IDE: VS Code

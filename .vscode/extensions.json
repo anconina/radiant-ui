@@ -1,0 +1,51 @@
+{
+  "recommendations": [
+    // Essential
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    
+    // React & TypeScript
+    "dsznajder.es7-react-js-snippets",
+    "burkeholland.simple-react-snippets",
+    "infeng.vscode-react-typescript",
+    "styled-components.vscode-styled-components",
+    
+    // Productivity
+    "christian-kohler.path-intellisense",
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "wix.vscode-import-cost",
+    "kisstkondoros.vscode-gutter-preview",
+    "naumovs.color-highlight",
+    
+    // Git
+    "eamodio.gitlens",
+    "donjayamanne.githistory",
+    "mhutchie.git-graph",
+    
+    // Testing
+    "vitest.explorer",
+    "ms-playwright.playwright",
+    
+    // Debugging
+    "firefox-devtools.vscode-firefox-debug",
+    "msjsdiag.debugger-for-chrome",
+    
+    // Utilities
+    "ritwickdey.liveserver",
+    "yzhang.markdown-all-in-one",
+    "dotenv.dotenv-vscode",
+    "mikestead.dotenv",
+    "christian-kohler.npm-intellisense",
+    "eg2.vscode-npm-script",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    
+    // Themes (optional)
+    "zhuangtongfa.material-theme",
+    "PKief.material-icon-theme"
+  ]
+}

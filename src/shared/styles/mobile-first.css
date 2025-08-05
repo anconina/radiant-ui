@@ -1,0 +1,397 @@
+/* ========================================
+   MOBILE-FIRST TYPOGRAPHY SYSTEM
+   ======================================== */
+
+/* Fluid Typography Scale - Mobile First */
+:root {
+  /* Base font size for mobile */
+  --font-size-base: 16px;
+
+  /* Fluid type scale using clamp() */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-md: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.125rem + 0.625vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --font-size-3xl: clamp(1.875rem, 1.5rem + 1.875vw, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 1.75rem + 2.5vw, 3rem);
+  --font-size-5xl: clamp(3rem, 2rem + 5vw, 4rem);
+
+  /* Line heights optimized for readability */
+  --line-height-xs: 1.5;
+  --line-height-sm: 1.5;
+  --line-height-md: 1.6;
+  --line-height-lg: 1.5;
+  --line-height-xl: 1.4;
+  --line-height-2xl: 1.3;
+  --line-height-3xl: 1.2;
+  --line-height-4xl: 1.1;
+  --line-height-5xl: 1;
+
+  /* Letter spacing for better mobile readability */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+}
+
+/* Typography Classes */
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.text-base {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-2xl);
+}
+
+.text-3xl {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-3xl);
+}
+
+.text-4xl {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-4xl);
+}
+
+.text-5xl {
+  font-size: var(--font-size-5xl);
+  line-height: var(--line-height-5xl);
+}
+
+/* ========================================
+   MOBILE-FIRST SPACING SYSTEM
+   ======================================== */
+
+:root {
+  /* Fluid spacing scale */
+  --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
+  --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --space-md: clamp(1rem, 0.875rem + 0.625vw, 1.25rem);
+  --space-lg: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --space-xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --space-2xl: clamp(3rem, 2rem + 5vw, 4rem);
+  --space-3xl: clamp(4rem, 3rem + 5vw, 6rem);
+
+  /* Component-specific spacing */
+  --space-gutter: clamp(1rem, 0.75rem + 1.25vw, 1.5rem);
+  --space-section: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+  --space-card: clamp(1rem, 0.875rem + 0.625vw, 1.25rem);
+}
+
+/* Spacing utilities */
+.space-xs {
+  padding: var(--space-xs);
+}
+.space-sm {
+  padding: var(--space-sm);
+}
+.space-md {
+  padding: var(--space-md);
+}
+.space-lg {
+  padding: var(--space-lg);
+}
+.space-xl {
+  padding: var(--space-xl);
+}
+.space-2xl {
+  padding: var(--space-2xl);
+}
+.space-3xl {
+  padding: var(--space-3xl);
+}
+
+/* ========================================
+   MOBILE-FIRST GRID SYSTEM
+   ======================================== */
+
+.grid-mobile {
+  display: grid;
+  gap: var(--space-gutter);
+  grid-template-columns: 1fr;
+}
+
+/* Auto-fit grid with minimum column width */
+.grid-auto {
+  display: grid;
+  gap: var(--space-gutter);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+/* Responsive grid columns */
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* ========================================
+   MOBILE-FIRST COMPONENTS
+   ======================================== */
+
+/* Mobile-optimized card */
+.card-mobile {
+  @apply bg-card text-card-foreground rounded-lg;
+  padding: var(--space-card);
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card-mobile:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile-first button styles */
+.btn-mobile {
+  @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+  min-height: 44px;
+  padding: 0 var(--space-md);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn-mobile:active {
+  transform: scale(0.98);
+}
+
+/* Mobile navigation patterns */
+.nav-mobile {
+  @apply fixed bottom-0 inset-x-0 bg-background border-t z-50;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-mobile-items {
+  @apply flex items-center justify-around;
+  height: 56px;
+}
+
+.nav-mobile-item {
+  @apply flex flex-col items-center justify-center flex-1;
+  min-height: 56px;
+  padding: 0 0.5rem;
+}
+
+/* Floating action button */
+.fab {
+  @apply fixed bottom-20 right-4 z-40 rounded-full shadow-lg;
+  width: 56px;
+  height: 56px;
+  margin-bottom: env(safe-area-inset-bottom);
+}
+
+/* Pull-to-refresh indicator */
+.pull-to-refresh {
+  @apply absolute top-0 left-0 right-0 flex items-center justify-center;
+  height: 60px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.pull-to-refresh.active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   TOUCH INTERACTION STATES
+   ======================================== */
+
+/* Ripple effect for touch feedback */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+.ripple:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Long press indicator */
+.long-press {
+  position: relative;
+}
+
+.long-press::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.long-press:active::after {
+  opacity: 1;
+  border-color: var(--ring);
+  animation: longPressHold 0.8s ease-out;
+}
+
+@keyframes longPressHold {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Optimize images for mobile */
+.img-mobile {
+  @apply w-full h-auto;
+  object-fit: cover;
+  loading: lazy;
+  decoding: async;
+}
+
+/* Skeleton loading for mobile */
+.skeleton-mobile {
+  @apply bg-muted animate-pulse rounded;
+  min-height: 1rem;
+}
+
+/* Virtualized list container */
+.virtual-list {
+  @apply overflow-auto;
+  -webkit-overflow-scrolling: touch;
+  contain: strict;
+}
+
+/* ========================================
+   MOBILE GESTURE INDICATORS
+   ======================================== */
+
+/* Swipe indicator */
+.swipe-indicator {
+  @apply absolute bottom-2 left-1/2 transform -translate-x-1/2;
+  width: 40px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+/* Scroll hint */
+.scroll-hint {
+  @apply absolute bottom-4 left-1/2 transform -translate-x-1/2;
+  animation: scrollHint 2s ease-in-out infinite;
+}
+
+@keyframes scrollHint {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0.5;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY FOR MOBILE
+   ======================================== */
+
+/* Focus indicators for touch devices */
+@media (hover: none) {
+  *:focus {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+/* Screen reader only content */
+.sr-only-mobile {
+  @apply sr-only;
+}
+
+@media (min-width: 768px) {
+  .sr-only-mobile {
+    @apply not-sr-only;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card-mobile {
+    border: 2px solid currentColor;
+  }
+
+  .btn-mobile {
+    border: 2px solid currentColor;
+  }
+}

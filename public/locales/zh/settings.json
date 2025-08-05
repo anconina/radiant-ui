@@ -1,0 +1,133 @@
+{
+  "title": "设置",
+  "subtitle": "管理您的账户设置和偏好",
+  "tabs": {
+    "appearance": "外观",
+    "language": "语言",
+    "notifications": "通知",
+    "privacy": "隐私"
+  },
+  "actions": {
+    "save": "保存设置",
+    "saveChanges": "保存更改",
+    "saving": "保存中...",
+    "cancel": "取消",
+    "reset": "重置"
+  },
+  "appearance": {
+    "title": "主题",
+    "description": "自定义应用程序在您设备上的外观",
+    "colorTheme": "颜色主题",
+    "fontSize": "字体大小",
+    "fontSizeDescription": "调整基础字体大小以提高可读性",
+    "reducedMotion": "减少动画",
+    "reducedMotionDescription": "最小化动画和过渡效果",
+    "highContrast": "高对比度",
+    "highContrastDescription": "增加对比度以提高可见性",
+    "themes": {
+      "light": "浅色",
+      "dark": "深色",
+      "system": "系统"
+    }
+  },
+  "language": {
+    "title": "语言和地区",
+    "description": "设置您的语言和地区偏好",
+    "language": "语言",
+    "region": "地区",
+    "dateFormat": "日期格式",
+    "timeFormat": "时间格式",
+    "firstDayOfWeek": "每周第一天",
+    "regions": {
+      "US": "美国",
+      "GB": "英国",
+      "CA": "加拿大",
+      "AU": "澳大利亚",
+      "DE": "德国",
+      "FR": "法国",
+      "JP": "日本",
+      "CN": "中国"
+    },
+    "timeFormats": {
+      "12h": "12小时制（AM/PM）",
+      "24h": "24小时制"
+    },
+    "weekDays": {
+      "sunday": "星期日",
+      "monday": "星期一",
+      "saturday": "星期六"
+    },
+    "placeholders": {
+      "selectRegion": "选择地区",
+      "selectDateFormat": "选择日期格式",
+      "selectTimeFormat": "选择时间格式",
+      "selectFirstDay": "选择第一天"
+    }
+  },
+  "notifications": {
+    "title": "通知偏好",
+    "description": "选择您希望如何接收通知",
+    "channels": {
+      "email": "邮件",
+      "push": "推送",
+      "sms": "短信"
+    },
+    "types": {
+      "updates": {
+        "label": "产品更新",
+        "description": "产品功能和改进的新闻"
+      },
+      "security": {
+        "label": "安全警报",
+        "description": "重要的安全通知和警报"
+      },
+      "marketing": {
+        "label": "营销",
+        "description": "促销内容和特别优惠"
+      },
+      "reminders": {
+        "label": "提醒",
+        "description": "任务提醒和截止日期通知"
+      }
+    },
+    "schedule": {
+      "title": "通知计划",
+      "description": "设置您不希望被打扰的安静时间",
+      "quietHours": "安静时间",
+      "quietHoursDescription": "在指定时间内暂停非紧急通知",
+      "startTime": "开始时间",
+      "endTime": "结束时间"
+    }
+  },
+  "privacy": {
+    "title": "隐私设置",
+    "description": "控制您的隐私和数据共享偏好",
+    "profileVisibility": "个人资料可见性",
+    "profileOptions": {
+      "public": "公开 - 任何人都能看到您的个人资料",
+      "friends": "仅朋友 - 只有您的联系人能看到",
+      "private": "私密 - 只有您能看到自己的个人资料"
+    },
+    "showEmail": "显示邮箱地址",
+    "showEmailDescription": "在您的公开个人资料中显示邮箱",
+    "showPhone": "显示电话号码",
+    "showPhoneDescription": "在您的公开个人资料中显示电话号码",
+    "searchIndexing": "搜索引擎索引",
+    "searchIndexingDescription": "允许搜索引擎索引您的个人资料",
+    "dataCollection": "使用分析",
+    "dataCollectionDescription": "通过共享使用数据帮助改进我们的服务",
+    "dataManagement": {
+      "title": "数据管理",
+      "description": "管理您的个人数据和账户",
+      "exportData": "导出您的数据",
+      "exportDataDescription": "下载您所有数据的副本",
+      "requestExport": "请求导出",
+      "deleteAccount": "删除账户",
+      "deleteAccountDescription": "永久删除您的账户和所有数据"
+    }
+  },
+  "messages": {
+    "settingsSaved": "设置保存成功",
+    "settingsSaveFailed": "设置保存失败"
+  }
+}

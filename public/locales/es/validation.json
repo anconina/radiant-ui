@@ -1,0 +1,36 @@
+{
+  "required": "{{field}} es requerido",
+  "email": "Por favor ingresa un correo electrónico válido",
+  "minLength": "{{field}} debe tener al menos {{min}} caracteres",
+  "maxLength": "{{field}} no debe exceder {{max}} caracteres",
+  "min": "{{field}} debe ser al menos {{min}}",
+  "max": "{{field}} no debe exceder {{max}}",
+  "pattern": "El formato de {{field}} es inválido",
+  "number": "{{field}} debe ser un número",
+  "integer": "{{field}} debe ser un número entero",
+  "positive": "{{field}} debe ser positivo",
+  "negative": "{{field}} debe ser negativo",
+  "url": "Por favor ingresa una URL válida",
+  "date": "Por favor ingresa una fecha válida",
+  "time": "Por favor ingresa una hora válida",
+  "dateTime": "Por favor ingresa una fecha y hora válidas",
+  "match": "{{field}} debe coincidir con {{otherField}}",
+  "unique": "{{field}} debe ser único",
+  "fileSize": "El tamaño del archivo no debe exceder {{max}}",
+  "fileType": "Tipo de archivo inválido. Tipos permitidos: {{types}}",
+  "imageSize": "Las dimensiones de la imagen deben ser {{width}}x{{height}}",
+  "phoneNumber": "Por favor ingresa un número de teléfono válido",
+  "postalCode": "Por favor ingresa un código postal válido",
+  "creditCard": "Por favor ingresa un número de tarjeta de crédito válido",
+  "password": {
+    "weak": "La contraseña es muy débil",
+    "medium": "La fortaleza de la contraseña es media",
+    "strong": "La contraseña es fuerte",
+    "requirements": "La contraseña debe contener al menos {{min}} caracteres, incluyendo mayúsculas, minúsculas, números y caracteres especiales"
+  },
+  "custom": {
+    "username": "El nombre de usuario solo puede contener letras, números y guiones bajos",
+    "age": "Debes tener al menos 18 años",
+    "terms": "Debes aceptar los términos y condiciones"
+  }
+}

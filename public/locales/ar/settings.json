@@ -1,0 +1,133 @@
+{
+  "title": "الإعدادات",
+  "subtitle": "إدارة إعدادات حسابك وتفضيلاتك",
+  "tabs": {
+    "appearance": "المظهر",
+    "language": "اللغة",
+    "notifications": "الإشعارات",
+    "privacy": "الخصوصية"
+  },
+  "actions": {
+    "save": "حفظ الإعدادات",
+    "saveChanges": "حفظ التغييرات",
+    "saving": "جاري الحفظ...",
+    "cancel": "إلغاء",
+    "reset": "إعادة تعيين"
+  },
+  "appearance": {
+    "title": "المظهر",
+    "description": "تخصيص مظهر التطبيق على جهازك",
+    "colorTheme": "موضوع الألوان",
+    "fontSize": "حجم الخط",
+    "fontSizeDescription": "ضبط حجم الخط الأساسي لتحسين القراءة",
+    "reducedMotion": "تقليل الحركة",
+    "reducedMotionDescription": "تقليل الرسوم المتحركة والانتقالات",
+    "highContrast": "تباين عالي",
+    "highContrastDescription": "زيادة التباين لتحسين الرؤية",
+    "themes": {
+      "light": "فاتح",
+      "dark": "داكن",
+      "system": "النظام"
+    }
+  },
+  "language": {
+    "title": "اللغة والمنطقة",
+    "description": "تعيين تفضيلات اللغة والمنطقة",
+    "language": "اللغة",
+    "region": "المنطقة",
+    "dateFormat": "تنسيق التاريخ",
+    "timeFormat": "تنسيق الوقت",
+    "firstDayOfWeek": "أول أيام الأسبوع",
+    "regions": {
+      "US": "الولايات المتحدة",
+      "GB": "المملكة المتحدة",
+      "CA": "كندا",
+      "AU": "أستراليا",
+      "DE": "ألمانيا",
+      "FR": "فرنسا",
+      "JP": "اليابان",
+      "CN": "الصين"
+    },
+    "timeFormats": {
+      "12h": "12 ساعة (ص/م)",
+      "24h": "24 ساعة"
+    },
+    "weekDays": {
+      "sunday": "الأحد",
+      "monday": "الاثنين",
+      "saturday": "السبت"
+    },
+    "placeholders": {
+      "selectRegion": "اختيار المنطقة",
+      "selectDateFormat": "اختيار تنسيق التاريخ",
+      "selectTimeFormat": "اختيار تنسيق الوقت",
+      "selectFirstDay": "اختيار اليوم الأول"
+    }
+  },
+  "notifications": {
+    "title": "تفضيلات الإشعارات",
+    "description": "اختر كيف تريد تلقي الإشعارات",
+    "channels": {
+      "email": "البريد الإلكتروني",
+      "push": "إشعارات فورية",
+      "sms": "رسائل نصية"
+    },
+    "types": {
+      "updates": {
+        "label": "تحديثات المنتج",
+        "description": "أخبار حول ميزات المنتج والتحسينات"
+      },
+      "security": {
+        "label": "تنبيهات الأمان",
+        "description": "إشعارات وتنبيهات الأمان المهمة"
+      },
+      "marketing": {
+        "label": "التسويق",
+        "description": "المحتوى الترويجي والعروض الخاصة"
+      },
+      "reminders": {
+        "label": "التذكيرات",
+        "description": "تذكيرات المهام وإشعارات المواعيد النهائية"
+      }
+    },
+    "schedule": {
+      "title": "جدولة الإشعارات",
+      "description": "تعيين الساعات الهادئة عندما لا تريد أن تُزعج",
+      "quietHours": "الساعات الهادئة",
+      "quietHoursDescription": "إيقاف الإشعارات غير العاجلة خلال الساعات المحددة",
+      "startTime": "وقت البداية",
+      "endTime": "وقت النهاية"
+    }
+  },
+  "privacy": {
+    "title": "إعدادات الخصوصية",
+    "description": "التحكم في خصوصيتك وتفضيلات مشاركة البيانات",
+    "profileVisibility": "رؤية الملف الشخصي",
+    "profileOptions": {
+      "public": "عام - يمكن لأي شخص رؤية ملفك الشخصي",
+      "friends": "الأصدقاء فقط - يمكن لجهات الاتصال فقط الرؤية",
+      "private": "خاص - يمكنك فقط رؤية ملفك الشخصي"
+    },
+    "showEmail": "عرض عنوان البريد الإلكتروني",
+    "showEmailDescription": "عرض بريدك الإلكتروني في ملفك الشخصي العام",
+    "showPhone": "عرض رقم الهاتف",
+    "showPhoneDescription": "عرض رقم هاتفك في ملفك الشخصي العام",
+    "searchIndexing": "فهرسة محركات البحث",
+    "searchIndexingDescription": "السماح لمحركات البحث بفهرسة ملفك الشخصي",
+    "dataCollection": "تحليلات الاستخدام",
+    "dataCollectionDescription": "مساعدة في تحسين خدماتنا من خلال مشاركة بيانات الاستخدام",
+    "dataManagement": {
+      "title": "إدارة البيانات",
+      "description": "إدارة بياناتك الشخصية وحسابك",
+      "exportData": "تصدير بياناتك",
+      "exportDataDescription": "تنزيل نسخة من جميع بياناتك",
+      "requestExport": "طلب التصدير",
+      "deleteAccount": "حذف الحساب",
+      "deleteAccountDescription": "حذف حسابك وجميع البيانات نهائياً"
+    }
+  },
+  "messages": {
+    "settingsSaved": "تم حفظ الإعدادات بنجاح",
+    "settingsSaveFailed": "فشل في حفظ الإعدادات"
+  }
+}

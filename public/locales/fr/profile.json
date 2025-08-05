@@ -1,0 +1,120 @@
+{
+  "title": "Profil",
+  "subtitle": "Gérez vos informations personnelles et préférences",
+  "tabs": {
+    "general": "Général",
+    "professional": "Professionnel",
+    "security": "Sécurité"
+  },
+  "userCard": {
+    "role": "Utilisateur"
+  },
+  "accountStats": {
+    "title": "Statistiques du compte",
+    "memberSince": "Membre depuis",
+    "lastActive": "Dernière activité",
+    "status": "Statut",
+    "active": "Actif"
+  },
+  "general": {
+    "title": "Informations personnelles",
+    "description": "Mettez à jour vos détails personnels et informations de contact",
+    "fullName": "Nom complet",
+    "email": "E-mail",
+    "phoneNumber": "Numéro de téléphone",
+    "location": "Localisation",
+    "bio": "Biographie",
+    "bioPlaceholder": "Parlez-nous de vous...",
+    "website": "Site web",
+    "placeholders": {
+      "fullName": "Jean Dupont",
+      "email": "jean@exemple.com",
+      "phoneNumber": "+33 1 23 45 67 89",
+      "location": "Paris, France",
+      "website": "https://exemple.com"
+    }
+  },
+  "professional": {
+    "title": "Informations professionnelles",
+    "description": "Gérez vos informations et préférences liées au travail",
+    "company": "Entreprise",
+    "position": "Poste",
+    "department": "Département",
+    "timezone": "Fuseau horaire",
+    "preferredLanguage": "Langue préférée",
+    "placeholders": {
+      "company": "Acme Inc.",
+      "position": "Ingénieur logiciel",
+      "selectDepartment": "Sélectionner le département",
+      "selectTimezone": "Sélectionner le fuseau horaire",
+      "selectLanguage": "Sélectionner la langue"
+    },
+    "departments": {
+      "engineering": "Ingénierie",
+      "design": "Design",
+      "marketing": "Marketing",
+      "sales": "Ventes",
+      "support": "Support",
+      "hr": "Ressources humaines",
+      "other": "Autre"
+    },
+    "timezones": {
+      "utc": "UTC",
+      "easternTime": "Heure de l'Est",
+      "centralTime": "Heure du Centre",
+      "mountainTime": "Heure des Montagnes",
+      "pacificTime": "Heure du Pacifique",
+      "london": "Londres",
+      "paris": "Paris",
+      "tokyo": "Tokyo"
+    },
+    "languages": {
+      "english": "Anglais",
+      "spanish": "Espagnol",
+      "french": "Français",
+      "german": "Allemand",
+      "japanese": "Japonais",
+      "chinese": "Chinois"
+    }
+  },
+  "security": {
+    "title": "Paramètres de sécurité",
+    "description": "Gérez la sécurité de votre compte et les préférences de confidentialité",
+    "twoFactorAuth": "Authentification à deux facteurs",
+    "twoFactorAuthDescription": "Ajoutez une couche de sécurité supplémentaire à votre compte",
+    "emailNotifications": "Notifications par e-mail",
+    "emailNotificationsDescription": "Recevez des alertes de sécurité par e-mail",
+    "recentActivity": "Activité récente",
+    "lastLogin": "Dernière connexion",
+    "lastPasswordChange": "Dernier changement de mot de passe",
+    "activeSessions": "Sessions actives",
+    "changePassword": "Changer le mot de passe",
+    "enable": "Activer",
+    "configure": "Configurer",
+    "activityValues": {
+      "todayAt": "Aujourd'hui à 9h15",
+      "monthsAgo": "Il y a 3 mois",
+      "devices": "2 appareils"
+    }
+  },
+  "actions": {
+    "save": "Enregistrer les modifications",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+    "deleteAccount": "Supprimer le compte"
+  },
+  "messages": {
+    "updateSuccess": "Profil mis à jour avec succès",
+    "updateError": "Échec de la mise à jour du profil",
+    "avatarUpdateSuccess": "Avatar mis à jour avec succès",
+    "avatarUpdateError": "Échec du téléversement de l'avatar",
+    "invalidImageFile": "Veuillez téléverser un fichier image",
+    "imageTooLarge": "La taille de l'image doit être inférieure à 5 Mo"
+  },
+  "validation": {
+    "nameRequired": "Le nom doit contenir au moins 2 caractères",
+    "invalidEmail": "Adresse e-mail invalide",
+    "bioTooLong": "La biographie doit contenir moins de 500 caractères",
+    "invalidUrl": "URL invalide"
+  }
+}

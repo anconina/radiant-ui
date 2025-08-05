@@ -1,0 +1,102 @@
+{
+  "page": {
+    "title": "התראות",
+    "description": "הישאר מעודכן עם הפעילויות וההתראות האחרונות שלך"
+  },
+  "stats": {
+    "total": {
+      "title": "סה״כ",
+      "description": "כל ההתראות"
+    },
+    "unread": {
+      "title": "לא נקראו",
+      "description": "דורש תשומת לב"
+    },
+    "thisWeek": {
+      "title": "השבוע",
+      "description": "פעילות אחרונה"
+    },
+    "actions": {
+      "title": "פעולות",
+      "description": "דורש פעולה"
+    }
+  },
+  "filter": {
+    "button": "סינון",
+    "label": "סנן לפי",
+    "all": "כל ההתראות",
+    "unread": "לא נקראו בלבד"
+  },
+  "actions": {
+    "markAllAsRead": "סמן הכל כנקרא",
+    "clearAll": "נקה הכל",
+    "markAsRead": "סמן כנקרא",
+    "delete": "מחק"
+  },
+  "card": {
+    "title": "כל ההתראות",
+    "description": "לחץ על התראה כדי לצפות בפרטים"
+  },
+  "empty": {
+    "all": "אין התראות להצגה",
+    "unread": "אין התראות שלא נקראו"
+  },
+  "types": {
+    "info": "מידע",
+    "success": "הצלחה",
+    "warning": "אזהרה",
+    "error": "שגיאה"
+  },
+  "badges": {
+    "new": "חדש"
+  },
+  "time": {
+    "from": "מאת {{name}}",
+    "ago": "לפני {{time}}",
+    "days": "יום {{count}}",
+    "days_other": "{{count}} ימים",
+    "hours": "שעה {{count}}",
+    "hours_other": "{{count}} שעות",
+    "minutes": "דקה {{count}}",
+    "minutes_other": "{{count}} דקות"
+  },
+  "mock": {
+    "paymentReceived": {
+      "title": "תשלום התקבל",
+      "message": "קיבלת תשלום בסך $1,250.00 מג׳ון דו",
+      "action": "צפה בעסקה"
+    },
+    "newFeature": {
+      "title": "תכונה חדשה זמינה",
+      "message": "בדוק את תכונות האנליטיקה החדשות בלוח הבקרה",
+      "action": "למד עוד"
+    },
+    "securityAlert": {
+      "title": "התראת אבטחה",
+      "message": "זוהתה כניסה חדשה ממכשיר לא מוכר",
+      "action": "סקור פעילות"
+    },
+    "paymentFailed": {
+      "title": "התשלום נכשל",
+      "message": "לא ניתן לעבד את תשלום המנוי שלך",
+      "action": "עדכן תשלום"
+    },
+    "systemMaintenance": {
+      "title": "תחזוקת מערכת",
+      "message": "תחזוקה מתוכננת ב-28 במרץ 2024 בשעה 2:00 UTC"
+    },
+    "profileUpdated": {
+      "title": "הפרופיל עודכן",
+      "message": "פרטי הפרופיל שלך עודכנו בהצלחה"
+    },
+    "newTeamMember": {
+      "title": "חבר צוות חדש",
+      "message": "שרה ג׳ונסון הצטרפה לצוות שלך"
+    },
+    "storageLimit": {
+      "title": "מגבלת אחסון",
+      "message": "אתה מתקרב למגבלת האחסון שלך (85% בשימוש)",
+      "action": "שדרג תוכנית"
+    }
+  }
+}

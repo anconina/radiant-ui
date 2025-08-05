@@ -1,0 +1,127 @@
+{
+  "title": "我们如何为您提供帮助？",
+  "subtitle": "搜索我们的知识库或浏览下面的主题",
+  "searchPlaceholder": "搜索帮助...",
+  "quickLinks": {
+    "documentation": "文档",
+    "community": "社区",
+    "emailSupport": "邮件支持",
+    "callUs": "电话联系"
+  },
+  "tabs": {
+    "faq": "常见问题",
+    "guides": "指南",
+    "contact": "联系我们"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "查找有关我们服务的常见问题答案",
+    "categories": {
+      "allTopics": "所有主题",
+      "account": "账户",
+      "billing": "账单",
+      "security": "安全",
+      "technical": "技术"
+    },
+    "questions": {
+      "resetPassword": {
+        "question": "如何重置密码？",
+        "answer": "要重置密码，请点击登录页面上的\"忘记密码\"链接。输入您的邮箱地址，我们将向您发送重置密码的说明。"
+      },
+      "upgradeSubscription": {
+        "question": "如何升级我的订阅？",
+        "answer": "您可以通过转到设置 > 账单来升级订阅。点击\"更改计划\"并选择最适合您需求的计划。您的账单将按比例计算。"
+      },
+      "dataSecure": {
+        "question": "我的数据安全吗？",
+        "answer": "是的，我们非常重视安全。所有数据在传输和静态存储时都经过加密。我们使用行业标准的安全协议，并定期进行安全审计。"
+      },
+      "exportData": {
+        "question": "我可以导出我的数据吗？",
+        "answer": "是的，您可以随时导出数据。转到设置 > 数据和隐私，然后点击\"导出数据\"。您将通过邮件收到下载链接。"
+      },
+      "cancelSubscription": {
+        "question": "如何取消我的订阅？",
+        "answer": "要取消订阅，请转到设置 > 账单，然后点击\"取消订阅\"。您将在账单周期结束前继续享有访问权限。"
+      },
+      "paymentMethods": {
+        "question": "您接受哪些付款方式？",
+        "answer": "我们接受所有主要信用卡（Visa、MasterCard、American Express）、PayPal，以及企业客户的银行转账。"
+      },
+      "twoFactor": {
+        "question": "如何启用双重认证？",
+        "answer": "转到设置 > 安全，然后点击\"启用双重认证\"。按照设置说明链接您的认证应用程序。"
+      },
+      "api": {
+        "question": "我可以使用API吗？",
+        "answer": "是的，我们提供全面的REST API。您可以在docs.example.com/api找到API文档。专业版和企业版计划可以使用API访问。"
+      }
+    },
+    "noResults": "未找到与您的搜索匹配的常见问题。"
+  },
+  "guides": {
+    "title": "帮助指南和教程",
+    "subtitle": "逐步指南，帮助您充分利用我们的平台",
+    "items": {
+      "gettingStarted": {
+        "title": "入门指南",
+        "description": "学习基础知识并快速开始"
+      },
+      "accountManagement": {
+        "title": "账户管理",
+        "description": "管理您的个人资料、设置和偏好"
+      },
+      "billing": {
+        "title": "账单和订阅",
+        "description": "了解定价、账单周期和付款选项"
+      },
+      "security": {
+        "title": "安全最佳实践",
+        "description": "使用我们推荐的做法保护您的账户安全"
+      },
+      "api": {
+        "title": "API文档",
+        "description": "使用我们的REST API与平台集成"
+      },
+      "mobile": {
+        "title": "移动应用指南",
+        "description": "充分利用我们的移动应用程序"
+      },
+      "collaboration": {
+        "title": "团队协作",
+        "description": "与您的团队成员高效合作"
+      },
+      "advanced": {
+        "title": "高级功能",
+        "description": "释放我们平台的全部潜力"
+      }
+    },
+    "noResults": "未找到与您的搜索匹配的指南。"
+  },
+  "contact": {
+    "support": {
+      "title": "联系支持",
+      "subtitle": "与我们的支持团队取得联系",
+      "hours": {
+        "title": "支持时间",
+        "description": "我们的支持团队在周一至周五上午9点至下午6点（EST）提供服务。我们通常在24小时内回复。"
+      },
+      "email": "support@example.com",
+      "phone": "+86 400-123-4567",
+      "liveChat": "在线聊天（在线）"
+    },
+    "resources": {
+      "title": "其他资源",
+      "subtitle": "获得帮助和保持信息更新的更多方式",
+      "communityForum": "社区论坛",
+      "apiDocs": "API文档",
+      "developerPortal": "开发者门户",
+      "videoTutorials": "视频教程"
+    },
+    "ticket": {
+      "title": "找不到您要找的内容？",
+      "subtitle": "提交支持工单，我们将尽快与您联系",
+      "button": "提交支持工单"
+    }
+  }
+}

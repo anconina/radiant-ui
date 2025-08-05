@@ -1,0 +1,102 @@
+{
+  "page": {
+    "title": "Notifications",
+    "description": "Stay updated with your latest activities and alerts"
+  },
+  "stats": {
+    "total": {
+      "title": "Total",
+      "description": "All notifications"
+    },
+    "unread": {
+      "title": "Unread",
+      "description": "Requires attention"
+    },
+    "thisWeek": {
+      "title": "This Week",
+      "description": "Recent activity"
+    },
+    "actions": {
+      "title": "Actions",
+      "description": "Require action"
+    }
+  },
+  "filter": {
+    "button": "Filter",
+    "label": "Filter by",
+    "all": "All notifications",
+    "unread": "Unread only"
+  },
+  "actions": {
+    "markAllAsRead": "Mark all as read",
+    "clearAll": "Clear all",
+    "markAsRead": "Mark as read",
+    "delete": "Delete"
+  },
+  "card": {
+    "title": "All Notifications",
+    "description": "Click on a notification to view details"
+  },
+  "empty": {
+    "all": "No notifications to display",
+    "unread": "No unread notifications"
+  },
+  "types": {
+    "info": "info",
+    "success": "success",
+    "warning": "warning",
+    "error": "error"
+  },
+  "badges": {
+    "new": "New"
+  },
+  "time": {
+    "from": "from {{name}}",
+    "ago": "{{time}} ago",
+    "days": "{{count}} day",
+    "days_other": "{{count}} days",
+    "hours": "{{count}} hour",
+    "hours_other": "{{count}} hours",
+    "minutes": "{{count}} minute",
+    "minutes_other": "{{count}} minutes"
+  },
+  "mock": {
+    "paymentReceived": {
+      "title": "Payment Received",
+      "message": "You have received a payment of $1,250.00 from John Doe",
+      "action": "View transaction"
+    },
+    "newFeature": {
+      "title": "New Feature Available",
+      "message": "Check out our new dashboard analytics features",
+      "action": "Learn more"
+    },
+    "securityAlert": {
+      "title": "Security Alert",
+      "message": "New login detected from unknown device",
+      "action": "Review activity"
+    },
+    "paymentFailed": {
+      "title": "Payment Failed",
+      "message": "Your subscription payment could not be processed",
+      "action": "Update payment"
+    },
+    "systemMaintenance": {
+      "title": "System Maintenance",
+      "message": "Scheduled maintenance on March 28, 2024 at 2:00 AM UTC"
+    },
+    "profileUpdated": {
+      "title": "Profile Updated",
+      "message": "Your profile information has been successfully updated"
+    },
+    "newTeamMember": {
+      "title": "New Team Member",
+      "message": "Sarah Johnson has joined your team"
+    },
+    "storageLimit": {
+      "title": "Storage Limit",
+      "message": "You are approaching your storage limit (85% used)",
+      "action": "Upgrade plan"
+    }
+  }
+}

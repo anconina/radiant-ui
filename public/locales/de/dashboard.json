@@ -1,0 +1,48 @@
+{
+  "title": "Dashboard",
+  "subtitle": "Ihr Unternehmen auf einen Blick",
+  "welcome": "Willkommen zurück, {{name}}!",
+  "refresh": "Aktualisieren",
+  "today": "Heute",
+  "thisWeek": "Diese Woche",
+  "thisMonth": "Dieser Monat",
+  "download": "Herunterladen",
+  "downloadCsv": "Als CSV herunterladen",
+  "downloadJson": "Als JSON herunterladen",
+  "downloadPdf": "Als PDF herunterladen",
+  "exporting": "Exportiere...",
+  "totalRevenue": "Gesamtumsatz",
+  "totalUsers": "Benutzer gesamt",
+  "totalOrders": "Bestellungen gesamt",
+  "activeNow": "Aktuell aktiv",
+  "revenue": "Umsatz",
+  "revenueDescription": "Ihr Umsatz im Zeitverlauf",
+  "activity": "Aktivität",
+  "activityDescription": "Aufschlüsselung der Benutzeraktivität",
+  "recentSales": "Aktuelle Verkäufe",
+  "recentSalesDescription": "Sie haben diesen Monat 265 Verkäufe erzielt",
+  "topProducts": "Top-Produkte",
+  "topProductsDescription": "Beste Produkte",
+  "overview": {
+    "title": "Übersicht",
+    "totalUsers": "Benutzer gesamt",
+    "activeUsers": "Aktive Benutzer",
+    "revenue": "Umsatz",
+    "growth": "Wachstum"
+  },
+  "charts": {
+    "userActivity": "Benutzeraktivität",
+    "revenueAnalysis": "Umsatzanalyse",
+    "performanceMetrics": "Leistungskennzahlen"
+  },
+  "recentActivity": {
+    "title": "Letzte Aktivitäten",
+    "noActivity": "Keine aktuellen Aktivitäten"
+  },
+  "quickActions": {
+    "title": "Schnellaktionen",
+    "viewReports": "Berichte anzeigen",
+    "manageUsers": "Benutzer verwalten",
+    "settings": "Einstellungen"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "title": "Wie können wir Ihnen helfen?",
+  "subtitle": "Durchsuchen Sie unsere Wissensdatenbank oder stöbern Sie in den unten stehenden Themen",
+  "searchPlaceholder": "Nach Hilfe suchen...",
+  "quickLinks": {
+    "documentation": "Dokumentation",
+    "community": "Community",
+    "emailSupport": "E-Mail-Support",
+    "callUs": "Anrufen"
+  },
+  "tabs": {
+    "faq": "FAQ",
+    "guides": "Anleitungen",
+    "contact": "Kontakt"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu unserem Service",
+    "categories": {
+      "allTopics": "Alle Themen",
+      "account": "Konto",
+      "billing": "Abrechnung",
+      "security": "Sicherheit",
+      "technical": "Technisch"
+    },
+    "questions": {
+      "resetPassword": {
+        "question": "Wie setze ich mein Passwort zurück?",
+        "answer": "Um Ihr Passwort zurückzusetzen, klicken Sie auf den Link \"Passwort vergessen\" auf der Anmeldeseite. Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen Anweisungen zum Zurücksetzen Ihres Passworts."
+      },
+      "upgradeSubscription": {
+        "question": "Wie kann ich mein Abonnement aktualisieren?",
+        "answer": "Sie können Ihr Abonnement aktualisieren, indem Sie zu Einstellungen > Abrechnung gehen. Klicken Sie auf \"Plan ändern\" und wählen Sie den Plan, der am besten zu Ihren Bedürfnissen passt. Ihre Abrechnung wird anteilig berechnet."
+      },
+      "dataSecure": {
+        "question": "Sind meine Daten sicher?",
+        "answer": "Ja, wir nehmen Sicherheit ernst. Alle Daten werden während der Übertragung und im Ruhezustand verschlüsselt. Wir verwenden branchenübliche Sicherheitsprotokolle und unterziehen uns regelmäßig Sicherheitsaudits."
+      },
+      "exportData": {
+        "question": "Kann ich meine Daten exportieren?",
+        "answer": "Ja, Sie können Ihre Daten jederzeit exportieren. Gehen Sie zu Einstellungen > Daten & Datenschutz und klicken Sie auf \"Daten exportieren\". Sie erhalten einen Download-Link per E-Mail."
+      },
+      "cancelSubscription": {
+        "question": "Wie kündige ich mein Abonnement?",
+        "answer": "Um Ihr Abonnement zu kündigen, gehen Sie zu Einstellungen > Abrechnung und klicken Sie auf \"Abonnement kündigen\". Sie haben weiterhin Zugang bis zum Ende Ihrer Abrechnungsperiode."
+      },
+      "paymentMethods": {
+        "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+        "answer": "Wir akzeptieren alle gängigen Kreditkarten (Visa, MasterCard, American Express), PayPal und Überweisungen für Unternehmenskunden."
+      },
+      "twoFactor": {
+        "question": "Wie aktiviere ich die Zwei-Faktor-Authentifizierung?",
+        "answer": "Gehen Sie zu Einstellungen > Sicherheit und klicken Sie auf \"Zwei-Faktor-Authentifizierung aktivieren\". Folgen Sie den Setup-Anweisungen, um Ihre Authenticator-App zu verknüpfen."
+      },
+      "api": {
+        "question": "Kann ich die API verwenden?",
+        "answer": "Ja, wir bieten eine umfassende REST-API. Sie finden die API-Dokumentation unter docs.beispiel.com/api. API-Zugang ist bei Professional- und Enterprise-Plänen verfügbar."
+      }
+    },
+    "noResults": "Keine FAQs gefunden, die Ihrer Suche entsprechen."
+  },
+  "guides": {
+    "title": "Hilfe-Anleitungen und Tutorials",
+    "subtitle": "Schritt-für-Schritt-Anleitungen, um das Beste aus unserer Plattform herauszuholen",
+    "items": {
+      "gettingStarted": {
+        "title": "Erste Schritte Anleitung",
+        "description": "Lernen Sie die Grundlagen und starten Sie schnell durch"
+      },
+      "accountManagement": {
+        "title": "Kontoverwaltung",
+        "description": "Verwalten Sie Ihr Profil, Einstellungen und Präferenzen"
+      },
+      "billing": {
+        "title": "Abrechnung & Abonnements",
+        "description": "Verstehen Sie Preise, Abrechnungszyklen und Zahlungsoptionen"
+      },
+      "security": {
+        "title": "Sicherheits-Best-Practices",
+        "description": "Halten Sie Ihr Konto mit unseren empfohlenen Praktiken sicher"
+      },
+      "api": {
+        "title": "API-Dokumentation",
+        "description": "Integrieren Sie sich mit unserer Plattform über unsere REST-API"
+      },
+      "mobile": {
+        "title": "Mobile-App-Anleitung",
+        "description": "Holen Sie das Beste aus unseren mobilen Anwendungen heraus"
+      },
+      "collaboration": {
+        "title": "Teamzusammenarbeit",
+        "description": "Arbeiten Sie effektiv mit Ihren Teammitgliedern"
+      },
+      "advanced": {
+        "title": "Erweiterte Funktionen",
+        "description": "Schöpfen Sie das volle Potenzial unserer Plattform aus"
+      }
+    },
+    "noResults": "Keine Anleitungen gefunden, die Ihrer Suche entsprechen."
+  },
+  "contact": {
+    "support": {
+      "title": "Support kontaktieren",
+      "subtitle": "Kontaktieren Sie unser Support-Team",
+      "hours": {
+        "title": "Support-Zeiten",
+        "description": "Unser Support-Team ist Montag bis Freitag von 9:00 bis 18:00 Uhr MEZ verfügbar. Wir antworten normalerweise innerhalb von 24 Stunden."
+      },
+      "email": "support@beispiel.com",
+      "phone": "+49 30 12345678",
+      "liveChat": "Live-Chat (Online)"
+    },
+    "resources": {
+      "title": "Zusätzliche Ressourcen",
+      "subtitle": "Weitere Möglichkeiten, Hilfe zu erhalten und informiert zu bleiben",
+      "communityForum": "Community-Forum",
+      "apiDocs": "API-Dokumentation",
+      "developerPortal": "Entwicklerportal",
+      "videoTutorials": "Video-Tutorials"
+    },
+    "ticket": {
+      "title": "Finden Sie nicht, was Sie suchen?",
+      "subtitle": "Senden Sie ein Support-Ticket und wir melden uns so schnell wie möglich bei Ihnen",
+      "button": "Support-Ticket senden"
+    }
+  }
+}

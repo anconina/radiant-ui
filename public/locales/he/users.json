@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "משתמשים",
+    "subtitle": "ניהול ומעקב אחר חשבונות משתמשים",
+    "addUser": "הוסף משתמש"
+  },
+  "stats": {
+    "totalUsers": "סה\"כ משתמשים",
+    "activeUsers": "משתמשים פעילים",
+    "adminUsers": "משתמשי ניהול",
+    "totalUsersDescription": "+{{count}} מהחודש שעבר",
+    "activeUsersDescription": "{{percentage}}% מהסך הכל",
+    "adminUsersDescription": "עם גישה מלאה"
+  },
+  "table": {
+    "title": "ניהול משתמשים",
+    "description": "צפייה וניהול של כל המשתמשים הרשומים",
+    "searchPlaceholder": "חיפוש משתמשים...",
+    "noResults": "לא נמצאו משתמשים",
+    "headers": {
+      "user": "משתמש",
+      "role": "תפקיד",
+      "status": "סטטוס",
+      "joined": "תאריך הצטרפות",
+      "actions": "פעולות"
+    }
+  },
+  "roles": {
+    "admin": "מנהל",
+    "user": "משתמש",
+    "moderator": "מנחה"
+  },
+  "statuses": {
+    "active": "פעיל",
+    "inactive": "לא פעיל",
+    "pending": "ממתין"
+  },
+  "actions": {
+    "openMenu": "פתח תפריט",
+    "edit": "ערוך",
+    "sendEmail": "שלח אימייל",
+    "delete": "מחק"
+  }
+}

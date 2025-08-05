@@ -1,0 +1,48 @@
+{
+  "title": "Tableau de bord",
+  "subtitle": "Votre entreprise en un coup d'œil",
+  "welcome": "Bon retour, {{name}} !",
+  "refresh": "Actualiser",
+  "today": "Aujourd'hui",
+  "thisWeek": "Cette semaine",
+  "thisMonth": "Ce mois",
+  "download": "Télécharger",
+  "downloadCsv": "Télécharger en CSV",
+  "downloadJson": "Télécharger en JSON",
+  "downloadPdf": "Télécharger en PDF",
+  "exporting": "Exportation...",
+  "totalRevenue": "Chiffre d'affaires total",
+  "totalUsers": "Utilisateurs totaux",
+  "totalOrders": "Commandes totales",
+  "activeNow": "Actifs maintenant",
+  "revenue": "Chiffre d'affaires",
+  "revenueDescription": "Votre chiffre d'affaires dans le temps",
+  "activity": "Activité",
+  "activityDescription": "Répartition de l'activité des utilisateurs",
+  "recentSales": "Ventes récentes",
+  "recentSalesDescription": "Vous avez réalisé 265 ventes ce mois",
+  "topProducts": "Produits populaires",
+  "topProductsDescription": "Produits les plus performants",
+  "overview": {
+    "title": "Vue d'ensemble",
+    "totalUsers": "Utilisateurs totaux",
+    "activeUsers": "Utilisateurs actifs",
+    "revenue": "Chiffre d'affaires",
+    "growth": "Croissance"
+  },
+  "charts": {
+    "userActivity": "Activité des utilisateurs",
+    "revenueAnalysis": "Analyse du chiffre d'affaires",
+    "performanceMetrics": "Métriques de performance"
+  },
+  "recentActivity": {
+    "title": "Activité récente",
+    "noActivity": "Aucune activité récente"
+  },
+  "quickActions": {
+    "title": "Actions rapides",
+    "viewReports": "Voir les rapports",
+    "manageUsers": "Gérer les utilisateurs",
+    "settings": "Paramètres"
+  }
+}

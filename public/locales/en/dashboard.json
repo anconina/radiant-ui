@@ -1,0 +1,48 @@
+{
+  "title": "Dashboard",
+  "subtitle": "Your business at a glance",
+  "welcome": "Welcome back, {{name}}!",
+  "refresh": "Refresh",
+  "today": "Today",
+  "thisWeek": "This Week",
+  "thisMonth": "This Month",
+  "download": "Download",
+  "downloadCsv": "Download as CSV",
+  "downloadJson": "Download as JSON",
+  "downloadPdf": "Download as PDF",
+  "exporting": "Exporting...",
+  "totalRevenue": "Total Revenue",
+  "totalUsers": "Total Users",
+  "totalOrders": "Total Orders",
+  "activeNow": "Active Now",
+  "revenue": "Revenue",
+  "revenueDescription": "Your revenue over time",
+  "activity": "Activity",
+  "activityDescription": "User activity breakdown",
+  "recentSales": "Recent Sales",
+  "recentSalesDescription": "You made 265 sales this month",
+  "topProducts": "Top Products",
+  "topProductsDescription": "Best performing products",
+  "overview": {
+    "title": "Overview",
+    "totalUsers": "Total Users",
+    "activeUsers": "Active Users",
+    "revenue": "Revenue",
+    "growth": "Growth"
+  },
+  "charts": {
+    "userActivity": "User Activity",
+    "revenueAnalysis": "Revenue Analysis",
+    "performanceMetrics": "Performance Metrics"
+  },
+  "recentActivity": {
+    "title": "Recent Activity",
+    "noActivity": "No recent activity"
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "viewReports": "View Reports",
+    "manageUsers": "Manage Users",
+    "settings": "Settings"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "title": "How can we help you?",
+  "subtitle": "Search our knowledge base or browse topics below",
+  "searchPlaceholder": "Search for help...",
+  "quickLinks": {
+    "documentation": "Documentation",
+    "community": "Community",
+    "emailSupport": "Email Support",
+    "callUs": "Call Us"
+  },
+  "tabs": {
+    "faq": "FAQ",
+    "guides": "Guides",
+    "contact": "Contact"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our service",
+    "categories": {
+      "allTopics": "All Topics",
+      "account": "Account",
+      "billing": "Billing",
+      "security": "Security",
+      "technical": "Technical"
+    },
+    "questions": {
+      "resetPassword": {
+        "question": "How do I reset my password?",
+        "answer": "To reset your password, click on the \"Forgot Password\" link on the login page. Enter your email address, and we'll send you instructions to reset your password."
+      },
+      "upgradeSubscription": {
+        "question": "How can I upgrade my subscription?",
+        "answer": "You can upgrade your subscription by going to Settings > Billing. Click on \"Change Plan\" and select the plan that best suits your needs. Your billing will be prorated."
+      },
+      "dataSecure": {
+        "question": "Is my data secure?",
+        "answer": "Yes, we take security seriously. All data is encrypted in transit and at rest. We use industry-standard security protocols and regularly undergo security audits."
+      },
+      "exportData": {
+        "question": "Can I export my data?",
+        "answer": "Yes, you can export your data at any time. Go to Settings > Data & Privacy and click on \"Export Data\". You'll receive a download link via email."
+      },
+      "cancelSubscription": {
+        "question": "How do I cancel my subscription?",
+        "answer": "To cancel your subscription, go to Settings > Billing and click on \"Cancel Subscription\". You'll continue to have access until the end of your billing period."
+      },
+      "paymentMethods": {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and wire transfers for enterprise customers."
+      },
+      "twoFactor": {
+        "question": "How do I enable two-factor authentication?",
+        "answer": "Go to Settings > Security and click on \"Enable Two-Factor Authentication\". Follow the setup instructions to link your authenticator app."
+      },
+      "api": {
+        "question": "Can I use the API?",
+        "answer": "Yes, we provide a comprehensive REST API. You can find the API documentation at docs.example.com/api. API access is available on Professional and Enterprise plans."
+      }
+    },
+    "noResults": "No FAQs found matching your search."
+  },
+  "guides": {
+    "title": "Help Guides & Tutorials",
+    "subtitle": "Step-by-step guides to help you get the most out of our platform",
+    "items": {
+      "gettingStarted": {
+        "title": "Getting Started Guide",
+        "description": "Learn the basics and get up and running quickly"
+      },
+      "accountManagement": {
+        "title": "Account Management",
+        "description": "Manage your profile, settings, and preferences"
+      },
+      "billing": {
+        "title": "Billing & Subscriptions",
+        "description": "Understand pricing, billing cycles, and payment options"
+      },
+      "security": {
+        "title": "Security Best Practices",
+        "description": "Keep your account secure with our recommended practices"
+      },
+      "api": {
+        "title": "API Documentation",
+        "description": "Integrate with our platform using our REST API"
+      },
+      "mobile": {
+        "title": "Mobile App Guide",
+        "description": "Get the most out of our mobile applications"
+      },
+      "collaboration": {
+        "title": "Team Collaboration",
+        "description": "Work effectively with your team members"
+      },
+      "advanced": {
+        "title": "Advanced Features",
+        "description": "Unlock the full potential of our platform"
+      }
+    },
+    "noResults": "No guides found matching your search."
+  },
+  "contact": {
+    "support": {
+      "title": "Contact Support",
+      "subtitle": "Get in touch with our support team",
+      "hours": {
+        "title": "Support Hours",
+        "description": "Our support team is available Monday to Friday, 9 AM - 6 PM EST. We typically respond within 24 hours."
+      },
+      "email": "support@example.com",
+      "phone": "+1 (555) 123-4567",
+      "liveChat": "Live Chat (Online)"
+    },
+    "resources": {
+      "title": "Additional Resources",
+      "subtitle": "More ways to get help and stay informed",
+      "communityForum": "Community Forum",
+      "apiDocs": "API Documentation",
+      "developerPortal": "Developer Portal",
+      "videoTutorials": "Video Tutorials"
+    },
+    "ticket": {
+      "title": "Can't find what you're looking for?",
+      "subtitle": "Submit a support ticket and we'll get back to you as soon as possible",
+      "button": "Submit a Support Ticket"
+    }
+  }
+}

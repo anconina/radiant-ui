@@ -1,0 +1,46 @@
+{
+  "generic": {
+    "title": "Ups! Ein Fehler ist aufgetreten",
+    "message": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "message": "Die Seite, die Sie suchen, existiert nicht oder wurde verschoben.",
+    "code": "404"
+  },
+  "unauthorized": {
+    "title": "Nicht autorisiert",
+    "message": "Sie haben keine Berechtigung, auf diese Ressource zuzugreifen.",
+    "code": "401"
+  },
+  "forbidden": {
+    "title": "Verboten",
+    "message": "Der Zugriff auf diese Ressource ist verboten.",
+    "code": "403"
+  },
+  "serverError": {
+    "title": "Serverfehler",
+    "message": "Der Server hat einen Fehler festgestellt und konnte Ihre Anfrage nicht bearbeiten.",
+    "code": "500"
+  },
+  "networkError": {
+    "title": "Netzwerkfehler",
+    "message": "Verbindung zum Server nicht möglich. Bitte überprüfen Sie Ihre Internetverbindung."
+  },
+  "validationError": {
+    "title": "Validierungsfehler",
+    "message": "Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut."
+  },
+  "actions": {
+    "goHome": "Zur Startseite",
+    "goBack": "Zurück",
+    "retry": "Wiederholen",
+    "refresh": "Seite aktualisieren",
+    "contactSupport": "Support kontaktieren"
+  },
+  "details": {
+    "errorCode": "Fehlercode",
+    "timestamp": "Zeitstempel",
+    "requestId": "Anfrage-ID"
+  }
+}
