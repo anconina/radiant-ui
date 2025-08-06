@@ -73,8 +73,12 @@ describe('TokenRotationManager', () => {
   })
 
   afterEach(() => {
-    vi.useRealTimers()
+    // Clear all scheduled rotations and timers before cleanup
+    manager.clearScheduledRotations()
     manager.destroy()
+    vi.clearAllTimers()
+    vi.useRealTimers()
+    vi.clearAllMocks()
   })
 
   describe('scheduleRotation', () => {

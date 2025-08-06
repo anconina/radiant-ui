@@ -75,8 +75,11 @@ describe('RotationConflictHandler', () => {
   })
 
   afterEach(() => {
-    vi.useRealTimers()
+    // Destroy handler and clear all timers before resetting
     handler.destroy()
+    vi.clearAllTimers()
+    vi.useRealTimers()
+    vi.clearAllMocks()
   })
 
   describe('initialization', () => {

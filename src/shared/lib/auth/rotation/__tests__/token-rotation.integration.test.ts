@@ -126,7 +126,10 @@ describe('Token Rotation Integration Tests', () => {
   })
 
   afterEach(() => {
+    // Clear all scheduled rotations before resetting timers
+    tokenRotationManager.clearScheduledRotations()
     vi.unstubAllEnvs()
+    vi.clearAllTimers()
     vi.useRealTimers()
     vi.clearAllMocks()
   })
