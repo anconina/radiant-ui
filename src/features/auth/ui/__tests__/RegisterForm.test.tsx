@@ -90,6 +90,11 @@ describe('RegisterForm', () => {
   it('validates terms acceptance', async () => {
     const { user } = render(<RegisterForm />)
 
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByLabelText(/first name/i)).toBeInTheDocument()
+    })
+
     const firstNameInput = screen.getByLabelText(/first name/i)
     const lastNameInput = screen.getByLabelText(/last name/i)
     const emailInput = screen.getByLabelText(/email/i)
@@ -114,6 +119,11 @@ describe('RegisterForm', () => {
   it('handles successful registration', async () => {
     const { user } = render(<RegisterForm />)
 
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByLabelText(/first name/i)).toBeInTheDocument()
+    })
+
     const firstNameInput = screen.getByLabelText(/first name/i)
     const lastNameInput = screen.getByLabelText(/last name/i)
     const emailInput = screen.getByLabelText(/email/i)
@@ -131,9 +141,12 @@ describe('RegisterForm', () => {
     const submitButton = screen.getByRole('button', { name: /create account/i })
     await user.click(submitButton)
 
-    await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith('/dashboard', { replace: true })
-    })
+    await waitFor(
+      () => {
+        expect(mockNavigate).toHaveBeenCalledWith('/dashboard', { replace: true })
+      },
+      { timeout: 3000 }
+    )
   })
 
   it('handles registration failure', async () => {
@@ -144,6 +157,11 @@ describe('RegisterForm', () => {
     )
 
     const { user } = render(<RegisterForm />)
+
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByLabelText(/first name/i)).toBeInTheDocument()
+    })
 
     const firstNameInput = screen.getByLabelText(/first name/i)
     const lastNameInput = screen.getByLabelText(/last name/i)

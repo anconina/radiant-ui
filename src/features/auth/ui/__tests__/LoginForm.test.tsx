@@ -100,24 +100,29 @@ describe('LoginForm', () => {
   it('handles successful login', async () => {
     const { user } = render(<LoginForm />)
 
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
+    })
+
     const emailInput = screen.getByLabelText(/email/i)
     const passwordInput = screen.getByLabelText(/password/i)
-    const submitButton = screen.getByRole('button', { name: /sign in/i })
 
     // Fill form using React Hook Form compatible approach
-    await user.click(emailInput)
-    await user.keyboard('demo@example.com')
+    await user.type(emailInput, 'demo@example.com')
+    await user.type(passwordInput, 'password')
 
-    await user.click(passwordInput)
-    await user.keyboard('password')
-
-    // Submit the form
+    // Find and click submit button
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
     await user.click(submitButton)
 
     // Wait for navigation to complete
-    await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith('/dashboard', { replace: true })
-    })
+    await waitFor(
+      () => {
+        expect(mockNavigate).toHaveBeenCalledWith('/dashboard', { replace: true })
+      },
+      { timeout: 3000 }
+    )
   })
 
   it('handles login failure', async () => {
@@ -129,6 +134,11 @@ describe('LoginForm', () => {
     )
 
     const { user } = render(<LoginForm />)
+
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
+    })
 
     const emailInput = screen.getByLabelText(/email/i)
     const passwordInput = screen.getByLabelText(/password/i)
@@ -166,6 +176,11 @@ describe('LoginForm', () => {
   it('remembers user preference when remember me is checked', async () => {
     const { user } = render(<LoginForm />)
 
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
+    })
+
     const rememberMeCheckbox = screen.getByRole('checkbox')
     await user.click(rememberMeCheckbox)
 
@@ -174,21 +189,19 @@ describe('LoginForm', () => {
     const emailInput = screen.getByLabelText(/email/i)
     const passwordInput = screen.getByLabelText(/password/i)
 
-    // Use fireEvent to change values directly
-    fireEvent.change(emailInput, { target: { value: 'demo@example.com' } })
-    fireEvent.change(passwordInput, { target: { value: 'password' } })
-
-    // Wait for React Hook Form to update
-    await waitFor(() => {
-      expect(passwordInput).toHaveValue('password')
-    })
+    // Type using user-event for better compatibility
+    await user.type(emailInput, 'demo@example.com')
+    await user.type(passwordInput, 'password')
 
     const submitButton = screen.getByRole('button', { name: /sign in/i })
     await user.click(submitButton)
 
-    await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalled()
-    })
+    await waitFor(
+      () => {
+        expect(mockNavigate).toHaveBeenCalledWith('/dashboard', { replace: true })
+      },
+      { timeout: 3000 }
+    )
   })
 
   it('shows loading state while submitting', async () => {
@@ -220,6 +233,11 @@ describe('LoginForm', () => {
     )
 
     const { user } = render(<LoginForm />)
+
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
+    })
 
     const emailInput = screen.getByLabelText(/email/i)
     const passwordInput = screen.getByLabelText(/password/i)

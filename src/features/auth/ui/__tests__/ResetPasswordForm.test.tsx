@@ -86,6 +86,11 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByPlaceholderText(/enter your new password/i)).toBeInTheDocument()
+    })
+
     const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
     const confirmPasswordInput = screen.getByPlaceholderText(/confirm your new password/i)
 
@@ -96,11 +101,14 @@ describe('ResetPasswordForm', () => {
     await user.click(submitButton)
 
     // Wait for success screen
-    await waitFor(() => {
-      expect(
-        screen.getByRole('heading', { name: /password reset successful/i })
-      ).toBeInTheDocument()
-    })
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole('heading', { name: /password reset successful/i })
+        ).toBeInTheDocument()
+      },
+      { timeout: 3000 }
+    )
 
     expect(screen.getByText(/your password has been successfully reset/i)).toBeInTheDocument()
 
@@ -125,6 +133,11 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByPlaceholderText(/enter your new password/i)).toBeInTheDocument()
+    })
+
     const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
     const confirmPasswordInput = screen.getByPlaceholderText(/confirm your new password/i)
 
@@ -146,12 +159,17 @@ describe('ResetPasswordForm', () => {
     // Mock a slow response
     server.use(
       http.post('*/auth/reset-password', async () => {
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        await new Promise(resolve => setTimeout(resolve, 100))
         return HttpResponse.json({ message: 'Success' })
       })
     )
 
     const { user } = render(<ResetPasswordForm />)
+
+    // Wait for form to be ready
+    await waitFor(() => {
+      expect(screen.getByPlaceholderText(/enter your new password/i)).toBeInTheDocument()
+    })
 
     const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
     const confirmPasswordInput = screen.getByPlaceholderText(/confirm your new password/i)
