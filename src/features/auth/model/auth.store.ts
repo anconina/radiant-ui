@@ -113,6 +113,7 @@ export const useAuthStore = create<AuthStore>()(
               })
             } catch (error) {
               handleAuthError(error as Error, 'login')
+              throw error // Re-throw to allow components to handle it
             }
           },
 
@@ -156,6 +157,7 @@ export const useAuthStore = create<AuthStore>()(
               })
             } catch (error) {
               handleAuthError(error as Error, 'register')
+              throw error // Re-throw to allow components to handle it
             }
           },
 

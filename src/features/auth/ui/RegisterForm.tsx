@@ -57,8 +57,8 @@ export function RegisterForm({ className, ...props }: RegisterFormProps) {
   const onSubmit = async (data: RegisterInput) => {
     try {
       await register(data)
-      navigate(ROUTES.dashboard)
-    } catch {
+      // Navigation is handled by the useAuth hook
+    } catch (error) {
       // Error is handled by the auth store and displayed as notification
       form.setError('root', {
         message: t('register.error'),

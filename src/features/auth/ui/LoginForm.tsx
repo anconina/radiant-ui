@@ -48,8 +48,8 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
   const onSubmit = async (data: LoginInput) => {
     try {
       await login(data)
-      navigate(from, { replace: true })
-    } catch {
+      // Navigation is handled by the useAuth hook
+    } catch (error) {
       // Error is handled by the auth store and displayed as notification
       form.setError('root', {
         message: t('login.error'),

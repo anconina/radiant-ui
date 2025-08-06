@@ -1,4 +1,5 @@
 import { server } from '@/mocks/server'
+import { testAuthHandlers } from '@/mocks/test-handlers'
 import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
 import { afterAll, afterEach, beforeAll, vi } from 'vitest'
@@ -8,6 +9,9 @@ import './i18n-test-setup'
 // Start MSW server before all tests
 beforeAll(() => {
   server.listen({ onUnhandledRequest: 'error' })
+  
+  // Add test-specific handlers with minimal delays on top of existing handlers
+  server.use(...testAuthHandlers)
 
   // Initialize API client for test environment
   // The HTTP client has conditional setup that skips test env,
