@@ -66,8 +66,8 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
-    const passwordInput = screen.getByLabelText(/new password/i)
-    const confirmPasswordInput = screen.getByLabelText(/confirm new password/i)
+    const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
+    const confirmPasswordInput = screen.getByPlaceholderText(/confirm your new password/i)
 
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'DifferentPassword123!')
@@ -86,8 +86,8 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
-    const passwordInput = screen.getByLabelText(/new password/i)
-    const confirmPasswordInput = screen.getByLabelText(/confirm new password/i)
+    const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
+    const confirmPasswordInput = screen.getByPlaceholderText(/confirm your new password/i)
 
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'NewPassword123!')
@@ -125,8 +125,8 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
-    const passwordInput = screen.getByLabelText(/new password/i)
-    const confirmPasswordInput = screen.getByLabelText(/confirm new password/i)
+    const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
+    const confirmPasswordInput = screen.getByPlaceholderText(/confirm your new password/i)
 
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'NewPassword123!')
@@ -153,8 +153,8 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
-    const passwordInput = screen.getByLabelText(/new password/i)
-    const confirmPasswordInput = screen.getByLabelText(/confirm new password/i)
+    const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
+    const confirmPasswordInput = screen.getByPlaceholderText(/confirm your new password/i)
 
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'NewPassword123!')
@@ -174,7 +174,7 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
-    const passwordInput = screen.getByLabelText(/new password/i)
+    const passwordInput = screen.getByPlaceholderText(/enter your new password/i)
 
     // Type a weak password
     await user.type(passwordInput, 'weak')
@@ -191,7 +191,7 @@ describe('ResetPasswordForm', () => {
 
     const signInLink = screen.getByRole('link', { name: /back to sign in/i })
     expect(signInLink).toBeInTheDocument()
-    expect(signInLink).toHaveAttribute('href', '/login')
+    expect(signInLink).toHaveAttribute('href', '/auth/login')
   })
 
   it('prefills email when provided in URL', () => {

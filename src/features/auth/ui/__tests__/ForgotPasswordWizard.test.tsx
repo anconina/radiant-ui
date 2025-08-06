@@ -151,7 +151,7 @@ describe('ForgotPasswordWizard', () => {
 
     const backLink = screen.getByRole('link', { name: /back to sign in/i })
     expect(backLink).toBeInTheDocument()
-    expect(backLink).toHaveAttribute('href', '/login')
+    expect(backLink).toHaveAttribute('href', '/auth/login')
   })
 
   it('opens email app when button is clicked in step 2', async () => {

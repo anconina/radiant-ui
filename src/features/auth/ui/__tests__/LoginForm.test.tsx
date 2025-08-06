@@ -67,13 +67,10 @@ describe('LoginForm', () => {
   it('validates required fields', async () => {
     const { user } = render(<LoginForm />)
 
-    const emailInput = screen.getByLabelText(/email/i)
-    const passwordInput = screen.getByLabelText(/password/i)
-
-    // Focus and blur fields to trigger validation
-    await user.click(emailInput)
-    await user.tab() // Move to password field
-    await user.tab() // Move past password field
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    
+    // Try to submit form without filling fields
+    await user.click(submitButton)
 
     await waitFor(() => {
       expect(screen.getByText(/email is required/i)).toBeInTheDocument()
@@ -91,11 +88,12 @@ describe('LoginForm', () => {
     await user.type(emailInput, 'invalid-email')
     await user.type(passwordInput, 'ValidPass123!')
 
-    // Tab out to trigger validation
-    await user.tab()
+    // Submit to trigger validation
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    await user.click(submitButton)
 
     await waitFor(() => {
-      expect(screen.getByText(/invalid email address/i)).toBeInTheDocument()
+      expect(screen.getByText(/invalid email format/i)).toBeInTheDocument()
     })
   })
 

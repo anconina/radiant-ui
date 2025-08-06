@@ -220,7 +220,7 @@ export function RegisterForm({ className, ...props }: RegisterFormProps) {
                 <Button
                   type="submit"
                   className="w-full"
-                  disabled={isLoading || form.formState.isSubmitting || passwordStrength < 60}
+                  disabled={isLoading || form.formState.isSubmitting}
                 >
                   {isLoading || form.formState.isSubmitting ? (
                     <>

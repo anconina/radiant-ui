@@ -185,6 +185,7 @@ i18n.use(initReactI18next).init({
         'register.passwordValidation.hasNumber': 'Password must contain at least one number',
         'register.passwordValidation.hasSpecial': 'Password must contain at least one special character',
         'register.validation.passwordsDoNotMatch': "Passwords don't match",
+        'register.validation.termsRequired': 'You must accept the terms and conditions',
         // Logout translations
         'logout.notification.title': 'Logged out',
         'logout.notification.message': 'You have been successfully logged out.',
