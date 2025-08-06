@@ -1,7 +1,7 @@
 import { server } from '@/mocks/server'
 import { render, screen, waitFor } from '@/test/utils'
 import { HttpResponse, http } from 'msw'
-import { describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { RegisterForm } from '../RegisterForm'
 

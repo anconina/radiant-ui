@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -10,7 +10,8 @@ import { useTranslation } from 'react-i18next'
 
 import { useForm } from '@/shared/lib/forms'
 import { cn } from '@/shared/lib/utils'
-import { type RegisterInput, registerSchema } from '@/shared/lib/utils'
+import { type RegisterInput } from '@/shared/lib/utils'
+import { createRegisterSchema } from '@/shared/lib/utils/i18n-validation'
 import { ROUTES } from '@/shared/routes'
 import { Button } from '@/shared/ui/button'
 import { Card, CardContent } from '@/shared/ui/card'
@@ -39,6 +40,8 @@ export function RegisterForm({ className, ...props }: RegisterFormProps) {
   const { register, isLoading } = useAuth()
   const [passwordStrength, setPasswordStrength] = useState(0)
 
+  const registerSchema = React.useMemo(() => createRegisterSchema(), [])
+  
   const form = useForm<RegisterInput>({
     schema: registerSchema,
     defaultValues: {

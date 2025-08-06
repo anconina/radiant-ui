@@ -3,6 +3,7 @@
 import * as React from 'react'
 
 import { Check, Eye, EyeOff, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 import { cn } from '@/shared/lib/utils'
 
@@ -26,6 +27,7 @@ function PasswordInput({
   ref,
   ...props
 }: PasswordInputProps) {
+  const { t } = useTranslation('auth')
   const [showPassword, setShowPassword] = React.useState(false)
   const [password, setPassword] = React.useState('')
   const [isFocused, setIsFocused] = React.useState(false)
@@ -85,10 +87,10 @@ function PasswordInput({
   }
 
   const getStrengthText = (strength: number) => {
-    if (strength < 30) return 'Weak'
-    if (strength < 60) return 'Fair'
-    if (strength < 80) return 'Good'
-    return 'Strong'
+    if (strength < 30) return t('register.passwordStrength.weak')
+    if (strength < 60) return t('register.passwordStrength.fair')
+    if (strength < 80) return t('register.passwordStrength.good')
+    return t('register.passwordStrength.strong')
   }
 
   React.useEffect(() => {
@@ -125,7 +127,7 @@ function PasswordInput({
           className="absolute end-0 top-0 h-full px-3 py-2 hover:bg-transparent"
           onClick={() => setShowPassword(!showPassword)}
           tabIndex={-1}
-          aria-label={showPassword ? 'Hide password' : 'Show password'}
+          aria-label={showPassword ? t('login.hidePassword') : t('login.showPassword')}
         >
           {showPassword ? (
             <EyeOff className="h-4 w-4 text-muted-foreground" />
@@ -138,7 +140,7 @@ function PasswordInput({
       {showStrength && password && (
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-muted-foreground">Strength</span>
+            <span className="text-xs text-muted-foreground">{t('register.passwordStrength.label')}</span>
             <span
               className={cn(
                 'text-xs font-medium',
@@ -162,12 +164,12 @@ function PasswordInput({
 
       {showRequirements && password && isFocused && (
         <div className="rounded-md border bg-muted/50 p-3 text-xs space-y-1">
-          <p className="font-medium text-muted-foreground mb-1">Password must contain:</p>
-          <RequirementItem met={requirements.length} text="At least 8 characters" />
-          <RequirementItem met={requirements.lowercase} text="One lowercase letter" />
-          <RequirementItem met={requirements.uppercase} text="One uppercase letter" />
-          <RequirementItem met={requirements.number} text="One number" />
-          <RequirementItem met={requirements.special} text="One special character" />
+          <p className="font-medium text-muted-foreground mb-1">{t('register.passwordValidation.title')}</p>
+          <RequirementItem met={requirements.length} text={t('register.passwordValidation.minLength')} />
+          <RequirementItem met={requirements.lowercase} text={t('register.passwordValidation.hasLowercase')} />
+          <RequirementItem met={requirements.uppercase} text={t('register.passwordValidation.hasUppercase')} />
+          <RequirementItem met={requirements.number} text={t('register.passwordValidation.hasNumber')} />
+          <RequirementItem met={requirements.special} text={t('register.passwordValidation.hasSpecial')} />
         </div>
       )}
     </div>
