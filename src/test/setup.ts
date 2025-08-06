@@ -142,17 +142,29 @@ global.sessionStorage = sessionStorageMock as any
 
 // Complete AbortController/AbortSignal polyfill for jsdom compatibility
 ;(function () {
-  if (typeof global.AbortController !== 'undefined') {
-    return // Already exists
+  // Don't override if already exists and is working
+  if (typeof global.AbortController !== 'undefined' && typeof global.AbortSignal !== 'undefined') {
+    // Test if the existing AbortController works properly
+    try {
+      const testController = new global.AbortController()
+      if (testController.signal && typeof testController.signal.aborted === 'boolean') {
+        return // Already exists and works
+      }
+    } catch (e) {
+      // Fall through to polyfill
+    }
   }
 
-  class AbortSignalPolyfill extends EventTarget {
+  class AbortSignalPolyfill implements AbortSignal {
     aborted = false
     reason: any = undefined
     onabort: ((this: AbortSignal, ev: Event) => any) | null = null
-
+    
+    private _abortAlgorithms = new Set<() => void>()
+    
     constructor() {
-      super()
+      // Ensure the signal is an EventTarget
+      Object.setPrototypeOf(this, EventTarget.prototype)
     }
 
     throwIfAborted() {
@@ -160,27 +172,40 @@ global.sessionStorage = sessionStorageMock as any
         throw new DOMException(this.reason || 'The operation was aborted', 'AbortError')
       }
     }
+    
+    addEventListener(type: string, listener: any, options?: any) {
+      // @ts-ignore
+      EventTarget.prototype.addEventListener.call(this, type, listener, options)
+    }
+    
+    removeEventListener(type: string, listener: any, options?: any) {
+      // @ts-ignore
+      EventTarget.prototype.removeEventListener.call(this, type, listener, options)
+    }
+    
+    dispatchEvent(event: Event): boolean {
+      // @ts-ignore
+      return EventTarget.prototype.dispatchEvent.call(this, event)
+    }
 
     // Override toString to help with debugging
     toString() {
       return '[object AbortSignal]'
     }
-
-    // Make instanceof work properly
-    static [Symbol.hasInstance](instance: any) {
-      return (
-        instance instanceof EventTarget &&
-        typeof instance.aborted === 'boolean' &&
-        typeof instance.throwIfAborted === 'function'
-      )
+    
+    get [Symbol.toStringTag]() {
+      return 'AbortSignal'
     }
   }
+  
+  // Mix in EventTarget
+  Object.setPrototypeOf(AbortSignalPolyfill.prototype, EventTarget.prototype)
 
-  class AbortControllerPolyfill {
+  class AbortControllerPolyfill implements AbortController {
     signal: AbortSignalPolyfill
 
     constructor() {
-      this.signal = new AbortSignalPolyfill()
+      this.signal = new AbortSignalPolyfill() as any
     }
 
     abort(reason?: any) {
@@ -199,29 +224,19 @@ global.sessionStorage = sessionStorageMock as any
     }
   }
 
-  // Install polyfills
+  // Install polyfills globally
   // @ts-ignore
   global.AbortSignal = AbortSignalPolyfill
-  // @ts-ignore
+  // @ts-ignore  
   global.AbortController = AbortControllerPolyfill
-
-  // Also override fetch to be more compatible
-  const originalFetch = global.fetch
-  global.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
-    // If we get a mock implementation, use it
-    if (vi.isMockFunction(global.fetch)) {
-      const mockImpl = (global.fetch as any).getMockImplementation()
-      if (mockImpl) {
-        return mockImpl(input, init)
-      }
-    }
-
-    // Default successful response for non-mocked calls
-    return new Response(JSON.stringify({}), {
-      status: 200,
-      headers: { 'content-type': 'application/json' },
-    })
-  })
+  
+  // Make sure window also has them
+  if (typeof window !== 'undefined') {
+    // @ts-ignore
+    window.AbortSignal = AbortSignalPolyfill
+    // @ts-ignore
+    window.AbortController = AbortControllerPolyfill
+  }
 })()
 
 // Mock DOMException if not available

@@ -137,7 +137,7 @@ describe('AuthStore', () => {
       expect(useAppStore.getState().addNotification).toHaveBeenCalledWith({
         type: 'success',
         title: 'Welcome back!',
-        message: `Logged in as ${mockUser.email}`,
+        message: 'Logged in successfully.',
       })
     })
 

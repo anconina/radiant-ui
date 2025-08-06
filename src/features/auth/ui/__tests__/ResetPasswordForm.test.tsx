@@ -41,9 +41,9 @@ describe('ResetPasswordForm', () => {
 
     expect(screen.getByRole('heading', { name: /set new password/i })).toBeInTheDocument()
     expect(screen.getByText(/choose a strong password/i)).toBeInTheDocument()
-    expect(screen.getByLabelText(/new password/i)).toBeInTheDocument()
-    expect(screen.getByLabelText(/confirm password/i)).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /reset password/i })).toBeInTheDocument()
+    expect(screen.getByPlaceholderText(/enter your new password/i)).toBeInTheDocument()
+    expect(screen.getByPlaceholderText(/confirm your new password/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /update password/i })).toBeInTheDocument()
   })
 
   it('validates password requirements', async () => {
@@ -52,7 +52,7 @@ describe('ResetPasswordForm', () => {
 
     const { user } = render(<ResetPasswordForm />)
 
-    const submitButton = screen.getByRole('button', { name: /reset password/i })
+    const submitButton = screen.getByRole('button', { name: /update password/i })
     await user.click(submitButton)
 
     await waitFor(() => {
@@ -72,7 +72,7 @@ describe('ResetPasswordForm', () => {
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'DifferentPassword123!')
 
-    const submitButton = screen.getByRole('button', { name: /reset password/i })
+    const submitButton = screen.getByRole('button', { name: /update password/i })
     await user.click(submitButton)
 
     await waitFor(() => {
@@ -92,7 +92,7 @@ describe('ResetPasswordForm', () => {
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'NewPassword123!')
 
-    const submitButton = screen.getByRole('button', { name: /reset password/i })
+    const submitButton = screen.getByRole('button', { name: /update password/i })
     await user.click(submitButton)
 
     // Wait for success screen
@@ -131,7 +131,7 @@ describe('ResetPasswordForm', () => {
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'NewPassword123!')
 
-    const submitButton = screen.getByRole('button', { name: /reset password/i })
+    const submitButton = screen.getByRole('button', { name: /update password/i })
     await user.click(submitButton)
 
     await waitFor(() => {
@@ -159,12 +159,12 @@ describe('ResetPasswordForm', () => {
     await user.type(passwordInput, 'NewPassword123!')
     await user.type(confirmPasswordInput, 'NewPassword123!')
 
-    const submitButton = screen.getByRole('button', { name: /reset password/i })
+    const submitButton = screen.getByRole('button', { name: /update password/i })
     user.click(submitButton)
 
     await waitFor(() => {
       expect(submitButton).toBeDisabled()
-      expect(submitButton).toHaveTextContent(/resetting/i)
+      expect(submitButton).toHaveTextContent(/updating password/i)
     })
   })
 
@@ -189,7 +189,7 @@ describe('ResetPasswordForm', () => {
 
     render(<ResetPasswordForm />)
 
-    const signInLink = screen.getByRole('link', { name: /remember your password.*sign in/i })
+    const signInLink = screen.getByRole('link', { name: /back to sign in/i })
     expect(signInLink).toBeInTheDocument()
     expect(signInLink).toHaveAttribute('href', '/login')
   })

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 
@@ -14,6 +14,7 @@ import { resetPassword } from '@/features/auth/api/auth.api'
 
 import { toast } from '@/shared/lib/toast'
 import { cn } from '@/shared/lib/utils'
+import { createResetPasswordSchema } from '@/shared/lib/utils/i18n-validation'
 import { ROUTES } from '@/shared/routes'
 import { Alert, AlertDescription } from '@/shared/ui/alert'
 import { Button } from '@/shared/ui/button'
@@ -21,23 +22,10 @@ import { Card, CardContent, CardHeader } from '@/shared/ui/card'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/shared/ui/form'
 import { PasswordInput } from '@/shared/ui/password-input'
 
-const resetPasswordSchema = z
-  .object({
-    password: z
-      .string()
-      .min(8, 'Password must be at least 8 characters')
-      .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
-      .regex(/[a-z]/, 'Password must contain at least one lowercase letter')
-      .regex(/[0-9]/, 'Password must contain at least one number')
-      .regex(/[^A-Za-z0-9]/, 'Password must contain at least one special character'),
-    confirmPassword: z.string(),
-  })
-  .refine(data => data.password === data.confirmPassword, {
-    message: "Passwords don't match",
-    path: ['confirmPassword'],
-  })
-
-type ResetPasswordInput = z.infer<typeof resetPasswordSchema>
+type ResetPasswordInput = {
+  password: string
+  confirmPassword: string
+}
 
 interface ResetPasswordFormProps {
   className?: string
@@ -54,6 +42,8 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
 
   const token = searchParams.get('token')
   const email = searchParams.get('email')
+
+  const resetPasswordSchema = React.useMemo(() => createResetPasswordSchema(), [])
 
   useEffect(() => {
     if (!token || !email) {
@@ -246,7 +236,7 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
                   <Button
                     type="submit"
                     className="w-full"
-                    disabled={isLoading || passwordStrength < 60}
+                    disabled={isLoading}
                   >
                     {isLoading ? (
                       <>

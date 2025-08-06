@@ -24,10 +24,10 @@ describe('RegisterForm', () => {
     render(<RegisterForm />)
 
     await waitFor(() => {
-      expect(screen.getByRole('heading', { name: /create account/i })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: /create your account/i })).toBeInTheDocument()
     })
 
-    expect(screen.getByText(/get started with your new account/i)).toBeInTheDocument()
+    expect(screen.getByText(/get started with radiant ui today/i)).toBeInTheDocument()
 
     expect(screen.getByLabelText(/first name/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/last name/i)).toBeInTheDocument()
