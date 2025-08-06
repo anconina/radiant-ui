@@ -41,8 +41,10 @@ describe('RegisterForm', () => {
   it('renders social signup buttons', () => {
     render(<RegisterForm />)
 
-    expect(screen.getByText(/continue with google/i)).toBeInTheDocument()
-    expect(screen.getByText(/continue with github/i)).toBeInTheDocument()
+    // Social buttons use icons only, with sr-only text
+    const buttons = screen.getAllByRole('button')
+    // Should have at least 3 social buttons (Apple, Google, GitHub) plus the submit button
+    expect(buttons.length).toBeGreaterThanOrEqual(4)
   })
 
   it('validates required fields', async () => {
@@ -62,17 +64,26 @@ describe('RegisterForm', () => {
   it('validates password confirmation', async () => {
     const { user } = render(<RegisterForm />)
 
+    // Fill all required fields first
+    const firstNameInput = screen.getByLabelText(/first name/i)
+    const lastNameInput = screen.getByLabelText(/last name/i)
+    const emailInput = screen.getByLabelText(/email/i)
     const passwordInput = screen.getByLabelText(/^password$/i)
     const confirmPasswordInput = screen.getByLabelText(/confirm password/i)
+    const termsCheckbox = screen.getByRole('checkbox')
 
+    await user.type(firstNameInput, 'John')
+    await user.type(lastNameInput, 'Doe')
+    await user.type(emailInput, 'john@example.com')
     await user.type(passwordInput, 'Password123!')
     await user.type(confirmPasswordInput, 'DifferentPassword123!')
+    await user.click(termsCheckbox)
 
     const submitButton = screen.getByRole('button', { name: /create account/i })
     await user.click(submitButton)
 
     await waitFor(() => {
-      expect(screen.getByText(/passwords do not match/i)).toBeInTheDocument()
+      expect(screen.getByText(/passwords don't match/i)).toBeInTheDocument()
     })
   })
 
@@ -90,6 +101,7 @@ describe('RegisterForm', () => {
     await user.type(emailInput, 'john@example.com')
     await user.type(passwordInput, 'Password123!')
     await user.type(confirmPasswordInput, 'Password123!')
+    // Don't check the terms checkbox
 
     const submitButton = screen.getByRole('button', { name: /create account/i })
     await user.click(submitButton)

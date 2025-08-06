@@ -76,7 +76,7 @@ describe('ResetPasswordForm', () => {
     await user.click(submitButton)
 
     await waitFor(() => {
-      expect(screen.getByText(/passwords do not match/i)).toBeInTheDocument()
+      expect(screen.getByText(/passwords don't match/i)).toBeInTheDocument()
     })
   })
 
@@ -107,7 +107,7 @@ describe('ResetPasswordForm', () => {
     // Check for redirect after delay
     await waitFor(
       () => {
-        expect(mockNavigate).toHaveBeenCalledWith('/login', { replace: true })
+        expect(mockNavigate).toHaveBeenCalledWith('/auth/login', { replace: true })
       },
       { timeout: 4000 }
     )
