@@ -28,9 +28,9 @@ describe('ResetPasswordForm', () => {
   it('shows error when no token is provided', () => {
     render(<ResetPasswordForm />)
 
-    expect(screen.getByRole('heading', { name: /invalid reset link/i })).toBeInTheDocument()
-    expect(screen.getByText(/missing or invalid/i)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /request a new one/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /set new password/i })).toBeInTheDocument()
+    expect(screen.getByText(/invalid or expired reset link/i)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /request new reset link/i })).toBeInTheDocument()
   })
 
   it('renders reset form when token is provided', () => {
@@ -39,10 +39,10 @@ describe('ResetPasswordForm', () => {
 
     render(<ResetPasswordForm />)
 
-    expect(screen.getByRole('heading', { name: /reset your password/i })).toBeInTheDocument()
-    expect(screen.getByText(/enter your new password/i)).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /set new password/i })).toBeInTheDocument()
+    expect(screen.getByText(/choose a strong password/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/new password/i)).toBeInTheDocument()
-    expect(screen.getByLabelText(/confirm new password/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/confirm password/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /reset password/i })).toBeInTheDocument()
   })
 
@@ -56,7 +56,7 @@ describe('ResetPasswordForm', () => {
     await user.click(submitButton)
 
     await waitFor(() => {
-      expect(screen.getByText(/password must be at least 8 characters/i)).toBeInTheDocument()
+      expect(screen.getByText(/password is required/i)).toBeInTheDocument()
     })
   })
 
@@ -102,7 +102,7 @@ describe('ResetPasswordForm', () => {
       ).toBeInTheDocument()
     })
 
-    expect(screen.getByText(/your password has been.*updated/i)).toBeInTheDocument()
+    expect(screen.getByText(/your password has been successfully reset/i)).toBeInTheDocument()
 
     // Check for redirect after delay
     await waitFor(

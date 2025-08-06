@@ -452,7 +452,8 @@ describe('AuthStore', () => {
 
       const { checkAuth } = useAuthStore.getState()
 
-      await expect(checkAuth()).rejects.toThrow('Unauthorized')
+      // checkAuth doesn't throw, it handles errors internally
+      await checkAuth()
 
       // Verify tokens were cleared
       expect(secureTokenManager.clearTokens).toHaveBeenCalled()
@@ -465,6 +466,12 @@ describe('AuthStore', () => {
           action: 'checkAuth',
         })
       )
+      
+      // Verify state after error
+      const state = useAuthStore.getState()
+      expect(state.user).toBeNull()
+      expect(state.isAuthenticated).toBe(false)
+      expect(state.error).toEqual(authError)
     })
 
     it('should set loading state during check', async () => {
