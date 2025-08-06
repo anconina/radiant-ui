@@ -12,8 +12,7 @@ import { useTranslation } from 'react-i18next'
 
 import { forgotPassword } from '@/features/auth/api/auth.api'
 
-import { cn } from '@/shared/lib/utils'
-import { createForgotPasswordSchema } from '@/shared/lib/utils/i18n-validation'
+import { cn, createForgotPasswordSchema } from '@/shared/lib/utils'
 import { ROUTES } from '@/shared/routes'
 import { Alert, AlertDescription } from '@/shared/ui/alert'
 import { Button } from '@/shared/ui/button'

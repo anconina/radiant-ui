@@ -34,3 +34,12 @@ export type {
   NotificationPreferencesInput,
   PrivacySettingsInput,
 } from './validation'
+
+// i18n validation schemas
+export {
+  createLoginSchema,
+  createRegisterSchema,
+  createForgotPasswordSchema,
+  createResetPasswordSchema,
+  createChangePasswordSchema,
+} from './i18n-validation'
