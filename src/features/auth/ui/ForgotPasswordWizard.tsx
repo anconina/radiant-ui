@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
@@ -9,11 +9,11 @@ import { ArrowLeft, ArrowRight, Check, Clock, Loader2, Mail, Shield } from 'luci
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
-import { z } from 'zod'
 
 import { forgotPassword } from '@/features/auth/api/auth.api'
 
 import { cn } from '@/shared/lib/utils'
+import { createForgotPasswordSchema } from '@/shared/lib/utils/i18n-validation'
 import { ROUTES } from '@/shared/routes'
 import { Alert, AlertDescription } from '@/shared/ui/alert'
 import { Button } from '@/shared/ui/button'
@@ -21,11 +21,6 @@ import { Card, CardContent } from '@/shared/ui/card'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/shared/ui/form'
 import { Input } from '@/shared/ui/input'
 import { Progress } from '@/shared/ui/progress'
-
-const createForgotPasswordSchema = (t: (key: string) => string) =>
-  z.object({
-    email: z.string().email(t('forgotPassword.validation.emailRequired')),
-  })
 
 type ForgotPasswordInput = {
   email: string
@@ -44,8 +39,10 @@ export function ForgotPasswordWizard({ className, ...props }: ForgotPasswordWiza
   const [error, setError] = useState<string | null>(null)
   const [userEmail, setUserEmail] = useState('')
 
+  const forgotPasswordSchema = React.useMemo(() => createForgotPasswordSchema(), [])
+
   const form = useForm<ForgotPasswordInput>({
-    resolver: zodResolver(createForgotPasswordSchema(t)),
+    resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
       email: '',
     },
@@ -154,7 +151,7 @@ export function ForgotPasswordWizard({ className, ...props }: ForgotPasswordWiza
             {/* Step 1: Email input */}
             {currentStep === 'email' && (
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
                   {error && (
                     <Alert variant="destructive">
                       <AlertDescription>{error}</AlertDescription>

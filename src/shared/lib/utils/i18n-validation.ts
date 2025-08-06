@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import i18n from '@/shared/lib/i18n/i18n'
+import { i18n } from '@/shared/lib/i18n'
 
 // Helper function to get translated error message
 const t = (key: string, options?: any) => {
@@ -9,17 +9,17 @@ const t = (key: string, options?: any) => {
 // Common validation patterns with i18n
 export const createEmailSchema = () => 
   z.string()
-    .min(1, t('auth:register.validation.emailRequired', 'Email is required'))
-    .email(t('auth:register.validation.emailInvalid', 'Invalid email address'))
+    .min(1, t('auth:register.validation.emailRequired', 'כתובת אימייל היא שדה חובה'))
+    .email(t('auth:register.validation.emailInvalid', 'כתובת אימייל לא תקינה'))
 
 export const createPasswordSchema = () =>
   z.string()
-    .min(1, t('auth:register.validation.passwordRequired', 'Password is required'))
-    .min(8, t('auth:register.validation.passwordTooShort', 'Password must be at least 8 characters'))
-    .regex(/[A-Z]/, t('auth:register.passwordValidation.hasUppercase', 'Password must contain at least one uppercase letter'))
-    .regex(/[a-z]/, t('auth:register.passwordValidation.hasLowercase', 'Password must contain at least one lowercase letter'))
-    .regex(/[0-9]/, t('auth:register.passwordValidation.hasNumber', 'Password must contain at least one number'))
-    .regex(/[^A-Za-z0-9]/, t('auth:register.passwordValidation.hasSpecial', 'Password must contain at least one special character'))
+    .min(1, t('auth:register.validation.passwordRequired', 'סיסמה היא שדה חובה'))
+    .min(8, t('auth:register.validation.passwordTooShort', 'הסיסמה חייבת להכיל לפחות 8 תווים'))
+    .regex(/[A-Z]/, t('auth:register.passwordValidation.hasUppercase', 'הסיסמה חייבת להכיל אות גדולה אחת'))
+    .regex(/[a-z]/, t('auth:register.passwordValidation.hasLowercase', 'הסיסמה חייבת להכיל אות קטנה אחת'))
+    .regex(/[0-9]/, t('auth:register.passwordValidation.hasNumber', 'הסיסמה חייבת להכיל מספר אחד'))
+    .regex(/[^A-Za-z0-9]/, t('auth:register.passwordValidation.hasSpecial', 'הסיסמה חייבת להכיל תו מיוחד אחד'))
 
 export const createNameSchema = () =>
   z.string()
@@ -34,7 +34,7 @@ export const createNameSchema = () =>
 export const createLoginSchema = () => 
   z.object({
     email: createEmailSchema(),
-    password: z.string().min(1, t('auth:login.passwordRequired', 'Password is required')),
+    password: z.string().min(1, t('auth:login.passwordRequired', 'נדרשת סיסמה')),
     rememberMe: z.boolean().default(false),
   })
 

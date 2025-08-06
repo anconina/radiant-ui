@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
@@ -8,7 +8,8 @@ import { Eye, EyeOff, Github, Loader2 } from 'lucide-react'
 
 import { useForm } from '@/shared/lib/forms'
 import { useTranslation } from '@/shared/lib/i18n'
-import { type LoginInput, cn, loginSchema } from '@/shared/lib/utils'
+import { type LoginInput, cn } from '@/shared/lib/utils'
+import { createLoginSchema } from '@/shared/lib/utils/i18n-validation'
 import { ROUTES } from '@/shared/routes'
 import { Button } from '@/shared/ui/button'
 import { Card, CardContent } from '@/shared/ui/card'
@@ -32,6 +33,8 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
   const { t: tCommon } = useTranslation('common')
 
   const from = location.state?.from?.pathname || ROUTES.dashboard
+
+  const loginSchema = React.useMemo(() => createLoginSchema(), [])
 
   const form = useForm<LoginInput>({
     schema: loginSchema,
