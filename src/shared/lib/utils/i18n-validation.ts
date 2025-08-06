@@ -23,11 +23,11 @@ export const createPasswordSchema = () =>
 
 export const createNameSchema = () =>
   z.string()
-    .min(1, t('validation.required', 'This field is required'))
-    .min(2, t('validation.minLength', 'Must be at least 2 characters'))
-    .max(50, t('validation.maxLength', 'Must be less than 50 characters'))
+    .min(1, t('validation:required', 'This field is required'))
+    .min(2, t('validation:minLength', { count: 2 }, 'Must be at least 2 characters'))
+    .max(50, t('validation:maxLength', { count: 50 }, 'Must be less than 50 characters'))
     .regex(/^[a-zA-Z\s'-\u0590-\u05FF]+$/, 
-      t('validation.nameFormat', 'Name can only contain letters, spaces, hyphens, and apostrophes')
+      t('validation:nameFormat', 'Name can only contain letters, spaces, hyphens, and apostrophes')
     )
 
 // Auth schemas with i18n
@@ -45,10 +45,10 @@ export const createRegisterSchema = () =>
     confirmPassword: z.string().min(1, t('auth:register.validation.confirmPasswordRequired', 'Please confirm your password')),
     firstName: z.string()
       .min(1, t('auth:register.validation.firstNameRequired', 'First name is required'))
-      .min(2, t('validation.minLength', 'Must be at least 2 characters')),
+      .min(2, t('validation:minLength', { count: 2 }, 'Must be at least 2 characters')),
     lastName: z.string()
       .min(1, t('auth:register.validation.lastNameRequired', 'Last name is required'))
-      .min(2, t('validation.minLength', 'Must be at least 2 characters')),
+      .min(2, t('validation:minLength', { count: 2 }, 'Must be at least 2 characters')),
     acceptTerms: z.boolean().refine(val => val === true, {
       message: t('auth:register.validation.termsRequired', 'You must accept the terms and conditions')
     }),
@@ -71,4 +71,19 @@ export const createResetPasswordSchema = () =>
   .refine(data => data.password === data.confirmPassword, {
     message: t('auth:register.validation.passwordsDoNotMatch', "Passwords don't match"),
     path: ['confirmPassword'],
+  })
+
+export const createChangePasswordSchema = () =>
+  z.object({
+    currentPassword: z.string().min(1, t('auth:changePassword.currentPasswordRequired', 'Current password is required')),
+    newPassword: createPasswordSchema(),
+    confirmPassword: z.string().min(1, t('auth:changePassword.confirmPasswordRequired', 'Please confirm your new password')),
+  })
+  .refine(data => data.newPassword === data.confirmPassword, {
+    message: t('auth:changePassword.validation.passwordsDoNotMatch', "Passwords don't match"),
+    path: ['confirmPassword'],
+  })
+  .refine(data => data.currentPassword !== data.newPassword, {
+    message: t('auth:changePassword.validation.samePassword', 'New password must be different from current password'),
+    path: ['newPassword'],
   })
