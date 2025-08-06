@@ -1,0 +1,3 @@
+# Mobile tests temporarily skipped
+# These tests require Playwright mobile emulation setup
+# To be enabled after main test infrastructure is stable

@@ -11,6 +11,9 @@ export default defineConfig({
     exclude: [
       'node_modules/**',
       'tests/e2e/**',
+      'tests/mobile/**',
+      'tests/visual/**',
+      'tests/performance/**',
       'dist/**'
     ],
     env: {

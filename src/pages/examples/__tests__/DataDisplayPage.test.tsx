@@ -48,12 +48,13 @@ describe('DataDisplayPage', () => {
   })
 
   it('applies responsive layout classes', () => {
-    render(<DataDisplayPage />, { wrapper: createWrapper() })
+    const { container } = render(<DataDisplayPage />, { wrapper: createWrapper() })
 
     const mainContainer = screen.getByText('Data Display Components').closest('.container')
     expect(mainContainer).toHaveClass('mx-auto', 'py-6', 'space-y-8')
 
-    const grid = screen.getByText('Data Table').closest('.grid')
+    // The grid is not a direct ancestor of "Data Table" text, so we need to find it differently
+    const grid = container.querySelector('.grid')
     expect(grid).toHaveClass('gap-6', 'md:grid-cols-2')
   })
 

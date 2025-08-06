@@ -19,7 +19,7 @@ interface CustomRenderOptions extends Omit<RenderOptions, 'wrapper'> {
 
 export function renderWithProviders(ui: ReactElement, options: CustomRenderOptions = {}) {
   const {
-    initialEntries: _initialEntries = ['/'],
+    initialEntries = ['/'],
     queryClient = new QueryClient({
       defaultOptions: {
         queries: {
@@ -35,6 +35,19 @@ export function renderWithProviders(ui: ReactElement, options: CustomRenderOptio
   } = options
 
   function Wrapper({ children }: { children: ReactNode }) {
+    // Check if the component already has its own router (like App component with AppRouter)
+    const hasOwnRouter = ui.type && (ui.type.name === 'App' || ui.type.name === 'AppRouter')
+    
+    if (hasOwnRouter) {
+      // Don't wrap with BrowserRouter if component has its own router
+      return React.createElement(
+        QueryClientProvider,
+        { client: queryClient },
+        children
+      )
+    }
+    
+    // Wrap with BrowserRouter for components that need it
     return React.createElement(
       QueryClientProvider,
       { client: queryClient },

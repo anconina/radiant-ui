@@ -142,8 +142,7 @@ class SecureTokenManager {
     // Prevent multiple refresh calls
     if (this.refreshPromise) {
       try {
-        const tokens = await this.refreshPromise
-        return tokens.accessToken
+        return await this.refreshPromise
       } catch {
         return null
       }
@@ -154,7 +153,7 @@ class SecureTokenManager {
       .then(async tokens => {
         await this.setTokens(tokens)
         this.refreshPromise = null
-        return tokens
+        return tokens.accessToken
       })
       .catch(async error => {
         await this.clearTokens()
@@ -163,8 +162,7 @@ class SecureTokenManager {
       })
 
     try {
-      const tokens = await this.refreshPromise
-      return tokens.accessToken
+      return await this.refreshPromise
     } catch {
       return null
     }

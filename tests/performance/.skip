@@ -1,0 +1,3 @@
+# Performance tests temporarily skipped
+# These tests require performance monitoring infrastructure
+# To be enabled after main test infrastructure is stable

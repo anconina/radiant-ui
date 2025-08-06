@@ -77,7 +77,7 @@ describe('SecureTokenManager CSRF Integration', () => {
       server.use(
         http.get(`${config.api.baseUrl}/auth/csrf-token`, () => {
           csrfRequestCount++
-          return HttpResponse.json({ token: mockCsrfToken })
+          return HttpResponse.json({ data: { token: mockCsrfToken } })
         })
       )
 

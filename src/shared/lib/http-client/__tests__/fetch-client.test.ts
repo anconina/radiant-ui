@@ -6,7 +6,7 @@ import { FetchClient, FetchError } from '../fetch-client'
 const mockFetch = vi.fn()
 global.fetch = mockFetch
 
-describe.skip('FetchClient - Skipped due to jsdom AbortSignal compatibility', () => {
+describe.skip('FetchClient - AbortSignal compatibility still being resolved', () => {
   let client: FetchClient
 
   beforeEach(() => {

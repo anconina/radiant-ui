@@ -22,7 +22,7 @@ const currentCsrfToken = 'mock-csrf-token-' + Date.now()
 export const authHandlers = [
   // CSRF Token
   http.get(`${config.api.baseUrl}/auth/csrf-token`, () => {
-    return HttpResponse.json({ token: currentCsrfToken })
+    return HttpResponse.json({ data: { token: currentCsrfToken } })
   }),
 
   // Auth Status

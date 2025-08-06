@@ -2,7 +2,7 @@
  * CSRF token management for state-changing requests
  * Only used in production with httpOnly cookies
  */
-import { api } from '@/shared/lib/http-client'
+import { apiClient } from '@/shared/lib/http-client'
 
 class CsrfManager {
   private csrfToken: string | null = null
@@ -46,15 +46,15 @@ class CsrfManager {
   private async fetchCsrfToken(): Promise<string | null> {
     try {
       // Check if API client is available (may not be in test environments)
-      if (!api || typeof api.get !== 'function') {
+      if (!apiClient || typeof apiClient.get !== 'function') {
         console.warn('API client not available for CSRF token fetch')
         return null
       }
 
-      const response = await api.get('/auth/csrf-token')
+      const response = await apiClient.get<{ token: string }>('/auth/csrf-token')
 
-      if (response.data && response.data.token) {
-        this.csrfToken = response.data.token
+      if (response && response.token) {
+        this.csrfToken = response.token
         // Cache for 23 hours (1 hour before expiry for safety)
         this.csrfTokenExpiry = Date.now() + 23 * 60 * 60 * 1000
         return this.csrfToken

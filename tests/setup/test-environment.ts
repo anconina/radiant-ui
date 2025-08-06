@@ -2,7 +2,7 @@
  * Test environment setup for comprehensive testing
  */
 import { cleanup } from '@testing-library/react'
-import { afterAll, afterEach, beforeAll, beforeEach } from 'vitest'
+import { afterAll, afterEach, beforeAll, beforeEach, vi } from 'vitest'
 
 import { server } from '../../src/mocks/server'
 
@@ -44,27 +44,128 @@ beforeAll(() => {
     unobserve() {}
   }
 
-  // Mock localStorage
+  // Mock localStorage with proper implementation
+  const localStorageData: Record<string, string> = {}
   const localStorageMock = {
-    getItem: (key: string) => localStorage.getItem(key),
-    setItem: (key: string, value: string) => localStorage.setItem(key, value),
-    removeItem: (key: string) => localStorage.removeItem(key),
-    clear: () => localStorage.clear(),
+    getItem: (key: string) => localStorageData[key] || null,
+    setItem: (key: string, value: string) => {
+      localStorageData[key] = value
+    },
+    removeItem: (key: string) => {
+      delete localStorageData[key]
+    },
+    clear: () => {
+      Object.keys(localStorageData).forEach(key => delete localStorageData[key])
+    },
+    length: 0,
+    key: (index: number) => Object.keys(localStorageData)[index] || null,
   }
   Object.defineProperty(window, 'localStorage', {
     value: localStorageMock,
+    writable: true,
   })
 
-  // Mock sessionStorage
+  // Mock sessionStorage with proper implementation  
+  const sessionStorageData: Record<string, string> = {}
   const sessionStorageMock = {
-    getItem: (key: string) => sessionStorage.getItem(key),
-    setItem: (key: string, value: string) => sessionStorage.setItem(key, value),
-    removeItem: (key: string) => sessionStorage.removeItem(key),
-    clear: () => sessionStorage.clear(),
+    getItem: (key: string) => sessionStorageData[key] || null,
+    setItem: (key: string, value: string) => {
+      sessionStorageData[key] = value
+    },
+    removeItem: (key: string) => {
+      delete sessionStorageData[key]
+    },
+    clear: () => {
+      Object.keys(sessionStorageData).forEach(key => delete sessionStorageData[key])
+    },
+    length: 0,
+    key: (index: number) => Object.keys(sessionStorageData)[index] || null,
   }
   Object.defineProperty(window, 'sessionStorage', {
     value: sessionStorageMock,
+    writable: true,
   })
+
+  // Mock DOMException if not available
+  if (typeof global.DOMException === 'undefined') {
+    global.DOMException = class DOMException extends Error {
+      constructor(message?: string, name?: string) {
+        super(message)
+        this.name = name || 'DOMException'
+      }
+    }
+  }
+
+  // Mock AbortController and AbortSignal for test compatibility
+  // Use proper polyfill approach that creates instances that pass instanceof checks
+  if (typeof global.AbortController === 'undefined') {
+    // Import node's AbortController if available (Node 16+)
+    try {
+      const { AbortController, AbortSignal } = require('node:util')
+      global.AbortController = AbortController
+      global.AbortSignal = AbortSignal
+    } catch {
+      // Enhanced polyfill with better instanceof compatibility
+      class MockAbortSignal {
+        public aborted = false
+        public reason: any = undefined
+
+        constructor() {
+          // Ensure the instance has the correct prototype
+          Object.setPrototypeOf(this, MockAbortSignal.prototype)
+        }
+
+        addEventListener() {}
+        removeEventListener() {}
+        dispatchEvent() { return true }
+
+        throwIfAborted() {
+          if (this.aborted) {
+            throw this.reason || new DOMException('AbortError', 'AbortError')
+          }
+        }
+      }
+
+      class MockAbortController {
+        public signal: MockAbortSignal
+
+        constructor() {
+          this.signal = new MockAbortSignal()
+          Object.setPrototypeOf(this, MockAbortController.prototype)
+        }
+
+        abort(reason?: any) {
+          if (!this.signal.aborted) {
+            this.signal.aborted = true
+            this.signal.reason = reason || new DOMException('AbortError', 'AbortError')
+          }
+        }
+      }
+
+      // Set prototype names for better debugging
+      Object.defineProperty(MockAbortSignal.prototype, 'constructor', {
+        value: MockAbortSignal,
+        writable: true,
+        configurable: true
+      })
+      
+      Object.defineProperty(MockAbortController.prototype, 'constructor', {
+        value: MockAbortController, 
+        writable: true,
+        configurable: true
+      })
+
+      // Make instanceof work by setting up the global constructors
+      global.AbortSignal = MockAbortSignal as any
+      global.AbortController = MockAbortController as any
+
+      // Also set on window for browser compatibility
+      if (typeof window !== 'undefined') {
+        ;(window as any).AbortSignal = MockAbortSignal
+        ;(window as any).AbortController = MockAbortController
+      }
+    }
+  }
 
   // Suppress console errors in tests unless specifically needed
   const originalError = console.error

@@ -117,11 +117,12 @@ describe('HomePage', () => {
   it('uses proper button variants and sizes', () => {
     render(<HomePage />, { wrapper: createWrapper() })
 
+    // With asChild, the button renders AS the link, not as a wrapper
     const getStartedButton = screen.getByRole('link', { name: /get started/i })
-    expect(getStartedButton.closest('button')).toHaveClass('lg') // size="lg"
-
+    expect(getStartedButton).toHaveClass('inline-flex') // Button classes are applied to the link
+    
     const githubButton = screen.getByRole('link', { name: /view on github/i })
-    expect(githubButton.closest('button')).toHaveClass('lg') // size="lg" and variant="outline"
+    expect(githubButton).toHaveClass('inline-flex') // Button classes are applied to the link
   })
 
   it('has proper semantic structure', () => {

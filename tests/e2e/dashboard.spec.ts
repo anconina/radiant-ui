@@ -2,8 +2,8 @@ import { Page, expect, test } from '@playwright/test'
 
 // Helper function to login
 async function login(page: Page) {
-  await page.goto('/login')
-  await page.getByPlaceholder('name@example.com').fill('demo@example.com')
+  await page.goto('/auth/login')
+  await page.getByPlaceholder('m@example.com').fill('demo@example.com')
   await page.getByPlaceholder('Enter your password').fill('password')
   await page.getByRole('button', { name: 'Sign in' }).click()
   await page.waitForURL('/dashboard')
@@ -233,8 +233,8 @@ test.describe('Performance', () => {
   test('should load dashboard quickly', async ({ page }) => {
     const startTime = Date.now()
 
-    await page.goto('/login')
-    await page.getByPlaceholder('name@example.com').fill('demo@example.com')
+    await page.goto('/auth/login')
+    await page.getByPlaceholder('m@example.com').fill('demo@example.com')
     await page.getByPlaceholder('Enter your password').fill('password')
     await page.getByRole('button', { name: 'Sign in' }).click()
 

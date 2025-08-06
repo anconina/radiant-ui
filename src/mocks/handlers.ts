@@ -1,3 +1,4 @@
+import { apiHandlers } from './handlers/api.handlers'
 import { authHandlers } from './handlers/auth.handlers'
 import { dashboardHandlers } from './handlers/dashboard.handlers'
 import { dataTableHandlers } from './handlers/data-table.handlers'
@@ -11,6 +12,7 @@ import { usersHandlers } from './handlers/users.handlers'
 
 // Combine all handlers
 export const handlers = [
+  ...apiHandlers,
   ...authHandlers,
   ...userHandlers,
   ...usersHandlers,

@@ -6,6 +6,91 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { NotificationsPage } from '../ui/NotificationsPage'
 
+// Mock i18n
+vi.mock('@/shared/lib/i18n', () => ({
+  useTranslation: () => ({
+    t: (key: string, params?: any) => {
+      const translations: Record<string, string> = {
+        // Page translations
+        'page.title': 'Notifications',
+        'page.description': 'Stay updated with your latest activities and alerts',
+        
+        // Stats translations
+        'stats.total': 'Total',
+        'stats.unread': 'Unread',
+        'stats.thisWeek': 'This Week',
+        'stats.actions': 'Actions',
+        'stats.total.description': 'All notifications',
+        'stats.unread.description': 'Requires attention',
+        'stats.thisWeek.description': 'Recent updates',
+        'stats.actions.description': 'Require action',
+        
+        // Filter translations
+        'filter.button': 'Filter',
+        'filter.label': 'Filter by',
+        'filter.all': 'All',
+        'filter.unread': 'Unread',
+        
+        // Action translations
+        'actions.markAllRead': 'Mark all as read',
+        'actions.clearAll': 'Clear all',
+        'actions.markAsRead': 'Mark as read',
+        'actions.delete': 'Delete',
+        
+        // Empty state
+        'empty.title': 'No notifications',
+        'empty.description': 'You have no notifications at this time',
+        'empty.filtered': 'No notifications match your filter',
+        
+        // Mock notification content
+        'mock.paymentReceived.title': 'Payment Received',
+        'mock.paymentReceived.message': 'You have received a payment of $500 from John Doe',
+        'mock.paymentReceived.action': 'View details',
+        'mock.newFeature.title': 'New Feature Available',
+        'mock.newFeature.message': 'Check out the new dashboard analytics feature',
+        'mock.newFeature.action': 'Learn more',
+        'mock.securityAlert.title': 'Security Alert',
+        'mock.securityAlert.message': 'Unusual login activity detected from a new device',
+        'mock.securityAlert.action': 'Review activity',
+        'mock.systemUpdate.title': 'System Update',
+        'mock.systemUpdate.message': 'System maintenance scheduled for tomorrow at 2 AM',
+        'mock.welcome.title': 'Welcome to the Platform',
+        'mock.welcome.message': 'Get started with our quick tour of the features',
+        'mock.welcome.action': 'Start tour',
+        'mock.teamInvite.title': 'Team Invitation',
+        'mock.teamInvite.message': 'Sarah Johnson invited you to join the Marketing team',
+        'mock.teamInvite.action': 'Accept invite',
+        'mock.report.title': 'Monthly Report Ready',
+        'mock.report.message': 'Your monthly analytics report is ready to download',
+        'mock.report.action': 'Download',
+        'mock.reminder.title': 'Meeting Reminder',
+        'mock.reminder.message': 'Team standup meeting in 15 minutes',
+        
+        // Time formatting
+        'time.ago': '{{time}} ago',
+        'time.days': '{{count}} days',
+        'time.hours': '{{count}} hours',
+        'time.minutes': '{{count}} minutes',
+      }
+      
+      // Handle parameterized translations
+      if (params && typeof translations[key] === 'string') {
+        let result = translations[key]
+        Object.keys(params).forEach(param => {
+          result = result.replace(`{{${param}}}`, params[param])
+        })
+        return result
+      }
+      
+      return translations[key] || key
+    },
+    i18n: {
+      changeLanguage: vi.fn(),
+      language: 'en',
+    },
+  }),
+}))
+
 const createWrapper = () => {
   return ({ children }: { children: React.ReactNode }) => <MemoryRouter>{children}</MemoryRouter>
 }
@@ -51,17 +136,17 @@ describe('NotificationsPage', () => {
     // Check for specific notifications from mock data
     expect(screen.getByText('Payment Received')).toBeInTheDocument()
     expect(
-      screen.getByText('You have received a payment of $1,250.00 from John Doe')
+      screen.getByText('You have received a payment of $500 from John Doe')
     ).toBeInTheDocument()
 
     expect(screen.getByText('New Feature Available')).toBeInTheDocument()
-    expect(screen.getByText('Check out our new dashboard analytics features')).toBeInTheDocument()
+    expect(screen.getByText('Check out the new dashboard analytics feature')).toBeInTheDocument()
 
     expect(screen.getByText('Security Alert')).toBeInTheDocument()
-    expect(screen.getByText('New login detected from unknown device')).toBeInTheDocument()
+    expect(screen.getByText('Unusual login activity detected from a new device')).toBeInTheDocument()
 
-    expect(screen.getByText('Payment Failed')).toBeInTheDocument()
-    expect(screen.getByText('Your subscription payment could not be processed')).toBeInTheDocument()
+    expect(screen.getByText('System Update')).toBeInTheDocument()
+    expect(screen.getByText('System maintenance scheduled for tomorrow at 2 AM')).toBeInTheDocument()
   })
 
   it('shows correct notification types and badges', () => {

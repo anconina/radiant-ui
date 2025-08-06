@@ -178,6 +178,12 @@ export class TokenRotationManager {
    * Perform the actual token rotation
    */
   private async performRotation(reason: string): Promise<AuthTokens> {
+    // Early check: fail fast if no refresh token is available
+    const refreshToken = await this.getCurrentRefreshToken()
+    if (!refreshToken) {
+      throw new Error('No refresh token available')
+    }
+
     // Try to acquire rotation lock
     const lockAcquired = await rotationConflictHandler.acquireLock()
 
@@ -211,12 +217,6 @@ export class TokenRotationManager {
 
     try {
       authLogger.info('Starting token rotation with lock acquired', { reason })
-
-      // Get current refresh token (this would come from storage)
-      const refreshToken = await this.getCurrentRefreshToken()
-      if (!refreshToken) {
-        throw new Error('No refresh token available')
-      }
 
       // Call refresh token function
       const newTokens = await this.refreshTokenFn!(refreshToken)
