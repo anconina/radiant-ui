@@ -6,6 +6,7 @@ import { devtools, persist } from 'zustand/middleware'
 import * as authApi from '@/features/auth/api/auth.api'
 
 import { secureTokenManager } from '@/shared/lib/auth'
+import { i18n } from '@/shared/lib/i18n'
 import { analytics } from '@/shared/lib/monitoring'
 import { authLogger } from '@/shared/lib/monitoring'
 import { useAppStore } from '@/shared/stores'
@@ -107,8 +108,8 @@ export const useAuthStore = create<AuthStore>()(
               // Show success notification
               useAppStore.getState().addNotification({
                 type: 'success',
-                title: 'Welcome back!',
-                message: `Logged in as ${response.user.email}`,
+                title: i18n.t('auth:login.notification.title'),
+                message: i18n.t('auth:login.notification.message'),
               })
             } catch (error) {
               handleAuthError(error as Error, 'login')
@@ -150,8 +151,8 @@ export const useAuthStore = create<AuthStore>()(
               // Show success notification
               useAppStore.getState().addNotification({
                 type: 'success',
-                title: 'Account created!',
-                message: 'Please check your email to verify your account.',
+                title: i18n.t('auth:register.notification.title'),
+                message: i18n.t('auth:register.notification.message'),
               })
             } catch (error) {
               handleAuthError(error as Error, 'register')
@@ -182,8 +183,8 @@ export const useAuthStore = create<AuthStore>()(
               // Show notification
               useAppStore.getState().addNotification({
                 type: 'info',
-                title: 'Logged out',
-                message: 'You have been successfully logged out.',
+                title: i18n.t('auth:logout.notification.title'),
+                message: i18n.t('auth:logout.notification.message'),
               })
             }
           },

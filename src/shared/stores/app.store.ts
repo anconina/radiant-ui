@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
+import { i18n } from '@/shared/lib/i18n'
 
 interface Notification {
   id: string
@@ -120,8 +121,8 @@ export const useAppStore = create<AppState>()(
           get().setOnlineStatus(true)
           get().addNotification({
             type: 'success',
-            title: 'Connection restored',
-            message: 'You are back online',
+            title: i18n.t('common:toast.connectionRestored.title'),
+            message: i18n.t('common:toast.connectionRestored.message'),
           })
         })
 
@@ -129,8 +130,8 @@ export const useAppStore = create<AppState>()(
           get().setOnlineStatus(false)
           get().addNotification({
             type: 'warning',
-            title: 'Connection lost',
-            message: 'You are offline. Some features may not work.',
+            title: i18n.t('common:toast.connectionLost.title'),
+            message: i18n.t('common:toast.connectionLost.message'),
             duration: 0, // Don't auto-remove
           })
         })

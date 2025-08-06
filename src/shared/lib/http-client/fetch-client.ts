@@ -2,6 +2,7 @@ import type { AuthTokens } from '@/shared/contracts'
 import { secureTokenManager } from '@/shared/lib/auth'
 import { csrfManager } from '@/shared/lib/auth/csrf/csrf-manager'
 import { config } from '@/shared/lib/environment'
+import { i18n } from '@/shared/lib/i18n'
 import { useAppStore } from '@/shared/stores'
 
 import { getTokenProvider } from './token-provider'
@@ -335,8 +336,8 @@ fetchClient.addResponseInterceptor({
     if (!error.response) {
       useAppStore.getState().addNotification({
         type: 'error',
-        title: 'Network Error',
-        message: 'Please check your internet connection',
+        title: i18n.t('common:toast.networkError.title'),
+        message: i18n.t('common:toast.networkError.message'),
       })
       throw error
     }
@@ -410,8 +411,8 @@ fetchClient.addResponseInterceptor({
 
       useAppStore.getState().addNotification({
         type: 'error',
-        title: 'Access Denied',
-        message: 'You do not have permission to perform this action',
+        title: i18n.t('common:toast.accessDenied.title'),
+        message: i18n.t('common:toast.accessDenied.message'),
       })
     }
 
@@ -419,8 +420,8 @@ fetchClient.addResponseInterceptor({
     if (error.status === 404) {
       useAppStore.getState().addNotification({
         type: 'error',
-        title: 'Not Found',
-        message: 'The requested resource was not found',
+        title: i18n.t('common:toast.notFound.title'),
+        message: i18n.t('common:toast.notFound.message'),
       })
     }
 
@@ -428,8 +429,8 @@ fetchClient.addResponseInterceptor({
     if (error.status && error.status >= 500) {
       useAppStore.getState().addNotification({
         type: 'error',
-        title: 'Server Error',
-        message: 'Something went wrong. Please try again later.',
+        title: i18n.t('common:toast.serverError.title'),
+        message: i18n.t('common:toast.serverError.message'),
       })
     }
 
@@ -440,7 +441,7 @@ fetchClient.addResponseInterceptor({
         const firstError = Object.values(error.data.errors)[0]
         useAppStore.getState().addNotification({
           type: 'error',
-          title: 'Validation Error',
+          title: i18n.t('common:toast.validationError.title'),
           message: Array.isArray(firstError) ? firstError[0] : (firstError as string),
         })
       }
