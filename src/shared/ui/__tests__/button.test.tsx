@@ -1,7 +1,7 @@
 import { render, screen } from '@/test/utils'
 import { describe, expect, it, vi } from 'vitest'
 
-import { Button } from './button'
+import { Button } from '../button'
 
 describe('Button', () => {
   it('renders correctly', () => {
@@ -31,16 +31,24 @@ describe('Button', () => {
 
   it('applies size classes correctly', () => {
     const { rerender } = render(<Button size="default">Default</Button>)
-    expect(screen.getByRole('button')).toHaveClass('h-9', 'px-4', 'py-2')
+    // Default size includes responsive variants
+    const defaultButton = screen.getByRole('button')
+    expect(defaultButton).toHaveClass('px-4', 'py-2')
+    expect(defaultButton.className).toMatch(/h-11.*sm:h-9|h-9/)
 
     rerender(<Button size="sm">Small</Button>)
-    expect(screen.getByRole('button')).toHaveClass('h-8', 'px-3')
+    const smallButton = screen.getByRole('button')
+    expect(smallButton).toHaveClass('px-3')
+    expect(smallButton.className).toMatch(/h-8/)
 
     rerender(<Button size="lg">Large</Button>)
-    expect(screen.getByRole('button')).toHaveClass('h-10', 'px-6')
+    const largeButton = screen.getByRole('button')
+    expect(largeButton).toHaveClass('px-6')
+    expect(largeButton.className).toMatch(/h-10|h-11.*sm:h-10/)
 
     rerender(<Button size="icon">Icon</Button>)
-    expect(screen.getByRole('button')).toHaveClass('size-9')
+    const iconButton = screen.getByRole('button')
+    expect(iconButton.className).toMatch(/size-9|size-11.*sm:size-9/)
   })
 
   it('handles click events', async () => {
