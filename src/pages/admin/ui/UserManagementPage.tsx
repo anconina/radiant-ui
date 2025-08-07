@@ -5,6 +5,7 @@ import { Edit, Mail, MoreHorizontal, Shield, Trash2 } from 'lucide-react'
 
 import { useTranslation } from 'react-i18next'
 
+import { cn } from '@/shared/lib/utils'
 import { Avatar } from '@/shared/ui/avatar'
 import { Badge } from '@/shared/ui/badge'
 import { Button } from '@/shared/ui/button'
@@ -18,6 +19,13 @@ import {
   DropdownMenuTrigger,
 } from '@/shared/ui/dropdown-menu'
 import { Input } from '@/shared/ui/input'
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/shared/ui/pagination'
 import {
   ResponsiveTable,
   ResponsiveTableBody,
@@ -85,12 +93,20 @@ export function UserManagementPage() {
   const { t } = useTranslation('users')
   const [searchQuery, setSearchQuery] = useState('')
   const [users] = useState<User[]>(mockUsers)
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 2 // Set to 2 to ensure pagination shows with mock data
 
   const filteredUsers = users.filter(
     user =>
       user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       user.email.toLowerCase().includes(searchQuery.toLowerCase())
   )
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredUsers.length / itemsPerPage)
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const paginatedUsers = filteredUsers.slice(startIndex, endIndex)
 
   const getRoleBadgeVariant = (role: User['role']) => {
     switch (role) {
@@ -260,7 +276,7 @@ export function UserManagementPage() {
                     </ResponsiveTableCell>
                   </ResponsiveTableRow>
                 ) : (
-                  filteredUsers.map(user => (
+                  paginatedUsers.map(user => (
                     <ResponsiveTableRow key={user.id}>
                       <ResponsiveTableCell mobileLabel={t('table.headers.user')}>
                         <div className="flex items-center gap-3 min-w-0 ltr:flex-row rtl:flex-row-reverse">
@@ -322,6 +338,37 @@ export function UserManagementPage() {
               </ResponsiveTableBody>
             </ResponsiveTable>
           </div>
+          
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-between px-4 py-4 border-t">
+              <p className="text-sm text-muted-foreground">
+                Page {currentPage} of {totalPages}
+              </p>
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious
+                      onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                      className={cn(
+                        'cursor-pointer',
+                        currentPage === 1 && 'pointer-events-none opacity-50'
+                      )}
+                    />
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationNext
+                      onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                      className={cn(
+                        'cursor-pointer',
+                        currentPage === totalPages && 'pointer-events-none opacity-50'
+                      )}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>

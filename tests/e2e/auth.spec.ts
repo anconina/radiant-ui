@@ -109,9 +109,10 @@ test.describe('Registration Flow', () => {
     await page.getByRole('button', { name: 'Create account' }).click()
 
     // Check validation messages
-    await expect(page.getByText('Name is required')).toBeVisible({ timeout: 10000 })
+    await expect(page.getByText('First name is required')).toBeVisible({ timeout: 10000 })
+    await expect(page.getByText('Last name is required')).toBeVisible()
     await expect(page.getByText('Email is required')).toBeVisible()
-    await expect(page.getByText('Password must be at least 8 characters')).toBeVisible()
+    await expect(page.getByText('Password is required')).toBeVisible()
   })
 
   test('should show error when passwords do not match', async ({ page }) => {
@@ -156,7 +157,7 @@ test.describe('Password Reset Flow', () => {
     await page.goto('/auth/forgot-password')
 
     // Check page elements
-    await expect(page.getByRole('heading', { name: 'Reset your password' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Enter your email' })).toBeVisible()
 
     // Fill email
     await page.getByPlaceholder('m@example.com').fill('demo@example.com')

@@ -29,7 +29,7 @@ test.describe('Settings Page', () => {
   test('should navigate between settings sections', async ({ page }) => {
     // Click notifications
     await page.getByRole('tab', { name: /Notifications/i }).click()
-    await expect(page.getByRole('heading', { name: 'Notification Settings' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Notification Preferences' })).toBeVisible()
 
     // Click privacy  
     await page.getByRole('tab', { name: /Privacy/i }).click()

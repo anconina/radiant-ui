@@ -199,7 +199,7 @@ test.describe('Account Settings', () => {
 
   test('should navigate to change password', async ({ page }) => {
     // Click change password link
-    await page.getByRole('link', { name: 'Change password' }).click()
+    await page.getByRole('button', { name: 'Change Password' }).click()
 
     // Check change password form is displayed
     await expect(page.getByRole('heading', { name: 'Change Password' })).toBeVisible()
@@ -209,7 +209,7 @@ test.describe('Account Settings', () => {
   })
 
   test('should change password successfully', async ({ page }) => {
-    await page.getByRole('link', { name: 'Change password' }).click()
+    await page.getByRole('button', { name: 'Change Password' }).click()
 
     // Fill password form
     await page.getByPlaceholder('Current password').fill('password')
@@ -224,7 +224,7 @@ test.describe('Account Settings', () => {
   })
 
   test('should validate password requirements', async ({ page }) => {
-    await page.getByRole('link', { name: 'Change password' }).click()
+    await page.getByRole('button', { name: 'Change Password' }).click()
 
     // Try weak password
     await page.getByPlaceholder('Current password').fill('password')

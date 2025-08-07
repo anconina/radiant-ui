@@ -80,6 +80,13 @@ export const useAuthStore = create<AuthStore>()(
 
               // Save tokens
               await secureTokenManager.setTokens(response.tokens)
+              
+              // Handle remember me functionality
+              if (credentials.rememberMe) {
+                localStorage.setItem('rememberMe', 'true')
+              } else {
+                localStorage.removeItem('rememberMe')
+              }
 
               // Set token expiry callback to auto-refresh
               secureTokenManager.setTokenExpiryCallback(async () => {
@@ -171,6 +178,9 @@ export const useAuthStore = create<AuthStore>()(
             } finally {
               // Clear tokens
               await secureTokenManager.clearTokens()
+              
+              // Clear remember me
+              localStorage.removeItem('rememberMe')
 
               // Reset state
               set({

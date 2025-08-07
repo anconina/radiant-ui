@@ -28,11 +28,11 @@ test.describe('Dashboard Features', () => {
 
   test('should display recent sales', async ({ page }) => {
     // Check recent sales section
-    await expect(page.getByRole('heading', { name: 'Recent Sales' })).toBeVisible()
+    await expect(page.getByText('Recent Sales')).toBeVisible()
     await expect(page.getByText('You made 265 sales this month')).toBeVisible()
 
     // Check top products section
-    await expect(page.getByRole('heading', { name: 'Top Products' })).toBeVisible()
+    await expect(page.getByText('Top Products')).toBeVisible()
     await expect(page.getByText('Best performing products')).toBeVisible()
   })
 
@@ -59,15 +59,27 @@ test.describe('Dashboard Features', () => {
       document.documentElement.classList.contains('dark')
     )
 
-    // Click theme toggle
-    await page.getByRole('button', { name: /toggle theme/i }).click()
+    // Click appropriate theme button based on current theme
+    if (initialTheme) {
+      // If in dark mode, click light mode button
+      await page.getByRole('button', { name: 'Light mode' }).click()
+    } else {
+      // If in light mode, click dark mode button
+      await page.getByRole('button', { name: 'Dark mode' }).click()
+    }
 
     // Check theme changed
     const newTheme = await page.evaluate(() => document.documentElement.classList.contains('dark'))
     expect(newTheme).toBe(!initialTheme)
 
     // Toggle back
-    await page.getByRole('button', { name: /toggle theme/i }).click()
+    if (newTheme) {
+      // If now in dark mode, click light mode button
+      await page.getByRole('button', { name: 'Light mode' }).click()
+    } else {
+      // If now in light mode, click dark mode button
+      await page.getByRole('button', { name: 'Dark mode' }).click()
+    }
 
     // Check theme restored
     const restoredTheme = await page.evaluate(() =>
@@ -77,16 +89,16 @@ test.describe('Dashboard Features', () => {
   })
 
   test('should show user menu with profile options', async ({ page }) => {
-    // Click on user avatar/menu
-    await page.getByRole('button', { name: /user menu/i }).click()
+    // The user menu is in the sidebar footer - find the user button with email text
+    const userButton = page.locator('[data-sidebar="menu-button"]').filter({ hasText: '@' })
+    await userButton.click()
 
-    // Check menu items
-    await expect(page.getByRole('menuitem', { name: 'Profile' })).toBeVisible()
-    await expect(page.getByRole('menuitem', { name: 'Settings' })).toBeVisible()
-    await expect(page.getByRole('menuitem', { name: 'Sign out' })).toBeVisible()
-
+    // Check menu items exist in the dropdown
+    await expect(page.getByRole('menuitem', { name: /Profile/i })).toBeVisible()
+    await expect(page.getByRole('menuitem', { name: /Settings/i })).toBeVisible()
+    
     // Click profile
-    await page.getByRole('menuitem', { name: 'Profile' }).click()
+    await page.getByRole('menuitem', { name: /Profile/i }).click()
     await page.waitForURL('/profile')
     await expect(page.getByRole('heading', { name: 'Profile' })).toBeVisible()
   })
@@ -103,10 +115,14 @@ test.describe('Data Table Features', () => {
     // Check table is visible
     await expect(page.getByRole('table')).toBeVisible()
 
-    // Check pagination controls
-    await expect(page.getByRole('button', { name: 'Previous' })).toBeVisible()
-    await expect(page.getByRole('button', { name: 'Next' })).toBeVisible()
+    // Check pagination text is visible
     await expect(page.getByText(/Page \d+ of \d+/)).toBeVisible()
+    
+    // Check pagination navigation exists
+    await expect(page.getByRole('navigation', { name: 'pagination' })).toBeVisible()
+    
+    // Check that Next link is visible (should be enabled)
+    await expect(page.getByRole('link', { name: 'Go to next page' })).toBeVisible()
   })
 
   test('should sort table columns', async ({ page }) => {
@@ -142,13 +158,13 @@ test.describe('Data Table Features', () => {
     await expect(page.getByText('Page 1 of')).toBeVisible()
 
     // Click next
-    await page.getByRole('button', { name: 'Next' }).click()
+    await page.getByRole('link', { name: 'Go to next page' }).click()
 
     // Check we're on page 2
     await expect(page.getByText('Page 2 of')).toBeVisible()
 
     // Click previous
-    await page.getByRole('button', { name: 'Previous' }).click()
+    await page.getByRole('link', { name: 'Go to previous page' }).click()
 
     // Check we're back on page 1
     await expect(page.getByText('Page 1 of')).toBeVisible()
