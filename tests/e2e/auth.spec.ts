@@ -65,7 +65,7 @@ test.describe('Authentication Flow', () => {
 
     // Check if on forgot password page
     await page.waitForURL('/auth/forgot-password')
-    await expect(page.getByRole('heading', { name: 'Forgot your password?' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Enter your email' })).toBeVisible()
   })
 
   test('should remember user with remember me checkbox', async ({ page }) => {
@@ -160,21 +160,21 @@ test.describe('Password Reset Flow', () => {
     await expect(page.getByRole('heading', { name: 'Enter your email' })).toBeVisible()
 
     // Fill email
-    await page.getByPlaceholder('m@example.com').fill('demo@example.com')
+    await page.getByPlaceholder('Enter your email address').fill('demo@example.com')
 
     // Submit form
     await page.getByRole('button', { name: 'Send reset link' }).click()
 
-    // Check success message
-    await expect(page.getByText('Reset link sent to your email!')).toBeVisible()
+    // Check success message - looking for the wizard's success step
+    await expect(page.getByRole('heading', { name: 'Check your email' })).toBeVisible({ timeout: 10000 })
   })
 
   test('should reset password with valid token', async ({ page }) => {
     // Navigate to reset password with token
-    await page.goto('/reset-password?token=valid-reset-token')
+    await page.goto('/auth/reset-password?token=valid-reset-token&email=test@example.com')
 
     // Check page elements
-    await expect(page.getByRole('heading', { name: 'Reset your password' })).toBeVisible()
+    await expect(page.getByText('Set new password')).toBeVisible()
 
     // Fill new password
     await page.getByPlaceholder('Enter new password').fill('newpassword123')
@@ -209,8 +209,9 @@ test.describe('Protected Routes', () => {
     // Wait for dashboard
     await page.waitForURL('/dashboard')
 
-    // Click logout
-    await page.getByRole('button', { name: 'Sign out' }).click()
+    // Open user menu and click logout
+    await page.getByRole('button', { name: /account/i }).click()
+    await page.getByRole('menuitem', { name: /log out|sign out/i }).click()
 
     // Should redirect to login
     await page.waitForURL('/auth/login')

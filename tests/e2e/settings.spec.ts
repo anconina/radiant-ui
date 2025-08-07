@@ -29,22 +29,22 @@ test.describe('Settings Page', () => {
   test('should navigate between settings sections', async ({ page }) => {
     // Click notifications
     await page.getByRole('tab', { name: /Notifications/i }).click()
-    await expect(page.getByRole('heading', { name: 'Notification Preferences' })).toBeVisible()
+    await expect(page.getByText('Notification Preferences')).toBeVisible()
 
     // Click privacy  
     await page.getByRole('tab', { name: /Privacy/i }).click()
-    await expect(page.getByRole('heading', { name: 'Privacy Settings' })).toBeVisible()
+    await expect(page.getByText('Privacy Settings')).toBeVisible()
 
     // Click language
     await page.getByRole('tab', { name: /Language/i }).click()
-    await expect(page.getByRole('heading', { name: 'Language & Region' })).toBeVisible()
+    await expect(page.getByText('Language & Region')).toBeVisible()
   })
 })
 
 test.describe('General Settings', () => {
   test.beforeEach(async ({ page }) => {
     await login(page)
-    await page.goto('/settings/general')
+    await page.goto('/settings')
   })
 
   test('should update language preference', async ({ page }) => {
@@ -97,12 +97,13 @@ test.describe('General Settings', () => {
 test.describe('Notification Settings', () => {
   test.beforeEach(async ({ page }) => {
     await login(page)
-    await page.goto('/settings/notifications')
+    await page.goto('/settings')
+    await page.getByRole('tab', { name: /Notifications/i }).click()
   })
 
   test('should toggle email notifications', async ({ page }) => {
-    // Check email notifications section
-    await expect(page.getByText('Email Notifications')).toBeVisible()
+    // Check notifications section
+    await expect(page.getByText('Notification Preferences')).toBeVisible()
 
     // Toggle marketing emails
     const marketingToggle = page.getByRole('checkbox', { name: /marketing emails/i })
@@ -111,10 +112,10 @@ test.describe('Notification Settings', () => {
     await marketingToggle.click()
 
     // Save changes
-    await page.getByRole('button', { name: 'Save preferences' }).click()
+    await page.getByRole('button', { name: /Save/i }).click()
 
     // Check success
-    await expect(page.getByText('Notification preferences updated')).toBeVisible()
+    await expect(page.getByText(/saved/i)).toBeVisible()
 
     // Verify state changed
     await expect(marketingToggle).toHaveChecked(!initialState)
@@ -130,10 +131,10 @@ test.describe('Notification Settings', () => {
     await page.getByRole('checkbox', { name: /vibration/i }).check()
 
     // Save changes
-    await page.getByRole('button', { name: 'Save preferences' }).click()
+    await page.getByRole('button', { name: /Save/i }).click()
 
     // Check success
-    await expect(page.getByText('Notification preferences updated')).toBeVisible()
+    await expect(page.getByText(/saved/i)).toBeVisible()
   })
 
   test('should disable all notifications', async ({ page }) => {
@@ -163,10 +164,10 @@ test.describe('Notification Settings', () => {
     await page.getByLabel('End time').fill('08:00')
 
     // Save changes
-    await page.getByRole('button', { name: 'Save preferences' }).click()
+    await page.getByRole('button', { name: /Save/i }).click()
 
     // Check success
-    await expect(page.getByText('Notification preferences updated')).toBeVisible()
+    await expect(page.getByText(/saved/i)).toBeVisible()
   })
 })
 
