@@ -104,7 +104,7 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
               <div className="space-y-2">
                 <h1 className="text-2xl font-bold">Password reset successful!</h1>
                 <p className="text-muted-foreground text-balance">
-                  Your password has been updated. You'll be redirected to the login page
+                  Your password has been updated. You&apos;ll be redirected to the login page
                   automatically.
                 </p>
               </div>

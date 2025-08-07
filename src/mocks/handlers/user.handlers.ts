@@ -122,7 +122,7 @@ export const userHandlers = [
   }),
 
   // Upload avatar
-  http.post(`${config.api.baseUrl}/users/:id/avatar`, async ({ params, request }) => {
+  http.post(`${config.api.baseUrl}/users/:id/avatar`, async ({ params, request: _request }) => {
     const { id } = params
     const userIndex = mockUsers.findIndex(u => u.id === id)
 

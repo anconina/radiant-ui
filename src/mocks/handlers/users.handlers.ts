@@ -7,7 +7,7 @@ import type { DataTableData, User } from '@/features/data-table/hooks/use-data-t
 function generateUsers(count: number = 100): User[] {
   const roles = ['Admin', 'Manager', 'Developer', 'Designer', 'Support', 'Sales']
   const departments = ['Engineering', 'Design', 'Marketing', 'Sales', 'Support', 'HR']
-  const statuses: Array<'active' | 'inactive' | 'pending'> = ['active', 'inactive', 'pending']
+  // Status types are defined inline in weightedArrayElement below
 
   return Array.from({ length: count }, () => ({
     id: faker.string.uuid(),

@@ -14,7 +14,7 @@ const mockTokens = {
 
 // Store for auth state
 const currentUser = mockUsers[0]
-const sessions: any[] = []
+const _sessions: any[] = []
 
 // Mock CSRF token
 const currentCsrfToken = 'mock-csrf-token-' + Date.now()

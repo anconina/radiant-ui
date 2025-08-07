@@ -20,7 +20,7 @@ import { Switch } from '@/shared/ui/switch'
 import { Textarea } from '@/shared/ui/textarea'
 
 export function FormsPage() {
-  const isMobile = useIsMobile()
+  const _isMobile = useIsMobile()
   const [mobileFormData, setMobileFormData] = useState({
     name: '',
     email: '',

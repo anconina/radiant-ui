@@ -313,7 +313,7 @@ export function RegisterForm({ className, ...props }: RegisterFormProps) {
                 </div>
 
                 <blockquote className="space-y-2">
-                  <p className="text-sm">"{t('register.features.testimonial.quote')}"</p>
+                  <p className="text-sm">&ldquo;{t('register.features.testimonial.quote')}&rdquo;</p>
                   <footer className="text-xs">— {t('register.features.testimonial.author')}</footer>
                 </blockquote>
               </div>

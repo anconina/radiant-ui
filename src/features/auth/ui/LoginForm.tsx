@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { Eye, EyeOff, Github, Loader2 } from 'lucide-react'
 
@@ -230,7 +230,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
 
               <div className="space-y-4">
                 <blockquote className="space-y-2">
-                  <p className="text-lg">"{t('login.testimonial.quote')}"</p>
+                  <p className="text-lg">&ldquo;{t('login.testimonial.quote')}&rdquo;</p>
                   <footer className="text-sm">— {t('login.testimonial.author')}</footer>
                 </blockquote>
               </div>

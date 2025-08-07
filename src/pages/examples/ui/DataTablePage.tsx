@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react'
 
 import {
   ArrowUpDown,
-  ChevronDown,
   Download,
   Eye,
   Filter,
@@ -17,7 +16,7 @@ import { useDataTableData } from '@/features/data-table'
 import { cn } from '@/shared/lib/utils'
 import { Badge } from '@/shared/ui/badge'
 import { Button } from '@/shared/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Card, CardContent, CardHeader } from '@/shared/ui/card'
 import { Checkbox } from '@/shared/ui/checkbox'
 import {
   DropdownMenu,

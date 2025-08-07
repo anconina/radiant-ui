@@ -20,7 +20,7 @@ function DashboardErrorFallback({ onRetry, onRefreshData }: DashboardErrorFallba
         </div>
         <CardTitle className="text-xl font-bold text-destructive">Dashboard Error</CardTitle>
         <CardDescription>
-          We're having trouble loading your dashboard data. This might be due to a network issue or
+          We&apos;re having trouble loading your dashboard data. This might be due to a network issue or
           a temporary problem with our servers.
         </CardDescription>
       </CardHeader>

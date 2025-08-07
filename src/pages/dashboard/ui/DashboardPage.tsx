@@ -38,7 +38,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/shared/ui/tabs'
 
 function DashboardPageContent() {
   const { t } = useTranslation('dashboard')
-  const { theme } = useTheme()
+  // const { theme } = useTheme() // Reserved for theme-specific features
   const { data, loading, error, refetch, exportData, exporting } = useDashboardData()
   const [refreshing, setRefreshing] = useState(false)
   const [selectedPeriod, setSelectedPeriod] = useState('week')

@@ -23,11 +23,11 @@ export function UnauthorizedPage() {
             <ShieldOff className="h-6 w-6 text-destructive" />
           </div>
           <CardTitle className="text-2xl">Access Denied</CardTitle>
-          <CardDescription>You don't have permission to access this resource</CardDescription>
+          <CardDescription>You don&apos;t have permission to access this resource</CardDescription>
         </CardHeader>
         <CardContent className="text-center">
           <p className="text-sm text-muted-foreground">
-            This page requires special permissions that your account doesn't have. If you believe
+            This page requires special permissions that your account doesn&apos;t have. If you believe
             this is an error, please contact your administrator.
           </p>
         </CardContent>
