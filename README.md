@@ -73,6 +73,7 @@ A production-ready, enterprise-grade React template built with TypeScript, Featu
 - **[Developer Guide](docs/DEVELOPER_GUIDE.md)** - Complete development workflow and best practices
 - **[Quick Reference](docs/QUICK_REFERENCE.md)** - Essential commands and patterns
 - **[Architecture Overview](docs/ARCHITECTURE.md)** - Feature-Sliced Design architecture guide
+- **[File Organization](docs/FILE_ORGANIZATION.md)** - Project structure and organization guide
 
 ### 🏗️ **Architecture & Design**
 
@@ -141,7 +142,34 @@ npm run build:analyze  # Bundle size analysis
 3. **Write Tests**: Follow the `__tests__/` pattern in each layer
 4. **Build & Test**: `npm run build && npm test`
 
-## 🏗️ Feature-Sliced Design Architecture
+## 🏗️ Project Structure
+
+### **📂 Organized File System**
+
+The project uses a clean, organized structure to maintain scalability and developer experience:
+
+```
+📁 radiant-ui/
+├── 📁 .artifacts/          # Generated outputs (gitignored)
+│   ├── coverage/          # Test coverage reports
+│   ├── test-results/      # Test execution results
+│   └── screenshots/       # Test screenshots
+├── 📁 .config/            # Configuration files
+│   ├── testing/          # Test configs (playwright, vitest alternatives)
+│   └── build/            # Build configs (production variants)
+├── 📁 .deploy/            # Deployment configurations
+│   └── [platform configs] # Vercel, Netlify, Railway, Render
+├── 📁 .docker/            # Docker configurations
+│   └── [Docker files]    # Dockerfiles, compose, nginx
+├── 📁 docs/               # Comprehensive documentation
+├── 📁 public/             # Static assets
+├── 📁 scripts/            # Build and utility scripts
+├── 📁 src/               # Source code (see below)
+├── 📁 tests/             # Test suites
+└── [Essential configs]   # package.json, vite.config.ts, etc.
+```
+
+### **🏗️ Feature-Sliced Design Architecture**
 
 Built with **Feature-Sliced Design (FSD)** - a scalable architecture methodology for frontend applications.
 
@@ -848,11 +876,11 @@ npm run perf:test:update    # Update performance baselines
 
 ```bash
 npm run deploy              # Deploy to configured platform
-npm run deploy:vercel       # Vercel deployment
-npm run deploy:netlify      # Netlify deployment
-npm run deploy:aws          # AWS S3 + CloudFront
-npm run deploy:cloudflare   # Cloudflare Pages
-npm run deploy:staging      # Staging environment
+npm run deploy:vercel       # Deploy via .deploy/vercel.json
+npm run deploy:netlify      # Deploy via .deploy/netlify.toml
+npm run deploy:aws          # AWS S3 + CloudFront deployment
+npm run deploy:cloudflare   # Cloudflare Pages deployment
+npm run deploy:staging      # Staging environment deployment
 ```
 
 ### **📦 Release & Git**

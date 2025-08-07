@@ -37,16 +37,16 @@ build_image() {
     
     case $env in
         dev)
-            docker build -f Dockerfile.dev -t radiant-ui:dev-$tag .
+            docker build -f .docker/Dockerfile.dev -t radiant-ui:dev-$tag .
             ;;
         test)
-            docker build -f Dockerfile.test -t radiant-ui:test-$tag .
+            docker build -f .docker/Dockerfile.test -t radiant-ui:test-$tag .
             ;;
         e2e)
-            docker build -f Dockerfile.e2e -t radiant-ui:e2e-$tag .
+            docker build -f .docker/Dockerfile.e2e -t radiant-ui:e2e-$tag .
             ;;
         prod|production)
-            docker build -f Dockerfile -t radiant-ui:$tag .
+            docker build -f .docker/Dockerfile -t radiant-ui:$tag .
             docker tag radiant-ui:$tag radiant-ui:latest
             ;;
         *)
@@ -67,13 +67,13 @@ run_container() {
     
     case $env in
         dev)
-            docker-compose up dev
+            docker-compose -f .docker/docker-compose.yml up dev
             ;;
         test)
-            docker-compose up test
+            docker-compose -f .docker/docker-compose.yml up test
             ;;
         e2e)
-            docker-compose up e2e
+            docker-compose -f .docker/docker-compose.yml up e2e
             ;;
         prod|production)
             docker run -d \
