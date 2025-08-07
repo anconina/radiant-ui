@@ -181,18 +181,20 @@ test.describe('Password Reset Flow', () => {
     // Navigate to reset password with token
     await page.goto('/auth/reset-password?token=valid-reset-token&email=test@example.com')
 
-    // Wait for page to load
-    await page.waitForTimeout(1000)
+    // Wait for page to load completely
+    await page.waitForLoadState('networkidle')
 
-    // Check page elements
-    await expect(page.getByText('Set new password')).toBeVisible()
+    // Check page elements with more flexible selector
+    await expect(page.getByText('Set new password')).toBeVisible({ timeout: 5000 })
 
     // Fill new password using the correct placeholders
     await page.getByPlaceholder('Enter your new password').fill('NewPassword123!')
     await page.getByPlaceholder('Confirm your new password').fill('NewPassword123!')
 
-    // Submit form
-    await page.getByRole('button', { name: /Reset password/i }).click()
+    // Wait for form to be ready and find the button more flexibly
+    const resetButton = page.locator('button').filter({ hasText: /reset/i })
+    await expect(resetButton).toBeVisible({ timeout: 5000 })
+    await resetButton.click()
 
     // Wait for response
     await page.waitForTimeout(2000)
@@ -232,28 +234,28 @@ test.describe('Protected Routes', () => {
 
     // Wait for dashboard
     await page.waitForURL('/dashboard')
+    await page.waitForLoadState('networkidle')
 
-    // Try to find and click logout
-    // First try user menu approach
-    const userMenuButton = page.getByRole('button', { name: /account|user|profile/i }).first()
-    const userMenuCount = await userMenuButton.count()
+    // The user menu is in the sidebar footer - find the user button with data-sidebar attribute
+    const userMenuButton = page.locator('[data-sidebar="menu-button"]').first()
     
-    if (userMenuCount > 0) {
-      await userMenuButton.click()
-      await page.waitForTimeout(500)
-      
-      const logoutItem = page.getByRole('menuitem', { name: /log out|sign out|logout/i }).first()
-      const logoutCount = await logoutItem.count()
-      
-      if (logoutCount > 0) {
-        await logoutItem.click()
-      } else {
-        // Try direct logout button
-        await page.getByRole('button', { name: /log out|sign out|logout/i }).first().click()
-      }
+    // Ensure the button is visible and click it
+    await expect(userMenuButton).toBeVisible({ timeout: 5000 })
+    await userMenuButton.click()
+    
+    // Wait for dropdown to open
+    await page.waitForTimeout(500)
+    
+    // Find and click the logout menu item - it has the LogOut icon and text
+    const logoutItem = page.locator('[role="menuitem"]').filter({ has: page.locator('svg').first() }).filter({ hasText: /log|sign out/i })
+    
+    // If we can't find it, try a more generic approach
+    const logoutCount = await logoutItem.count()
+    if (logoutCount > 0) {
+      await logoutItem.first().click()
     } else {
-      // Try direct logout button
-      await page.getByRole('button', { name: /log out|sign out|logout/i }).first().click()
+      // Alternative: click any menuitem with destructive class (logout is styled as destructive)
+      await page.locator('[role="menuitem"].text-destructive').first().click()
     }
 
     // Should redirect to login

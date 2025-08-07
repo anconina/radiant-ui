@@ -22,13 +22,23 @@ async function swipeGesture(
   }
 }
 
+// Helper function to login
+async function login(page: Page) {
+  await page.goto('/auth/login')
+  await page.getByPlaceholder('m@example.com').fill('demo@example.com')
+  await page.getByPlaceholder('Enter your password').fill('password')
+  await page.getByRole('button', { name: 'Sign in' }).click()
+  await page.waitForURL('/dashboard')
+}
+
 // Mobile-only test suite
 test.describe('Mobile Sidebar', () => {
   // Run tests only on mobile devices
   test.use({ ...test.use, viewport: { width: 375, height: 667 } })
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    // Login first since the dashboard is a protected route
+    await login(page)
     // Wait for the app to load
     await page.waitForLoadState('networkidle')
   })
