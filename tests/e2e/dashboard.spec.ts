@@ -212,15 +212,15 @@ test.describe('Responsive Design', () => {
     // Click hamburger menu
     await page.getByRole('button', { name: /menu/i }).click()
 
-    // Check mobile menu is open
-    await expect(page.getByRole('navigation')).toBeVisible()
+    // Check mobile sidebar menu is open (using specific data-testid)
+    await expect(page.locator('[data-testid="sidebar"]')).toBeVisible()
 
     // Click a link
     await page.getByRole('link', { name: 'Settings' }).click()
 
-    // Check navigation happened and menu closed
+    // Check navigation happened and sidebar menu closed
     await page.waitForURL('/settings')
-    await expect(page.getByRole('navigation')).not.toBeVisible()
+    await expect(page.locator('[data-testid="sidebar"]')).not.toBeVisible()
   })
 
   test('should adapt layout for tablet screens', async ({ page }) => {

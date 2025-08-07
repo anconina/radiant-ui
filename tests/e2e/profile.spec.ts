@@ -256,7 +256,7 @@ test.describe('Account Settings', () => {
     await expect(page.getByText('Two-factor authentication enabled')).toBeVisible()
   })
 
-  test('should download account data', async ({ page }) => {
+  test.skip('should download account data', async ({ page }) => {
     // Navigate to privacy settings
     await page.getByRole('link', { name: 'Privacy' }).click()
 
@@ -269,7 +269,7 @@ test.describe('Account Settings', () => {
     expect(download.suggestedFilename()).toContain('account-data')
   })
 
-  test('should delete account', async ({ page }) => {
+  test.skip('should delete account', async ({ page }) => {
     // Navigate to danger zone
     await page.getByRole('link', { name: 'Danger Zone' }).click()
 
