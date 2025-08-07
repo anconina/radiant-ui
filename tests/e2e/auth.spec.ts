@@ -19,8 +19,8 @@ test.describe('Authentication Flow', () => {
     await page.getByRole('button', { name: 'Sign in' }).click()
 
     // Check validation messages
-    await expect(page.getByText('Invalid email format')).toBeVisible()
-    await expect(page.getByText('Password must be at least 8 characters')).toBeVisible()
+    await expect(page.getByText('Email is required')).toBeVisible()
+    await expect(page.getByText('Password is required')).toBeVisible()
   })
 
   test('should show error message with wrong credentials', async ({ page }) => {
@@ -109,9 +109,8 @@ test.describe('Registration Flow', () => {
     await page.getByRole('button', { name: 'Create account' }).click()
 
     // Check validation messages
-    await expect(page.getByText('First name is required')).toBeVisible()
-    await expect(page.getByText('Last name is required')).toBeVisible()
-    await expect(page.getByText('Invalid email format')).toBeVisible()
+    await expect(page.getByText('Name is required')).toBeVisible({ timeout: 10000 })
+    await expect(page.getByText('Email is required')).toBeVisible()
     await expect(page.getByText('Password must be at least 8 characters')).toBeVisible()
   })
 

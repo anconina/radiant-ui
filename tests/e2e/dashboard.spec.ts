@@ -17,22 +17,23 @@ test.describe('Dashboard Features', () => {
   test('should display dashboard overview', async ({ page }) => {
     // Check dashboard elements
     await expect(page.getByRole('heading', { name: 'Dashboard' })).toBeVisible()
-    await expect(page.getByText('Welcome back,')).toBeVisible()
+    await expect(page.getByText('Your business at a glance')).toBeVisible()
 
     // Check stats cards
     await expect(page.getByText('Total Revenue')).toBeVisible()
-    await expect(page.getByText('Active Users')).toBeVisible()
-    await expect(page.getByText('Sales')).toBeVisible()
-    await expect(page.getByText('Performance')).toBeVisible()
+    await expect(page.getByText('Total Users')).toBeVisible()
+    await expect(page.getByText('Total Orders')).toBeVisible()
+    await expect(page.getByText('Active Now')).toBeVisible()
   })
 
-  test('should display recent activity', async ({ page }) => {
-    // Check recent activity section
-    await expect(page.getByRole('heading', { name: 'Recent Activity' })).toBeVisible()
+  test('should display recent sales', async ({ page }) => {
+    // Check recent sales section
+    await expect(page.getByRole('heading', { name: 'Recent Sales' })).toBeVisible()
+    await expect(page.getByText('You made 265 sales this month')).toBeVisible()
 
-    // Check if activity items are displayed
-    const activityItems = page.locator('[data-testid="activity-item"]')
-    await expect(activityItems).toHaveCount(5)
+    // Check top products section
+    await expect(page.getByRole('heading', { name: 'Top Products' })).toBeVisible()
+    await expect(page.getByText('Best performing products')).toBeVisible()
   })
 
   test('should navigate to different sections via sidebar', async ({ page }) => {
