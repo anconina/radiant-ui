@@ -277,11 +277,13 @@ export function VisuallyHidden({
 
 // Touch target size validator (development only)
 export function TouchTargetValidator({ children }: { children: React.ReactNode }) {
-  if (process.env.NODE_ENV === 'production') {
-    return <>{children}</>
-  }
+  const isDevelopment = process.env.NODE_ENV !== 'production'
 
   React.useEffect(() => {
+    if (!isDevelopment) {
+      return
+    }
+
     const checkTouchTargets = () => {
       const interactiveElements = document.querySelectorAll(
         'button, a, input, select, textarea, [role="button"], [role="link"]'
@@ -308,7 +310,7 @@ export function TouchTargetValidator({ children }: { children: React.ReactNode }
     observer.observe(document.body, { childList: true, subtree: true })
 
     return () => observer.disconnect()
-  }, [])
+  }, [isDevelopment])
 
   return <>{children}</>
 }

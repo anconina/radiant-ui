@@ -28,7 +28,7 @@ function Command({ className, ref, ...props }: CommandProps) {
 }
 Command.displayName = CommandPrimitive.displayName
 
-interface CommandDialogProps extends React.ComponentPropsWithoutRef<typeof Dialog> {}
+type CommandDialogProps = React.ComponentPropsWithoutRef<typeof Dialog>
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
@@ -52,7 +52,7 @@ interface CommandInputProps extends React.ComponentPropsWithoutRef<typeof Comman
 
 function CommandInput({ className, ref, ...props }: CommandInputProps) {
   return (
-    <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
+    <div className="flex items-center border-b px-3" data-cmdk-input-wrapper="">
       <Search className="me-2 h-4 w-4 shrink-0 opacity-50" />
       <CommandPrimitive.Input
         ref={ref}

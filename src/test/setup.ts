@@ -178,17 +178,17 @@ global.sessionStorage = sessionStorageMock as any
     }
     
     addEventListener(type: string, listener: any, options?: any) {
-      // @ts-expect-error
+      // @ts-expect-error - Calling EventTarget prototype method
       EventTarget.prototype.addEventListener.call(this, type, listener, options)
     }
     
     removeEventListener(type: string, listener: any, options?: any) {
-      // @ts-expect-error
+      // @ts-expect-error - Calling EventTarget prototype method
       EventTarget.prototype.removeEventListener.call(this, type, listener, options)
     }
     
     dispatchEvent(event: Event): boolean {
-      // @ts-expect-error
+      // @ts-expect-error - Calling EventTarget prototype method
       return EventTarget.prototype.dispatchEvent.call(this, event)
     }
 
@@ -229,23 +229,23 @@ global.sessionStorage = sessionStorageMock as any
   }
 
   // Install polyfills globally
-  // @ts-expect-error
+  // @ts-expect-error - Polyfilling AbortSignal for test environment
   global.AbortSignal = AbortSignalPolyfill
-  // @ts-expect-error  
+  // @ts-expect-error - Polyfilling AbortController for test environment
   global.AbortController = AbortControllerPolyfill
   
   // Make sure window also has them
   if (typeof window !== 'undefined') {
-    // @ts-expect-error
+    // @ts-expect-error - Polyfilling AbortSignal for window object
     window.AbortSignal = AbortSignalPolyfill
-    // @ts-expect-error
+    // @ts-expect-error - Polyfilling AbortController for window object
     window.AbortController = AbortControllerPolyfill
   }
 })()
 
 // Mock DOMException if not available
 if (!global.DOMException) {
-  // @ts-expect-error
+  // @ts-expect-error - Polyfilling DOMException for test environment
   global.DOMException = class DOMException extends Error {
     constructor(message?: string, name?: string) {
       super(message)

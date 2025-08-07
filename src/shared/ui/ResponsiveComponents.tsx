@@ -16,7 +16,7 @@ interface ShowProps {
   between?: [Breakpoint, Exclude<Breakpoint, 'xs'>]
 }
 
-interface HideProps extends ShowProps {}
+type HideProps = ShowProps
 
 /**
  * Show content based on breakpoint conditions

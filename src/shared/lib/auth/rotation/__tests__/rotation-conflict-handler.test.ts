@@ -38,7 +38,7 @@ class MockBroadcastChannel {
 
 let mockBroadcastChannels: MockBroadcastChannel[] = []
 
-// @ts-expect-error
+// @ts-expect-error - Mocking BroadcastChannel for testing purposes
 global.BroadcastChannel = MockBroadcastChannel
 
 describe('RotationConflictHandler', () => {
@@ -113,7 +113,7 @@ describe('RotationConflictHandler', () => {
     })
 
     it('should handle BroadcastChannel not being available', () => {
-      // @ts-expect-error
+      // @ts-expect-error - Testing BroadcastChannel not being available
       global.BroadcastChannel = undefined
 
       const handler2 = new RotationConflictHandler()
@@ -459,7 +459,7 @@ describe('RotationConflictHandler', () => {
 
     it('should handle destroy when BroadcastChannel is not available', () => {
       // Create handler without BroadcastChannel
-      // @ts-expect-error
+      // @ts-expect-error - Testing BroadcastChannel not being available
       global.BroadcastChannel = undefined
       const handler2 = new RotationConflictHandler()
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import {
   Activity,
@@ -43,6 +43,12 @@ function DashboardPageContent() {
   const [refreshing, setRefreshing] = useState(false)
   const [selectedPeriod, setSelectedPeriod] = useState('week')
 
+  const handleRefresh = useCallback(async () => {
+    setRefreshing(true)
+    await refetch()
+    setTimeout(() => setRefreshing(false), 1000)
+  }, [refetch])
+
   // Pull-to-refresh functionality for mobile
   useEffect(() => {
     let startY = 0
@@ -80,13 +86,7 @@ function DashboardPageContent() {
       window.removeEventListener('touchmove', handleTouchMove)
       window.removeEventListener('touchend', handleTouchEnd)
     }
-  }, [refreshing])
-
-  const handleRefresh = async () => {
-    setRefreshing(true)
-    await refetch()
-    setTimeout(() => setRefreshing(false), 1000)
-  }
+  }, [refreshing, handleRefresh])
 
   if (error) {
     return (

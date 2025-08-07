@@ -1,6 +1,8 @@
 // Additional loading components (placeholder implementations)
 import { ReactNode } from 'react'
 
+import { Spinner } from './Spinner'
+
 /**
  * Loading UI components public API
  * Provides loading states, spinners, and skeleton components
@@ -9,7 +11,7 @@ import { ReactNode } from 'react'
 // Loading components
 export { LoadingState } from './LoadingState'
 export { PageLoader } from './PageLoader'
-export { Spinner } from './Spinner'
+export { Spinner }
 
 // Skeleton components
 export { SkeletonCard } from './SkeletonCard'
