@@ -8,15 +8,15 @@ test.describe('Authentication Flow', () => {
   test('should display login form', async ({ page }) => {
     // Check if login form elements are visible
     await expect(page.getByRole('heading', { name: 'Welcome back' })).toBeVisible()
-    await expect(page.getByPlaceholder('Enter your email')).toBeVisible()
+    await expect(page.getByPlaceholder('m@example.com')).toBeVisible()
     await expect(page.getByPlaceholder('Enter your password')).toBeVisible()
-    await expect(page.getByRole('button', { name: 'Sign In' })).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Sign in' })).toBeVisible()
     await expect(page.getByText("Don't have an account?")).toBeVisible()
   })
 
   test('should show validation errors with invalid inputs', async ({ page }) => {
     // Click sign in without filling fields
-    await page.getByRole('button', { name: 'Sign In' }).click()
+    await page.getByRole('button', { name: 'Sign in' }).click()
 
     // Check validation messages
     await expect(page.getByText('Invalid email format')).toBeVisible()
@@ -25,11 +25,11 @@ test.describe('Authentication Flow', () => {
 
   test('should show error message with wrong credentials', async ({ page }) => {
     // Fill in wrong credentials
-    await page.getByPlaceholder('Enter your email').fill('wrong@example.com')
+    await page.getByPlaceholder('m@example.com').fill('wrong@example.com')
     await page.getByPlaceholder('Enter your password').fill('wrongpassword')
 
     // Submit form
-    await page.getByRole('button', { name: 'Sign In' }).click()
+    await page.getByRole('button', { name: 'Sign in' }).click()
 
     // Check error message
     await expect(page.getByText('Invalid email or password')).toBeVisible()
@@ -37,11 +37,11 @@ test.describe('Authentication Flow', () => {
 
   test('should successfully login with correct credentials', async ({ page }) => {
     // Fill in correct credentials
-    await page.getByPlaceholder('Enter your email').fill('demo@example.com')
+    await page.getByPlaceholder('m@example.com').fill('demo@example.com')
     await page.getByPlaceholder('Enter your password').fill('password')
 
     // Submit form
-    await page.getByRole('button', { name: 'Sign In' }).click()
+    await page.getByRole('button', { name: 'Sign in' }).click()
 
     // Wait for navigation to dashboard
     await page.waitForURL('/dashboard')
@@ -70,14 +70,14 @@ test.describe('Authentication Flow', () => {
 
   test('should remember user with remember me checkbox', async ({ page }) => {
     // Fill in credentials
-    await page.getByPlaceholder('Enter your email').fill('demo@example.com')
+    await page.getByPlaceholder('m@example.com').fill('demo@example.com')
     await page.getByPlaceholder('Enter your password').fill('password')
 
     // Check remember me
     await page.getByRole('checkbox').check()
 
     // Submit form
-    await page.getByRole('button', { name: 'Sign In' }).click()
+    await page.getByRole('button', { name: 'Sign in' }).click()
 
     // Wait for navigation
     await page.waitForURL('/dashboard')
@@ -96,17 +96,17 @@ test.describe('Registration Flow', () => {
   test('should display registration form', async ({ page }) => {
     // Check if registration form elements are visible
     await expect(page.getByRole('heading', { name: 'Create your account' })).toBeVisible()
-    await expect(page.getByPlaceholder('Enter your first name')).toBeVisible()
-    await expect(page.getByPlaceholder('Enter your last name')).toBeVisible()
-    await expect(page.getByPlaceholder('Enter your email')).toBeVisible()
-    await expect(page.getByPlaceholder('Enter your password')).toBeVisible()
+    await expect(page.getByPlaceholder('John')).toBeVisible()
+    await expect(page.getByPlaceholder('Doe')).toBeVisible()
+    await expect(page.getByPlaceholder('m@example.com')).toBeVisible()
+    await expect(page.getByPlaceholder('Create a strong password')).toBeVisible()
     await expect(page.getByPlaceholder('Confirm your password')).toBeVisible()
-    await expect(page.getByRole('button', { name: 'Create Account' })).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Create account' })).toBeVisible()
   })
 
   test('should show validation errors with invalid inputs', async ({ page }) => {
     // Click create account without filling fields
-    await page.getByRole('button', { name: 'Create Account' }).click()
+    await page.getByRole('button', { name: 'Create account' }).click()
 
     // Check validation messages
     await expect(page.getByText('First name is required')).toBeVisible()
@@ -117,14 +117,14 @@ test.describe('Registration Flow', () => {
 
   test('should show error when passwords do not match', async ({ page }) => {
     // Fill form with mismatched passwords
-    await page.getByPlaceholder('Enter your first name').fill('John')
-    await page.getByPlaceholder('Enter your last name').fill('Doe')
-    await page.getByPlaceholder('Enter your email').fill('test@example.com')
-    await page.getByPlaceholder('Enter your password').fill('password123')
+    await page.getByPlaceholder('John').fill('John')
+    await page.getByPlaceholder('Doe').fill('Doe')
+    await page.getByPlaceholder('m@example.com').fill('test@example.com')
+    await page.getByPlaceholder('Create a strong password').fill('password123')
     await page.getByPlaceholder('Confirm your password').fill('password456')
 
     // Submit form
-    await page.getByRole('button', { name: 'Create Account' }).click()
+    await page.getByRole('button', { name: 'Create account' }).click()
 
     // Check error message
     await expect(page.getByText('Passwords do not match')).toBeVisible()
@@ -132,17 +132,17 @@ test.describe('Registration Flow', () => {
 
   test('should successfully register new user', async ({ page }) => {
     // Fill in registration form
-    await page.getByPlaceholder('Enter your first name').fill('Test')
-    await page.getByPlaceholder('Enter your last name').fill('User')
-    await page.getByPlaceholder('Enter your email').fill('newuser@example.com')
-    await page.getByPlaceholder('Enter your password').fill('password123')
+    await page.getByPlaceholder('John').fill('Test')
+    await page.getByPlaceholder('Doe').fill('User')
+    await page.getByPlaceholder('m@example.com').fill('newuser@example.com')
+    await page.getByPlaceholder('Create a strong password').fill('password123')
     await page.getByPlaceholder('Confirm your password').fill('password123')
 
     // Accept terms
     await page.getByRole('checkbox').check()
 
     // Submit form
-    await page.getByRole('button', { name: 'Create Account' }).click()
+    await page.getByRole('button', { name: 'Create account' }).click()
 
     // Wait for navigation to dashboard
     await page.waitForURL('/dashboard')
@@ -160,7 +160,7 @@ test.describe('Password Reset Flow', () => {
     await expect(page.getByRole('heading', { name: 'Reset your password' })).toBeVisible()
 
     // Fill email
-    await page.getByPlaceholder('Enter your email').fill('demo@example.com')
+    await page.getByPlaceholder('m@example.com').fill('demo@example.com')
 
     // Submit form
     await page.getByRole('button', { name: 'Send reset link' }).click()
@@ -202,9 +202,9 @@ test.describe('Protected Routes', () => {
   test('should redirect to login after logout', async ({ page }) => {
     // Login first
     await page.goto('/auth/login')
-    await page.getByPlaceholder('Enter your email').fill('demo@example.com')
+    await page.getByPlaceholder('m@example.com').fill('demo@example.com')
     await page.getByPlaceholder('Enter your password').fill('password')
-    await page.getByRole('button', { name: 'Sign In' }).click()
+    await page.getByRole('button', { name: 'Sign in' }).click()
 
     // Wait for dashboard
     await page.waitForURL('/dashboard')
