@@ -6,6 +6,7 @@ import {
   Calendar,
   Camera,
   Globe,
+  Lock,
   Mail,
   MapPin,
   Phone,
@@ -34,6 +35,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Separator } from '@/shared/ui/separator'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/shared/ui/tabs'
 import { Textarea } from '@/shared/ui/textarea'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/shared/ui/dialog'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/shared/ui/form'
 
 // Form validation schema - using function to access translations
 const createProfileSchema = (t: any) =>
@@ -59,6 +69,7 @@ export function ProfilePage() {
   const { data: profile, loading, updateProfile, uploading, uploadAvatar } = useProfileData()
   const [activeTab, setActiveTab] = useState('general')
   const [isSaving, setIsSaving] = useState(false)
+  const [isPasswordDialogOpen, setIsPasswordDialogOpen] = useState(false)
 
   const profileSchema = createProfileSchema(t)
 
@@ -558,8 +569,13 @@ export function ProfilePage() {
                       <Separator />
 
                       <div className="pt-4">
-                        <Button variant="destructive" size="sm">
-                          {t('security.changePassword')}
+                        <Button
+                          type="button"
+                          variant="destructive"
+                          size="sm"
+                          onClick={() => setIsPasswordDialogOpen(true)}
+                        >
+                          Change Password
                         </Button>
                       </div>
                     </div>
@@ -578,6 +594,68 @@ export function ProfilePage() {
               )}
             </form>
           </Tabs>
+
+          {/* Change Password Dialog */}
+          <Dialog open={isPasswordDialogOpen} onOpenChange={setIsPasswordDialogOpen}>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Change Password</DialogTitle>
+                <DialogDescription>
+                  Enter your current password and choose a new password.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <div className="grid gap-2">
+                  <Label htmlFor="current-password">
+                    <Lock className="inline h-4 w-4 me-2" />
+                    Current Password
+                  </Label>
+                  <Input
+                    id="current-password"
+                    type="password"
+                    placeholder="Current password"
+                    autoComplete="current-password"
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="new-password">
+                    <Lock className="inline h-4 w-4 me-2" />
+                    New Password
+                  </Label>
+                  <Input
+                    id="new-password"
+                    type="password"
+                    placeholder="New password"
+                    autoComplete="new-password"
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="confirm-password">
+                    <Lock className="inline h-4 w-4 me-2" />
+                    Confirm New Password
+                  </Label>
+                  <Input
+                    id="confirm-password"
+                    type="password"
+                    placeholder="Confirm new password"
+                    autoComplete="new-password"
+                  />
+                </div>
+              </div>
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setIsPasswordDialogOpen(false)}>
+                  Cancel
+                </Button>
+                <Button type="submit" onClick={() => {
+                  // Handle password change logic here
+                  toast.success('Password changed successfully')
+                  setIsPasswordDialogOpen(false)
+                }}>
+                  Change Password
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </div>

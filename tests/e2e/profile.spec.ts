@@ -185,6 +185,9 @@ test.describe('Account Settings', () => {
   })
 
   test('should navigate to change password', async ({ page }) => {
+    // Navigate to Security tab first
+    await page.getByRole('tab', { name: 'Security' }).click()
+    
     // Click change password link
     await page.getByRole('button', { name: 'Change Password' }).click()
 
@@ -196,6 +199,9 @@ test.describe('Account Settings', () => {
   })
 
   test('should change password successfully', async ({ page }) => {
+    // Navigate to Security tab first
+    await page.getByRole('tab', { name: 'Security' }).click()
+    
     await page.getByRole('button', { name: 'Change Password' }).click()
 
     // Fill password form

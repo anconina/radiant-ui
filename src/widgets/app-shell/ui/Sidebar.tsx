@@ -375,6 +375,7 @@ function Sidebar({
           data-testid="sidebar"
           data-mobile="true"
           data-dragging={isDragging ? 'true' : undefined}
+          role="navigation"
           className="w-[--sidebar-width] !bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden border-0 overflow-hidden"
           style={
             {
@@ -518,6 +519,7 @@ function SidebarTrigger({ className, onClick, ref, ...props }: SidebarTriggerPro
         onClick?.(event)
         toggleSidebar()
       }}
+      aria-label="Toggle sidebar menu"
       {...props}
     >
       <PanelLeft className="w-4 h-4 ltr:block rtl:hidden" />
