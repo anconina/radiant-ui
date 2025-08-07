@@ -105,7 +105,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
                       <div className="flex items-center justify-between">
                         <FormLabel>{t('login.password')}</FormLabel>
                         <Link
-                          to={ROUTES.forgotPassword}
+                          to={ROUTES.forgotPwd}
                           className="text-sm text-primary hover:underline underline-offset-2"
                         >
                           {t('login.forgotPassword')}

@@ -40,6 +40,7 @@
     "test:mobile:a11y": "playwright test tests/mobile/accessibility.spec.ts --config .config/testing/playwright.config.mobile.ts",
     "security:audit": "node scripts/security-audit.cjs",
     "security:fix": "npm audit fix",
+    "security:fix:force": "npm audit fix --force",
     "perf:analyze": "node scripts/bundle-analyzer.cjs",
     "perf:analyze:save": "node scripts/bundle-analyzer.cjs --save-baseline",
     "perf:test": "playwright test --config .config/testing/playwright.performance.config.ts",

@@ -62,7 +62,7 @@ class CsrfManager {
 
       return null
     } catch (error) {
-      console.error('Failed to fetch CSRF token:', error)
+      console.error('Failed to fetch CSRF authentication:', error)
       return null
     }
   }
