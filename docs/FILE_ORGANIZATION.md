@@ -21,8 +21,7 @@ radiant-ui/
 │   └── build/           # Build-related configs
 │       ├── vite.config.production.ts
 │       ├── tsconfig.app.json
-│       ├── tsconfig.node.json
-│       └── steiger.config.js
+│       └── tsconfig.node.json
 ├── .deploy/             # Deployment configurations
 │   ├── deploy.config.js
 │   ├── vercel.json
@@ -64,6 +63,7 @@ Essential files that must remain at root due to tool requirements:
 - `postcss.config.js` - Build tool requirement
 - `index.html` - Vite entry point
 - `components.json` - shadcn/ui requirement
+- `steiger.config.js` - FSD architecture linter config
 - `README.md` - Repository documentation
 - `CONTRIBUTING.md` - Contribution guidelines
 
