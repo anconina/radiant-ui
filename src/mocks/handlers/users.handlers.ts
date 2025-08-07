@@ -29,12 +29,69 @@ function generateUsers(count: number = 100): User[] {
 // Store users in memory for consistency
 let mockUsers = generateUsers(100)
 
+// Simple mock users for UserManagementPage
+const simpleUsers = [
+  {
+    id: '1',
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    role: 'admin' as const,
+    status: 'active' as const,
+    joinedDate: '2024-01-15',
+  },
+  {
+    id: '2',
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    role: 'user' as const,
+    status: 'active' as const,
+    joinedDate: '2024-02-20',
+  },
+  {
+    id: '3',
+    name: 'Bob Johnson',
+    email: 'bob.johnson@example.com',
+    role: 'moderator' as const,
+    status: 'inactive' as const,
+    joinedDate: '2024-03-10',
+  },
+  {
+    id: '4',
+    name: 'Alice Brown',
+    email: 'alice.brown@example.com',
+    role: 'user' as const,
+    status: 'pending' as const,
+    joinedDate: '2024-03-15',
+  },
+  {
+    id: '5',
+    name: 'Charlie Wilson',
+    email: 'charlie.wilson@example.com',
+    role: 'user' as const,
+    status: 'active' as const,
+    joinedDate: '2024-03-20',
+  },
+]
+
 export const usersHandlers = [
   // Get all users
   http.get('/api/users', ({ request }) => {
     const url = new URL(request.url)
     const page = parseInt(url.searchParams.get('page') || '1')
     const pageSize = parseInt(url.searchParams.get('pageSize') || '10')
+    const includeDataTable = url.searchParams.get('dataTable') === 'true'
+    
+    // Simple response for UserManagementPage
+    if (!includeDataTable) {
+      return HttpResponse.json({
+        users: simpleUsers,
+        total: simpleUsers.length,
+        page: 1,
+        pageSize: 10
+      })
+    }
+    
+    // Complex response for data table
     const search = url.searchParams.get('search') || ''
     const status = url.searchParams.get('status')
     const role = url.searchParams.get('role')

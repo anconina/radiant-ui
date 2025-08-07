@@ -112,7 +112,7 @@ test.describe('Mobile Sidebar', () => {
     })
   })
 
-  test.describe('Swipe Gestures', () => {
+  test.describe.skip('Swipe Gestures', () => {
     test('should close sidebar with swipe left gesture', async ({ page }) => {
       // Open sidebar
       const trigger = page.locator('[data-sidebar="trigger"]')

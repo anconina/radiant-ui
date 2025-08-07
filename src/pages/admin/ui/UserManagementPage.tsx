@@ -5,6 +5,7 @@ import { Edit, Mail, MoreHorizontal, Shield, Trash2 } from 'lucide-react'
 
 import { useTranslation } from 'react-i18next'
 
+import { useApiQuery } from '@/shared/api/hooks/use-api'
 import { cn } from '@/shared/lib/utils'
 import { Avatar } from '@/shared/ui/avatar'
 import { Badge } from '@/shared/ui/badge'
@@ -92,9 +93,20 @@ const mockUsers: User[] = [
 export function UserManagementPage() {
   const { t } = useTranslation('users')
   const [searchQuery, setSearchQuery] = useState('')
-  const [users] = useState<User[]>(mockUsers)
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 2 // Set to 2 to ensure pagination shows with mock data
+
+  // Fetch users from API - the API returns paginated data
+  const { data, isLoading, error, refetch } = useApiQuery<{ users: User[]; total: number }>(
+    'users',
+    '/api/users',
+    {
+      retry: 1,
+      staleTime: 5 * 60 * 1000, // 5 minutes
+    }
+  )
+  
+  const users = data?.users || []
 
   const filteredUsers = users.filter(
     user =>
@@ -139,6 +151,29 @@ export function UserManagementPage() {
       .join('')
       .toUpperCase()
       .slice(0, 2)
+  }
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="container mx-auto py-6">
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        </div>
+      </div>
+    )
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="container mx-auto py-6">
+        <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
+          <p className="text-lg text-muted-foreground">Failed to load users</p>
+          <Button onClick={() => refetch()}>Retry</Button>
+        </div>
+      </div>
+    )
   }
 
   return (

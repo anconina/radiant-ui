@@ -40,3 +40,4 @@ security-report.json
 lint-output*
 test-results/*
 playwright-report/*
+security-report*
