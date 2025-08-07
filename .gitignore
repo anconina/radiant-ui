@@ -23,8 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-coverage*
-coverage/**
+# Test artifacts and reports (moved to .artifacts/)
+.artifacts/
+.artifacts/**
 test-output*
 test-output/**  
 
@@ -36,7 +37,5 @@ security-report.json
 *-report.json
 *-report.md
 
-# Test artifacts
-test-results/
-
-playwright-report/
+lint-output*
+test-results/*

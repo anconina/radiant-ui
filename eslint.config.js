@@ -123,9 +123,9 @@ export default tseslint.config(
     },
   },
   
-  // Node.js scripts
+  // Node.js scripts and deployment configs
   {
-    files: ['scripts/**/*.js'],
+    files: ['scripts/**/*.js', '.deploy/**/*.js'],
     languageOptions: {
       globals: {
         ...globals.node,

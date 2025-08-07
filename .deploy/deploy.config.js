@@ -2,6 +2,8 @@
  * Deployment configuration for multiple platforms
  */
 
+/* eslint-env node */
+
 export default {
   // Vercel deployment configuration
   vercel: {
