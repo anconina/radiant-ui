@@ -19,7 +19,7 @@ export function LanguageSelector({
   className,
   onChange,
 }: LanguageSelectorProps) {
-  const { currentLanguage, languages, switchLanguage, isChanging } = useLanguageSwitcher()
+  const { currentLanguage, switchLanguage, isChanging } = useLanguageSwitcher()
 
   const handleValueChange = (value: string) => {
     const language = value as SupportedLanguage

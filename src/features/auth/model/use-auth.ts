@@ -4,7 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import type { LoginRequest, RegisterRequest } from '@/entities/session'
 
-import { PERMISSIONS, type Permission, ROLES, type Role } from '@/shared/config'
+// Role and permission types imported for future use
+// import { PERMISSIONS, type Permission, ROLES, type Role } from '@/shared/config'
 import { ROUTES } from '@/shared/routes'
 
 import { useAuthStore } from './auth.store'
@@ -60,16 +61,11 @@ export function useAuth(): UseAuthReturn {
   // Enhanced login with redirect
   const login = useCallback(
     async (credentials: LoginRequest) => {
-      try {
-        await authLogin(credentials)
+      await authLogin(credentials)
 
-        // Redirect to the page they were trying to access, or dashboard
-        const from = location.state?.from?.pathname || ROUTES.dashboard
-        navigate(from, { replace: true })
-      } catch (error) {
-        // Error is handled in the store
-        throw error
-      }
+      // Redirect to the page they were trying to access, or dashboard
+      const from = location.state?.from?.pathname || ROUTES.dashboard
+      navigate(from, { replace: true })
     },
     [authLogin, navigate, location]
   )
@@ -77,15 +73,10 @@ export function useAuth(): UseAuthReturn {
   // Enhanced register with redirect
   const register = useCallback(
     async (data: RegisterRequest) => {
-      try {
-        await authRegister(data)
+      await authRegister(data)
 
-        // Redirect to dashboard after successful registration
-        navigate(ROUTES.dashboard, { replace: true })
-      } catch (error) {
-        // Error is handled in the store
-        throw error
-      }
+      // Redirect to dashboard after successful registration
+      navigate(ROUTES.dashboard, { replace: true })
     },
     [authRegister, navigate]
   )

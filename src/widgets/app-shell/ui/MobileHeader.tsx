@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
-import { Bell, Menu, Search, User } from 'lucide-react'
+import { Bell, Search } from 'lucide-react'
 
 import { useAuth } from '@/features/auth'
 
@@ -37,7 +37,7 @@ export function MobileHeader({
 }: MobileHeaderProps) {
   const { t } = useTranslation('common')
   const { user } = useAuth()
-  const { toggleSidebar } = useSidebar()
+  // const { toggleSidebar } = useSidebar() // Reserved for future use
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [notificationCount] = useState(3) // Mock notification count

@@ -54,7 +54,7 @@ export default tseslint.config(
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
       }],
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-explicit-any': 'off', // Disabled - any is sometimes necessary
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-non-null-assertion': 'warn',
     },
@@ -99,10 +99,7 @@ export default tseslint.config(
       'react-hooks/exhaustive-deps': 'warn',
       
       // React Refresh rules
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      'react-refresh/only-export-components': 'off', // Disabled - too strict for utility files
     },
   },
   

@@ -45,7 +45,8 @@ class IntelligentPreloader {
       return
     }
 
-    const { priority = 'low', onLoad, onError } = options
+    const { onLoad, onError } = options
+    // const { priority = 'low' } = options // Reserved for future prioritization
 
     try {
       // Create preload promise if not already queued
@@ -54,7 +55,7 @@ class IntelligentPreloader {
         this.preloadQueue.set(route, preloadPromise)
       }
 
-      const result = await this.preloadQueue.get(route)
+      await this.preloadQueue.get(route)
 
       this.preloadedRoutes.add(route)
       onLoad?.()

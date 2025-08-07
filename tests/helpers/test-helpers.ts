@@ -19,7 +19,7 @@ interface CustomRenderOptions extends Omit<RenderOptions, 'wrapper'> {
 
 export function renderWithProviders(ui: ReactElement, options: CustomRenderOptions = {}) {
   const {
-    initialEntries = ['/'],
+    // initialEntries = ['/'], // Reserved for future MemoryRouter implementation
     queryClient = new QueryClient({
       defaultOptions: {
         queries: {

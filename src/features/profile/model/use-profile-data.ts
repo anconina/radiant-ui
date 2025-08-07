@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 
 import { api } from '@/shared/lib/http-client'
-import { toast } from '@/shared/lib/toast'
+// import { toast } from '@/shared/lib/toast' // Reserved for future notifications
 
 export interface UserProfile {
   id: string

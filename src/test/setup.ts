@@ -178,17 +178,17 @@ global.sessionStorage = sessionStorageMock as any
     }
     
     addEventListener(type: string, listener: any, options?: any) {
-      // @ts-ignore
+      // @ts-expect-error
       EventTarget.prototype.addEventListener.call(this, type, listener, options)
     }
     
     removeEventListener(type: string, listener: any, options?: any) {
-      // @ts-ignore
+      // @ts-expect-error
       EventTarget.prototype.removeEventListener.call(this, type, listener, options)
     }
     
     dispatchEvent(event: Event): boolean {
-      // @ts-ignore
+      // @ts-expect-error
       return EventTarget.prototype.dispatchEvent.call(this, event)
     }
 
@@ -229,23 +229,23 @@ global.sessionStorage = sessionStorageMock as any
   }
 
   // Install polyfills globally
-  // @ts-ignore
+  // @ts-expect-error
   global.AbortSignal = AbortSignalPolyfill
-  // @ts-ignore  
+  // @ts-expect-error  
   global.AbortController = AbortControllerPolyfill
   
   // Make sure window also has them
   if (typeof window !== 'undefined') {
-    // @ts-ignore
+    // @ts-expect-error
     window.AbortSignal = AbortSignalPolyfill
-    // @ts-ignore
+    // @ts-expect-error
     window.AbortController = AbortControllerPolyfill
   }
 })()
 
 // Mock DOMException if not available
 if (!global.DOMException) {
-  // @ts-ignore
+  // @ts-expect-error
   global.DOMException = class DOMException extends Error {
     constructor(message?: string, name?: string) {
       super(message)

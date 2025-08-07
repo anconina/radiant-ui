@@ -93,7 +93,7 @@ export const useAuthStore = create<AuthStore>()(
                     // Refresh token expired, logout
                     get().logout()
                   }
-                } catch (error) {
+                } catch {
                   get().logout()
                 }
               })
@@ -137,7 +137,7 @@ export const useAuthStore = create<AuthStore>()(
                   } else {
                     get().logout()
                   }
-                } catch (error) {
+                } catch {
                   get().logout()
                 }
               })
@@ -238,7 +238,7 @@ export const useAuthStore = create<AuthStore>()(
                   } else {
                     get().logout()
                   }
-                } catch (error) {
+                } catch {
                   get().logout()
                 }
               })

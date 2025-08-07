@@ -59,7 +59,7 @@ class MockBroadcastChannel {
   }
 }
 
-// @ts-ignore
+// @ts-expect-error
 global.BroadcastChannel = MockBroadcastChannel
 
 describe('Token Rotation Integration Tests', () => {

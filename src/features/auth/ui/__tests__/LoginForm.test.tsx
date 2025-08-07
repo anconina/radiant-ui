@@ -1,6 +1,6 @@
-import { server } from '@/mocks/server'
-import { fireEvent, render, screen, waitFor } from '@/test/utils'
-import { HttpResponse, http } from 'msw'
+// import { server } from '@/mocks/server' // Reserved for mock setup
+import { render, screen, waitFor } from '@/test/utils'
+// import { HttpResponse, http } from 'msw' // Reserved for mock responses
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { LoginForm } from '../LoginForm'

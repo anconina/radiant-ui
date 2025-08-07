@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { Eye, EyeOff, Github, Loader2 } from 'lucide-react'
 
@@ -24,14 +24,11 @@ interface LoginFormProps {
 }
 
 export function LoginForm({ className, ...props }: LoginFormProps) {
-  const navigate = useNavigate()
-  const location = useLocation()
+  // const location = useLocation() // Reserved for redirect state handling
   const { login, isLoading } = useAuth()
   const [showPassword, setShowPassword] = useState(false)
   const { t } = useTranslation('auth')
   const { t: tCommon } = useTranslation('common')
-
-  const from = location.state?.from?.pathname || ROUTES.dashboard
 
   const loginSchema = React.useMemo(() => createLoginSchema(), [])
 
@@ -48,7 +45,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
     try {
       await login(data)
       // Navigation is handled by the useAuth hook
-    } catch (error) {
+    } catch {
       // Error is handled by the auth store and displayed as notification
       form.setError('root', {
         message: t('login.error'),

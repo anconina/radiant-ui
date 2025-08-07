@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { Github, Loader2, Shield, UserPlus, Zap } from 'lucide-react'
 
@@ -17,7 +17,7 @@ import { Checkbox } from '@/shared/ui/checkbox'
 import {
   Form,
   FormControl,
-  FormDescription,
+  // FormDescription, // Reserved for future use
   FormField,
   FormItem,
   FormLabel,
@@ -34,9 +34,8 @@ interface RegisterFormProps {
 
 export function RegisterForm({ className, ...props }: RegisterFormProps) {
   const { t } = useTranslation('auth')
-  const navigate = useNavigate()
   const { register, isLoading } = useAuth()
-  const [passwordStrength, setPasswordStrength] = useState(0)
+  const [_passwordStrength, setPasswordStrength] = useState(0)
 
   const registerSchema = React.useMemo(() => createRegisterSchema(), [])
   
@@ -56,7 +55,7 @@ export function RegisterForm({ className, ...props }: RegisterFormProps) {
     try {
       await register(data)
       // Navigation is handled by the useAuth hook
-    } catch (error) {
+    } catch {
       // Error is handled by the auth store and displayed as notification
       form.setError('root', {
         message: t('register.error'),

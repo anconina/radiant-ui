@@ -9,14 +9,14 @@ export const deviceCapabilities = {
 
   // Check if device has sufficient memory
   hasGoodMemory: () => {
-    // @ts-ignore - Navigator.deviceMemory is not in TypeScript types yet
+    // @ts-expect-error - Navigator.deviceMemory is not in TypeScript types yet
     const memory = navigator.deviceMemory
     return memory ? memory >= 4 : true // Default to true if API not available
   },
 
   // Check connection quality
   hasGoodConnection: () => {
-    // @ts-ignore - Navigator.connection is not in TypeScript types yet
+    // @ts-expect-error - Navigator.connection is not in TypeScript types yet
     const connection = navigator.connection
     if (!connection) return true // Default to true if API not available
 

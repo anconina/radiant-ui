@@ -8,7 +8,7 @@ import { AlertTriangle, ArrowLeft, CheckCircle, Loader2, Shield } from 'lucide-r
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { z } from 'zod'
+// import { z } from 'zod' // Reserved for future validation
 
 import { resetPassword } from '@/features/auth/api/auth.api'
 
@@ -37,7 +37,7 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [passwordStrength, setPasswordStrength] = useState(0)
+  const [_passwordStrength, setPasswordStrength] = useState(0)
 
   const token = searchParams.get('token')
   const email = searchParams.get('email')

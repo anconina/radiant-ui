@@ -101,6 +101,7 @@ beforeAll(() => {
   if (typeof global.AbortController === 'undefined') {
     // Import node's AbortController if available (Node 16+)
     try {
+      // @ts-expect-error - Dynamic require needed for conditional polyfill
       const { AbortController, AbortSignal } = require('node:util')
       global.AbortController = AbortController
       global.AbortSignal = AbortSignal
