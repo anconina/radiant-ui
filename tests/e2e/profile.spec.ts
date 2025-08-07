@@ -49,7 +49,7 @@ test.describe('User Profile', () => {
     await bioTextarea.fill('This is my updated bio.')
 
     // Save changes
-    await page.getByRole('button', { name: 'Save changes' }).click()
+    await page.getByRole('button', { name: 'Save Changes' }).click()
 
     // Check success notification
     await expect(page.getByText('Profile updated successfully')).toBeVisible()
@@ -70,7 +70,7 @@ test.describe('User Profile', () => {
     await lastNameInput.clear()
 
     // Try to save
-    await page.getByRole('button', { name: 'Save changes' }).click()
+    await page.getByRole('button', { name: 'Save Changes' }).click()
 
     // Check validation messages
     await expect(page.getByText('First name is required')).toBeVisible()
@@ -101,7 +101,7 @@ test.describe('User Profile', () => {
     await phoneInput.fill('invalid-phone')
 
     // Try to save
-    await page.getByRole('button', { name: 'Save changes' }).click()
+    await page.getByRole('button', { name: 'Save Changes' }).click()
 
     // Check validation message
     await expect(page.getByText('Invalid phone number format')).toBeVisible()
@@ -139,7 +139,7 @@ test.describe('Profile Picture Upload', () => {
     await expect(page.getByAltText('Profile preview')).toBeVisible()
 
     // Save changes
-    await page.getByRole('button', { name: 'Save changes' }).click()
+    await page.getByRole('button', { name: 'Save Changes' }).click()
 
     // Check success
     await expect(page.getByText('Profile picture updated')).toBeVisible()

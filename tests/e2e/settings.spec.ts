@@ -19,26 +19,25 @@ test.describe('Settings Page', () => {
     // Check main heading
     await expect(page.getByRole('heading', { name: 'Settings' })).toBeVisible()
 
-    // Check settings navigation
-    await expect(page.getByRole('link', { name: 'General' })).toBeVisible()
-    await expect(page.getByRole('link', { name: 'Notifications' })).toBeVisible()
-    await expect(page.getByRole('link', { name: 'Privacy' })).toBeVisible()
-    await expect(page.getByRole('link', { name: 'Security' })).toBeVisible()
-    await expect(page.getByRole('link', { name: 'Billing' })).toBeVisible()
+    // Check settings tabs
+    await expect(page.getByText('Appearance')).toBeVisible()
+    await expect(page.getByText('Language')).toBeVisible()
+    await expect(page.getByText('Notifications')).toBeVisible()
+    await expect(page.getByText('Privacy')).toBeVisible()
   })
 
   test('should navigate between settings sections', async ({ page }) => {
     // Click notifications
-    await page.getByRole('link', { name: 'Notifications' }).click()
-    await expect(page.getByRole('heading', { name: 'Notification Preferences' })).toBeVisible()
+    await page.getByRole('tab', { name: /Notifications/i }).click()
+    await expect(page.getByRole('heading', { name: 'Notification Settings' })).toBeVisible()
 
-    // Click privacy
-    await page.getByRole('link', { name: 'Privacy' }).click()
+    // Click privacy  
+    await page.getByRole('tab', { name: /Privacy/i }).click()
     await expect(page.getByRole('heading', { name: 'Privacy Settings' })).toBeVisible()
 
-    // Click security
-    await page.getByRole('link', { name: 'Security' }).click()
-    await expect(page.getByRole('heading', { name: 'Security Settings' })).toBeVisible()
+    // Click language
+    await page.getByRole('tab', { name: /Language/i }).click()
+    await expect(page.getByRole('heading', { name: 'Language & Region' })).toBeVisible()
   })
 })
 
