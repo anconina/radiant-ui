@@ -95,6 +95,19 @@
       "todayAt": "Heute um 9:15",
       "monthsAgo": "vor 3 Monaten",
       "devices": "2 Geräte"
+    },
+    "changePasswordDialog": {
+      "title": "Passwort ändern",
+      "description": "Geben Sie Ihr aktuelles Passwort ein und wählen Sie ein neues Passwort.",
+      "currentPassword": "Aktuelles Passwort",
+      "currentPasswordPlaceholder": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "newPasswordPlaceholder": "Neues Passwort",
+      "confirmPassword": "Neues Passwort bestätigen",
+      "confirmPasswordPlaceholder": "Neues Passwort bestätigen",
+      "cancel": "Abbrechen",
+      "submit": "Passwort ändern",
+      "success": "Passwort erfolgreich geändert"
     }
   },
   "actions": {

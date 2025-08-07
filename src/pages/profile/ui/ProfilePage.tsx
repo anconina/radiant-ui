@@ -575,7 +575,7 @@ export function ProfilePage() {
                           size="sm"
                           onClick={() => setIsPasswordDialogOpen(true)}
                         >
-                          Change Password
+                          {t('security.changePassword')}
                         </Button>
                       </div>
                     </div>
@@ -599,59 +599,59 @@ export function ProfilePage() {
           <Dialog open={isPasswordDialogOpen} onOpenChange={setIsPasswordDialogOpen}>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle>Change Password</DialogTitle>
+                <DialogTitle>{t('security.changePasswordDialog.title')}</DialogTitle>
                 <DialogDescription>
-                  Enter your current password and choose a new password.
+                  {t('security.changePasswordDialog.description')}
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
                 <div className="grid gap-2">
                   <Label htmlFor="current-password">
                     <Lock className="inline h-4 w-4 me-2" />
-                    Current Password
+                    {t('security.changePasswordDialog.currentPassword')}
                   </Label>
                   <Input
                     id="current-password"
                     type="password"
-                    placeholder="Current password"
+                    placeholder={t('security.changePasswordDialog.currentPasswordPlaceholder')}
                     autoComplete="current-password"
                   />
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="new-password">
                     <Lock className="inline h-4 w-4 me-2" />
-                    New Password
+                    {t('security.changePasswordDialog.newPassword')}
                   </Label>
                   <Input
                     id="new-password"
                     type="password"
-                    placeholder="New password"
+                    placeholder={t('security.changePasswordDialog.newPasswordPlaceholder')}
                     autoComplete="new-password"
                   />
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="confirm-password">
                     <Lock className="inline h-4 w-4 me-2" />
-                    Confirm New Password
+                    {t('security.changePasswordDialog.confirmPassword')}
                   </Label>
                   <Input
                     id="confirm-password"
                     type="password"
-                    placeholder="Confirm new password"
+                    placeholder={t('security.changePasswordDialog.confirmPasswordPlaceholder')}
                     autoComplete="new-password"
                   />
                 </div>
               </div>
               <DialogFooter>
                 <Button variant="outline" onClick={() => setIsPasswordDialogOpen(false)}>
-                  Cancel
+                  {t('security.changePasswordDialog.cancel')}
                 </Button>
                 <Button type="submit" onClick={() => {
                   // Handle password change logic here
-                  toast.success('Password changed successfully')
+                  toast.success(t('security.changePasswordDialog.success'))
                   setIsPasswordDialogOpen(false)
                 }}>
-                  Change Password
+                  {t('security.changePasswordDialog.submit')}
                 </Button>
               </DialogFooter>
             </DialogContent>

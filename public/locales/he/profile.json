@@ -95,6 +95,19 @@
       "todayAt": "היום ב-9:15",
       "monthsAgo": "לפני 3 חודשים",
       "devices": "2 מכשירים"
+    },
+    "changePasswordDialog": {
+      "title": "שינוי סיסמה",
+      "description": "הזן את הסיסמה הנוכחית שלך ובחר סיסמה חדשה.",
+      "currentPassword": "סיסמה נוכחית",
+      "currentPasswordPlaceholder": "סיסמה נוכחית",
+      "newPassword": "סיסמה חדשה",
+      "newPasswordPlaceholder": "סיסמה חדשה",
+      "confirmPassword": "אימות סיסמה חדשה",
+      "confirmPasswordPlaceholder": "אימות סיסמה חדשה",
+      "cancel": "ביטול",
+      "submit": "שנה סיסמה",
+      "success": "הסיסמה שונתה בהצלחה"
     }
   },
   "actions": {

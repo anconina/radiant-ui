@@ -95,6 +95,19 @@
       "todayAt": "اليوم في 9:15",
       "monthsAgo": "منذ 3 أشهر",
       "devices": "جهازان"
+    },
+    "changePasswordDialog": {
+      "title": "تغيير كلمة المرور",
+      "description": "أدخل كلمة المرور الحالية واختر كلمة مرور جديدة.",
+      "currentPassword": "كلمة المرور الحالية",
+      "currentPasswordPlaceholder": "كلمة المرور الحالية",
+      "newPassword": "كلمة المرور الجديدة",
+      "newPasswordPlaceholder": "كلمة المرور الجديدة",
+      "confirmPassword": "تأكيد كلمة المرور الجديدة",
+      "confirmPasswordPlaceholder": "تأكيد كلمة المرور الجديدة",
+      "cancel": "إلغاء",
+      "submit": "تغيير كلمة المرور",
+      "success": "تم تغيير كلمة المرور بنجاح"
     }
   },
   "actions": {

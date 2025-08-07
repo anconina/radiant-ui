@@ -95,6 +95,19 @@
       "todayAt": "今日 9:15",
       "monthsAgo": "3ヶ月前",
       "devices": "2台のデバイス"
+    },
+    "changePasswordDialog": {
+      "title": "パスワードの変更",
+      "description": "現在のパスワードを入力して、新しいパスワードを選択してください。",
+      "currentPassword": "現在のパスワード",
+      "currentPasswordPlaceholder": "現在のパスワード",
+      "newPassword": "新しいパスワード",
+      "newPasswordPlaceholder": "新しいパスワード",
+      "confirmPassword": "新しいパスワードの確認",
+      "confirmPasswordPlaceholder": "新しいパスワードの確認",
+      "cancel": "キャンセル",
+      "submit": "パスワードを変更",
+      "success": "パスワードが正常に変更されました"
     }
   },
   "actions": {

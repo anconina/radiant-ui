@@ -95,6 +95,19 @@
       "todayAt": "今天 9:15",
       "monthsAgo": "3个月前",
       "devices": "2台设备"
+    },
+    "changePasswordDialog": {
+      "title": "更改密码",
+      "description": "输入您当前的密码并选择一个新密码。",
+      "currentPassword": "当前密码",
+      "currentPasswordPlaceholder": "当前密码",
+      "newPassword": "新密码",
+      "newPasswordPlaceholder": "新密码",
+      "confirmPassword": "确认新密码",
+      "confirmPasswordPlaceholder": "确认新密码",
+      "cancel": "取消",
+      "submit": "更改密码",
+      "success": "密码更改成功"
     }
   },
   "actions": {

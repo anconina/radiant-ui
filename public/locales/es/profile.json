@@ -95,6 +95,19 @@
       "todayAt": "Hoy a las 9:15",
       "monthsAgo": "Hace 3 meses",
       "devices": "2 dispositivos"
+    },
+    "changePasswordDialog": {
+      "title": "Cambiar Contraseña",
+      "description": "Ingrese su contraseña actual y elija una nueva contraseña.",
+      "currentPassword": "Contraseña Actual",
+      "currentPasswordPlaceholder": "Contraseña actual",
+      "newPassword": "Nueva Contraseña",
+      "newPasswordPlaceholder": "Nueva contraseña",
+      "confirmPassword": "Confirmar Nueva Contraseña",
+      "confirmPasswordPlaceholder": "Confirmar nueva contraseña",
+      "cancel": "Cancelar",
+      "submit": "Cambiar Contraseña",
+      "success": "Contraseña cambiada exitosamente"
     }
   },
   "actions": {

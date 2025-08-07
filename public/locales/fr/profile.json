@@ -95,6 +95,19 @@
       "todayAt": "Aujourd'hui à 9h15",
       "monthsAgo": "Il y a 3 mois",
       "devices": "2 appareils"
+    },
+    "changePasswordDialog": {
+      "title": "Changer le mot de passe",
+      "description": "Entrez votre mot de passe actuel et choisissez un nouveau mot de passe.",
+      "currentPassword": "Mot de passe actuel",
+      "currentPasswordPlaceholder": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "newPasswordPlaceholder": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le nouveau mot de passe",
+      "confirmPasswordPlaceholder": "Confirmer le nouveau mot de passe",
+      "cancel": "Annuler",
+      "submit": "Changer le mot de passe",
+      "success": "Mot de passe changé avec succès"
     }
   },
   "actions": {
